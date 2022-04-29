@@ -7,3 +7,4 @@ cd "$parent_path"
 ./run_proto_lite.sh
 ./run_proto_kotlin.sh
 ./run_proto_kotlin_lite.sh
+./run_proto_nongrpc.sh
