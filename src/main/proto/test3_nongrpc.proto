@@ -1,0 +1,198 @@
+syntax = "proto3";
+
+package test3;
+import "google/protobuf/any.proto";
+
+
+option java_package = "com.proto.pure.test3";
+option java_multiple_files = true;
+
+message TestService3Response {
+  //  https://developers.google.com/protocol-buffers/docs/proto#reserved
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+  //  Extensions not supported in proto3
+  //  https://developers.google.com/protocol-buffers/docs/proto#extensions
+  //  https://developers.google.com/protocol-buffers/docs/proto#choosing
+  //  extensions 100 to 199, 1000 to max;
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
+  //  https://developers.google.com/protocol-buffers/docs/proto#scalar
+  optional double optionalDouble = 1;
+  double requiredDouble = 3;
+  optional int32 optionalInt32 = 4;
+  int32 requiredInt32 = 5;
+  optional int64 optionalInt64 = 6;
+  int64 requiredInt64 = 7;
+  optional uint32 optionalUint32 = 8;
+  uint32 requiredUint32 = 12;
+  optional uint64 optionalUint64 = 13;
+  uint64 requiredUint64 = 14;
+  optional sint32 optionalSint32 = 16;
+  sint32 requiredSint32 = 17;
+  optional sint64 optionalSint64 = 18;
+  sint64 requiredSint64 = 19;
+  optional fixed32 optionalFixed32 = 20;
+  fixed32 requiredFixed32 = 21;
+  optional fixed64 optionalFixed64 = 22;
+  fixed64 requiredFixed64 = 23;
+  optional sfixed32 optionalSfixed32 = 24;
+  sfixed32 requiredSfixed32 = 25;
+  optional sfixed64 optionalSfixed64 = 26;
+  sfixed64 requiredSfixed64 = 27;
+  optional bool optionalBool = 28;
+  bool requiredBool = 29;
+  optional string optionalString = 30;
+  string requiredString = 31;
+  optional bytes optionalBytes = 32;
+  bytes requiredBytes = 33;
+
+  // Defaults not supported in proto3 (https://developers.google.com/protocol-buffers/docs/proto3#default)
+  //  optional int32 optionalWithDefaultInt32 = 34 [default = 10];
+  //  optional string optionalWithDefaultString = 35 [default = "temp_holder"];
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#enum
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  optional Corpus corpus = 36;
+  //  [default = UNIVERSAL];
+
+  enum EnumAllowingAlias {
+    option allow_alias = true;
+    UNKNOWN = 0;
+    STARTED = 1;
+    RUNNING = 1;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#other
+  repeated int32 samples = 37 [packed = true];
+  //https://developers.google.com/protocol-buffers/docs/proto#nested
+  message NestedMessage {
+    string url = 1;
+    optional string title = 2;
+    repeated string snippets = 3;
+  }
+  //  https://developers.google.com/protocol-buffers/docs/proto#oneof
+  oneof oneOfField {
+    string name = 38;
+    NestedMessage nested = 39;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
+  map<string, NestedMessage> map = 40;
+
+  // Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
+  message MapFieldEntry {
+    string key = 1;
+    NestedMessage value = 2;
+  }
+  repeated MapFieldEntry map_field = 41;
+
+  // https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+  repeated google.protobuf.Any details = 42;
+}
+
+message TestService3Request {
+  //  https://developers.google.com/protocol-buffers/docs/proto#reserved
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+  //  Extensions not supported in proto3
+  //  https://developers.google.com/protocol-buffers/docs/proto#extensions
+  //  https://developers.google.com/protocol-buffers/docs/proto#choosing
+  //  extensions 100 to 199, 1000 to max;
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
+  //  https://developers.google.com/protocol-buffers/docs/proto#scalar
+  optional double optionalDouble = 1;
+  double requiredDouble = 3;
+  optional int32 optionalInt32 = 4;
+  int32 requiredInt32 = 5;
+  optional int64 optionalInt64 = 6;
+  int64 requiredInt64 = 7;
+  optional uint32 optionalUint32 = 8;
+  uint32 requiredUint32 = 12;
+  optional uint64 optionalUint64 = 13;
+  uint64 requiredUint64 = 14;
+  optional sint32 optionalSint32 = 16;
+  sint32 requiredSint32 = 17;
+  optional sint64 optionalSint64 = 18;
+  sint64 requiredSint64 = 19;
+  optional fixed32 optionalFixed32 = 20;
+  fixed32 requiredFixed32 = 21;
+  optional fixed64 optionalFixed64 = 22;
+  fixed64 requiredFixed64 = 23;
+  optional sfixed32 optionalSfixed32 = 24;
+  sfixed32 requiredSfixed32 = 25;
+  optional sfixed64 optionalSfixed64 = 26;
+  sfixed64 requiredSfixed64 = 27;
+  optional bool optionalBool = 28;
+  bool requiredBool = 29;
+  optional string optionalString = 30;
+  string requiredString = 31;
+  optional bytes optionalBytes = 32;
+  bytes requiredBytes = 33;
+
+  // Defaults not supported in proto3 (https://developers.google.com/protocol-buffers/docs/proto3#default)
+  //  optional int32 optionalWithDefaultInt32 = 34 [default = 10];
+  //  optional string optionalWithDefaultString = 35 [default = "temp_holder"];
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#enum
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  optional Corpus corpus = 36;
+  //  [default = UNIVERSAL];
+
+  enum EnumAllowingAlias {
+    option allow_alias = true;
+    UNKNOWN = 0;
+    STARTED = 1;
+    RUNNING = 1;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#other
+  repeated int32 samples = 37 [packed = true];
+  //https://developers.google.com/protocol-buffers/docs/proto#nested
+  message NestedMessage {
+    string url = 1;
+    optional string title = 2;
+    repeated string snippets = 3;
+  }
+  //  https://developers.google.com/protocol-buffers/docs/proto#oneof
+  oneof oneOfField {
+    string name = 38;
+    NestedMessage nested = 39;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
+  map<string, NestedMessage> map = 40;
+
+  // Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
+  message MapFieldEntry {
+    string key = 1;
+    NestedMessage value = 2;
+  }
+  repeated MapFieldEntry map_field = 41;
+
+  // https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+  repeated google.protobuf.Any details = 42;
+}

@@ -1,0 +1,197 @@
+syntax = "proto2";
+
+package test2;
+
+option java_package = "com.proto.test2";
+option java_multiple_files = true;
+
+message TestService2Response {
+  //  https://developers.google.com/protocol-buffers/docs/proto#reserved
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+  //  https://developers.google.com/protocol-buffers/docs/proto#extensions
+  //  https://developers.google.com/protocol-buffers/docs/proto#choosing
+  extensions 100 to 199, 1000 to max;
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
+  //  https://developers.google.com/protocol-buffers/docs/proto#scalar
+  optional double optionalDouble = 1;
+  required double requiredDouble = 3;
+  optional int32 optionalInt32 = 4;
+  required int32 requiredInt32 = 5;
+  optional int64 optionalInt64 = 6;
+  required int64 requiredInt64 = 7;
+  optional uint32 optionalUint32 = 8;
+  required uint32 requiredUint32 = 12;
+  optional uint64 optionalUint64 = 13;
+  required uint64 requiredUint64 = 14;
+  optional sint32 optionalSint32 = 16;
+  required sint32 requiredSint32 = 17;
+  optional sint64 optionalSint64 = 18;
+  required sint64 requiredSint64 = 19;
+  optional fixed32 optionalFixed32 = 20;
+  required fixed32 requiredFixed32 = 21;
+  optional fixed64 optionalFixed64 = 22;
+  required fixed64 requiredFixed64 = 23;
+  optional sfixed32 optionalSfixed32 = 24;
+  required sfixed32 requiredSfixed32 = 25;
+  optional sfixed64 optionalSfixed64 = 26;
+  required sfixed64 requiredSfixed64 = 27;
+  optional bool optionalBool = 28;
+  required bool requiredBool = 29;
+  optional string optionalString = 30;
+  required string requiredString = 31;
+  optional bytes optionalBytes = 32;
+  required bytes requiredBytes = 33;
+
+  optional int32 optionalWithDefaultInt32 = 34 [default = 10];
+  optional string optionalWithDefaultString = 35 [default = "temp_holder"];
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#enum
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  optional Corpus corpus = 36 [default = UNIVERSAL];
+
+  enum EnumAllowingAlias {
+    option allow_alias = true;
+    UNKNOWN = 0;
+    STARTED = 1;
+    RUNNING = 1;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#other
+  repeated int32 samples = 37 [packed = true];
+  //https://developers.google.com/protocol-buffers/docs/proto#nested
+  message NestedMessage {
+    required string url = 1;
+    optional string title = 2;
+    repeated string snippets = 3;
+  }
+  //  https://developers.google.com/protocol-buffers/docs/proto#oneof
+  oneof oneOfField {
+    string name = 38;
+    NestedMessage nested = 39;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
+  map<string, NestedMessage> map = 40;
+
+  // Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
+  message MapFieldEntry {
+    optional string key = 1;
+    optional NestedMessage value = 2;
+  }
+  repeated MapFieldEntry map_field = 41;
+}
+
+extend TestService2Response {
+  optional int32 extension = 126;
+}
+
+message TestService2Request {
+  //  https://developers.google.com/protocol-buffers/docs/proto#reserved
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+  //  https://developers.google.com/protocol-buffers/docs/proto#extensions
+  //  https://developers.google.com/protocol-buffers/docs/proto#choosing
+  extensions 100 to 199, 1000 to max;
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
+  //  https://developers.google.com/protocol-buffers/docs/proto#scalar
+  optional double optionalDouble = 1;
+  required double requiredDouble = 3;
+  optional int32 optionalInt32 = 4;
+  required int32 requiredInt32 = 5;
+  optional int64 optionalInt64 = 6;
+  required int64 requiredInt64 = 7;
+  optional uint32 optionalUint32 = 8;
+  required uint32 requiredUint32 = 12;
+  optional uint64 optionalUint64 = 13;
+  required uint64 requiredUint64 = 14;
+  optional sint32 optionalSint32 = 16;
+  required sint32 requiredSint32 = 17;
+  optional sint64 optionalSint64 = 18;
+  required sint64 requiredSint64 = 19;
+  optional fixed32 optionalFixed32 = 20;
+  required fixed32 requiredFixed32 = 21;
+  optional fixed64 optionalFixed64 = 22;
+  required fixed64 requiredFixed64 = 23;
+  optional sfixed32 optionalSfixed32 = 24;
+  required sfixed32 requiredSfixed32 = 25;
+  optional sfixed64 optionalSfixed64 = 26;
+  required sfixed64 requiredSfixed64 = 27;
+  optional bool optionalBool = 28;
+  required bool requiredBool = 29;
+  optional string optionalString = 30;
+  required string requiredString = 31;
+  optional bytes optionalBytes = 32;
+  required bytes requiredBytes = 33;
+
+  optional int32 optionalWithDefaultInt32 = 34 [default = 10];
+  optional string optionalWithDefaultString = 35 [default = "temp_holder"];
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#enum
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  optional Corpus corpus = 36 [default = UNIVERSAL];
+
+  enum EnumAllowingAlias {
+    option allow_alias = true;
+    UNKNOWN = 0;
+    STARTED = 1;
+    RUNNING = 1;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#other
+  repeated int32 samples = 37 [packed = true];
+  //https://developers.google.com/protocol-buffers/docs/proto#nested
+  message NestedMessage {
+    required string url = 1;
+    optional string title = 2;
+    repeated string snippets = 3;
+  }
+  //  https://developers.google.com/protocol-buffers/docs/proto#oneof
+  oneof oneOfField {
+    string name = 38;
+    NestedMessage nested = 39;
+  }
+
+
+  //  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
+  map<string, NestedMessage> map = 40;
+
+  // Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
+  message MapFieldEntry {
+    optional string key = 1;
+    optional NestedMessage value = 2;
+  }
+  repeated MapFieldEntry map_field = 41;
+}
+
+extend TestService2Request {
+  optional int32 extension_scope = 126;
+}
+
+service TestService2 {
+  // Unary
+  rpc test(TestService2Request) returns (TestService2Response) {};
+}
