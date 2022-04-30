@@ -9,7 +9,8 @@ protoc-3.20.1-osx-aarch_64/bin/protoc \
 --grpc-java_out="../src/main/java/lite" \
 --java_out="../src/main/java/lite" \
 ../src/main/proto/test2.proto
-
+#../src/main/proto/test2.proto \
+#../src/main/proto/test3.proto
 
 protoc-3.20.1-osx-aarch_64/bin/protoc \
 --proto_path="../src/main/proto" \
