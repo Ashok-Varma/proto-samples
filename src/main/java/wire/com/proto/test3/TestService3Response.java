@@ -2,7 +2,9 @@
 // Source: test3.TestService3Response in test3.proto
 package com.proto.test3;
 
+import android.os.Parcelable;
 import androidx.annotation.Nullable;
+import com.squareup.wire.AndroidMessage;
 import com.squareup.wire.AnyMessage;
 import com.squareup.wire.Message;
 import com.squareup.wire.ProtoAdapter;
@@ -21,8 +23,10 @@ import java.util.List;
 import java.util.Map;
 import okio.ByteString;
 
-public final class TestService3Response extends Message<TestService3Response, TestService3Response.Builder> {
+public final class TestService3Response extends AndroidMessage<TestService3Response, TestService3Response.Builder> {
   public static final ProtoAdapter<TestService3Response> ADAPTER = ProtoAdapter.newMessageAdapter(TestService3Response.class, "type.googleapis.com/test3.TestService3Response", Syntax.PROTO_3);
+
+  public static final Parcelable.Creator<TestService3Response> CREATOR = AndroidMessage.newCreator(ADAPTER);
 
   private static final long serialVersionUID = 0L;
 
@@ -886,8 +890,10 @@ public final class TestService3Response extends Message<TestService3Response, Te
   /**
    * https://developers.google.com/protocol-buffers/docs/proto#nested
    */
-  public static final class NestedMessage extends Message<NestedMessage, NestedMessage.Builder> {
+  public static final class NestedMessage extends AndroidMessage<NestedMessage, NestedMessage.Builder> {
     public static final ProtoAdapter<NestedMessage> ADAPTER = ProtoAdapter.newMessageAdapter(NestedMessage.class, "type.googleapis.com/test3.TestService3Response.NestedMessage", Syntax.PROTO_3);
+
+    public static final Parcelable.Creator<NestedMessage> CREATOR = AndroidMessage.newCreator(ADAPTER);
 
     private static final long serialVersionUID = 0L;
 
@@ -1001,8 +1007,10 @@ public final class TestService3Response extends Message<TestService3Response, Te
   /**
    * Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
    */
-  public static final class MapFieldEntry extends Message<MapFieldEntry, MapFieldEntry.Builder> {
+  public static final class MapFieldEntry extends AndroidMessage<MapFieldEntry, MapFieldEntry.Builder> {
     public static final ProtoAdapter<MapFieldEntry> ADAPTER = ProtoAdapter.newMessageAdapter(MapFieldEntry.class, "type.googleapis.com/test3.TestService3Response.MapFieldEntry", Syntax.PROTO_3);
+
+    public static final Parcelable.Creator<MapFieldEntry> CREATOR = AndroidMessage.newCreator(ADAPTER);
 
     private static final long serialVersionUID = 0L;
 

@@ -8,6 +8,7 @@ java -jar wire-compiler-4.3.0-jar-with-dependencies.jar \
     --java_out="../src/main/java/wire" \
     --compact \
     --android-annotations \
+    --android \
     test2.proto \
     test3.proto
 

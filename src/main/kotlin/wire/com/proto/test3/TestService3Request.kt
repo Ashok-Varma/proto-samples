@@ -2,10 +2,11 @@
 // Source: test3.TestService3Request in test3.proto
 package com.proto.test3
 
+import android.os.Parcelable
+import com.squareup.wire.AndroidMessage
 import com.squareup.wire.AnyMessage
 import com.squareup.wire.EnumAdapter
 import com.squareup.wire.FieldEncoding
-import com.squareup.wire.Message
 import com.squareup.wire.ProtoAdapter
 import com.squareup.wire.ProtoReader
 import com.squareup.wire.ProtoWriter
@@ -221,7 +222,7 @@ public class TestService3Request(
   map_field: List<MapFieldEntry> = emptyList(),
   details: List<AnyMessage> = emptyList(),
   unknownFields: ByteString = ByteString.EMPTY
-) : Message<TestService3Request, Nothing>(ADAPTER, unknownFields) {
+) : AndroidMessage<TestService3Request, Nothing>(ADAPTER, unknownFields) {
   /**
    *  https://developers.google.com/protocol-buffers/docs/proto#other
    */
@@ -747,6 +748,9 @@ public class TestService3Request(
       )
     }
 
+    @JvmField
+    public val CREATOR: Parcelable.Creator<TestService3Request> = AndroidMessage.newCreator(ADAPTER)
+
     private const val serialVersionUID: Long = 0L
   }
 
@@ -842,7 +846,7 @@ public class TestService3Request(
     public val title: String? = null,
     snippets: List<String> = emptyList(),
     unknownFields: ByteString = ByteString.EMPTY
-  ) : Message<NestedMessage, Nothing>(ADAPTER, unknownFields) {
+  ) : AndroidMessage<NestedMessage, Nothing>(ADAPTER, unknownFields) {
     @field:WireField(
       tag = 3,
       adapter = "com.squareup.wire.ProtoAdapter#STRING",
@@ -951,6 +955,9 @@ public class TestService3Request(
         )
       }
 
+      @JvmField
+      public val CREATOR: Parcelable.Creator<NestedMessage> = AndroidMessage.newCreator(ADAPTER)
+
       private const val serialVersionUID: Long = 0L
     }
   }
@@ -974,7 +981,7 @@ public class TestService3Request(
     )
     public val value_: NestedMessage? = null,
     unknownFields: ByteString = ByteString.EMPTY
-  ) : Message<MapFieldEntry, Nothing>(ADAPTER, unknownFields) {
+  ) : AndroidMessage<MapFieldEntry, Nothing>(ADAPTER, unknownFields) {
     @Deprecated(
       message = "Shouldn't be used in Kotlin",
       level = DeprecationLevel.HIDDEN
@@ -1067,6 +1074,9 @@ public class TestService3Request(
           unknownFields = ByteString.EMPTY
         )
       }
+
+      @JvmField
+      public val CREATOR: Parcelable.Creator<MapFieldEntry> = AndroidMessage.newCreator(ADAPTER)
 
       private const val serialVersionUID: Long = 0L
     }
