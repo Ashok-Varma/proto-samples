@@ -2,6 +2,7 @@
 // Source: test3.TestService3Response in test3.proto
 package com.proto.test3;
 
+import androidx.annotation.Nullable;
 import com.squareup.wire.AnyMessage;
 import com.squareup.wire.Message;
 import com.squareup.wire.ProtoAdapter;
@@ -69,6 +70,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 1,
       adapter = "com.squareup.wire.ProtoAdapter#DOUBLE"
   )
+  @Nullable
   public final Double optionalDouble;
 
   @WireField(
@@ -82,6 +84,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 4,
       adapter = "com.squareup.wire.ProtoAdapter#INT32"
   )
+  @Nullable
   public final Integer optionalInt32;
 
   @WireField(
@@ -95,6 +98,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 6,
       adapter = "com.squareup.wire.ProtoAdapter#INT64"
   )
+  @Nullable
   public final Long optionalInt64;
 
   @WireField(
@@ -108,6 +112,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 8,
       adapter = "com.squareup.wire.ProtoAdapter#UINT32"
   )
+  @Nullable
   public final Integer optionalUint32;
 
   @WireField(
@@ -121,6 +126,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 13,
       adapter = "com.squareup.wire.ProtoAdapter#UINT64"
   )
+  @Nullable
   public final Long optionalUint64;
 
   @WireField(
@@ -134,6 +140,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 16,
       adapter = "com.squareup.wire.ProtoAdapter#SINT32"
   )
+  @Nullable
   public final Integer optionalSint32;
 
   @WireField(
@@ -147,6 +154,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 18,
       adapter = "com.squareup.wire.ProtoAdapter#SINT64"
   )
+  @Nullable
   public final Long optionalSint64;
 
   @WireField(
@@ -160,6 +168,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 20,
       adapter = "com.squareup.wire.ProtoAdapter#FIXED32"
   )
+  @Nullable
   public final Integer optionalFixed32;
 
   @WireField(
@@ -173,6 +182,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 22,
       adapter = "com.squareup.wire.ProtoAdapter#FIXED64"
   )
+  @Nullable
   public final Long optionalFixed64;
 
   @WireField(
@@ -186,6 +196,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 24,
       adapter = "com.squareup.wire.ProtoAdapter#SFIXED32"
   )
+  @Nullable
   public final Integer optionalSfixed32;
 
   @WireField(
@@ -199,6 +210,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 26,
       adapter = "com.squareup.wire.ProtoAdapter#SFIXED64"
   )
+  @Nullable
   public final Long optionalSfixed64;
 
   @WireField(
@@ -212,6 +224,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 28,
       adapter = "com.squareup.wire.ProtoAdapter#BOOL"
   )
+  @Nullable
   public final Boolean optionalBool;
 
   @WireField(
@@ -225,6 +238,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 30,
       adapter = "com.squareup.wire.ProtoAdapter#STRING"
   )
+  @Nullable
   public final String optionalString;
 
   @WireField(
@@ -238,6 +252,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 32,
       adapter = "com.squareup.wire.ProtoAdapter#BYTES"
   )
+  @Nullable
   public final ByteString optionalBytes;
 
   @WireField(
@@ -251,6 +266,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       tag = 36,
       adapter = "com.proto.test3.TestService3Response$Corpus#ADAPTER"
   )
+  @Nullable
   public final Corpus corpus;
 
   /**
@@ -296,6 +312,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       adapter = "com.squareup.wire.ProtoAdapter#STRING",
       oneofName = "oneOfField"
   )
+  @Nullable
   public final String name;
 
   @WireField(
@@ -303,6 +320,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
       adapter = "com.proto.test3.TestService3Response$NestedMessage#ADAPTER",
       oneofName = "oneOfField"
   )
+  @Nullable
   public final NestedMessage nested;
 
   public TestService3Response(Builder builder, ByteString unknownFields) {
@@ -886,6 +904,7 @@ public final class TestService3Response extends Message<TestService3Response, Te
         tag = 2,
         adapter = "com.squareup.wire.ProtoAdapter#STRING"
     )
+    @Nullable
     public final String title;
 
     @WireField(
@@ -895,11 +914,11 @@ public final class TestService3Response extends Message<TestService3Response, Te
     )
     public final List<String> snippets;
 
-    public NestedMessage(String url, String title, List<String> snippets) {
+    public NestedMessage(String url, @Nullable String title, List<String> snippets) {
       this(url, title, snippets, ByteString.EMPTY);
     }
 
-    public NestedMessage(String url, String title, List<String> snippets,
+    public NestedMessage(String url, @Nullable String title, List<String> snippets,
         ByteString unknownFields) {
       super(ADAPTER, unknownFields);
       if (url == null) {

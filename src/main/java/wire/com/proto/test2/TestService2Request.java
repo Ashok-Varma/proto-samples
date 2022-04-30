@@ -2,6 +2,7 @@
 // Source: test2.TestService2Request in test2.proto
 package com.proto.test2;
 
+import androidx.annotation.Nullable;
 import com.squareup.wire.Message;
 import com.squareup.wire.ProtoAdapter;
 import com.squareup.wire.Syntax;
@@ -98,6 +99,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 1,
       adapter = "com.squareup.wire.ProtoAdapter#DOUBLE"
   )
+  @Nullable
   public final Double optionalDouble;
 
   @WireField(
@@ -111,6 +113,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 4,
       adapter = "com.squareup.wire.ProtoAdapter#INT32"
   )
+  @Nullable
   public final Integer optionalInt32;
 
   @WireField(
@@ -124,6 +127,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 6,
       adapter = "com.squareup.wire.ProtoAdapter#INT64"
   )
+  @Nullable
   public final Long optionalInt64;
 
   @WireField(
@@ -137,6 +141,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 8,
       adapter = "com.squareup.wire.ProtoAdapter#UINT32"
   )
+  @Nullable
   public final Integer optionalUint32;
 
   @WireField(
@@ -150,6 +155,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 13,
       adapter = "com.squareup.wire.ProtoAdapter#UINT64"
   )
+  @Nullable
   public final Long optionalUint64;
 
   @WireField(
@@ -163,6 +169,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 16,
       adapter = "com.squareup.wire.ProtoAdapter#SINT32"
   )
+  @Nullable
   public final Integer optionalSint32;
 
   @WireField(
@@ -176,6 +183,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 18,
       adapter = "com.squareup.wire.ProtoAdapter#SINT64"
   )
+  @Nullable
   public final Long optionalSint64;
 
   @WireField(
@@ -189,6 +197,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 20,
       adapter = "com.squareup.wire.ProtoAdapter#FIXED32"
   )
+  @Nullable
   public final Integer optionalFixed32;
 
   @WireField(
@@ -202,6 +211,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 22,
       adapter = "com.squareup.wire.ProtoAdapter#FIXED64"
   )
+  @Nullable
   public final Long optionalFixed64;
 
   @WireField(
@@ -215,6 +225,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 24,
       adapter = "com.squareup.wire.ProtoAdapter#SFIXED32"
   )
+  @Nullable
   public final Integer optionalSfixed32;
 
   @WireField(
@@ -228,6 +239,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 26,
       adapter = "com.squareup.wire.ProtoAdapter#SFIXED64"
   )
+  @Nullable
   public final Long optionalSfixed64;
 
   @WireField(
@@ -241,6 +253,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 28,
       adapter = "com.squareup.wire.ProtoAdapter#BOOL"
   )
+  @Nullable
   public final Boolean optionalBool;
 
   @WireField(
@@ -254,6 +267,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 30,
       adapter = "com.squareup.wire.ProtoAdapter#STRING"
   )
+  @Nullable
   public final String optionalString;
 
   @WireField(
@@ -267,6 +281,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 32,
       adapter = "com.squareup.wire.ProtoAdapter#BYTES"
   )
+  @Nullable
   public final ByteString optionalBytes;
 
   @WireField(
@@ -280,18 +295,21 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 34,
       adapter = "com.squareup.wire.ProtoAdapter#INT32"
   )
+  @Nullable
   public final Integer optionalWithDefaultInt32;
 
   @WireField(
       tag = 35,
       adapter = "com.squareup.wire.ProtoAdapter#STRING"
   )
+  @Nullable
   public final String optionalWithDefaultString;
 
   @WireField(
       tag = 36,
       adapter = "com.proto.test2.TestService2Request$Corpus#ADAPTER"
   )
+  @Nullable
   public final Corpus corpus;
 
   /**
@@ -328,6 +346,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       tag = 126,
       adapter = "com.squareup.wire.ProtoAdapter#INT32"
   )
+  @Nullable
   public final Integer extension_scope;
 
   @WireField(
@@ -335,6 +354,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       adapter = "com.squareup.wire.ProtoAdapter#STRING",
       oneofName = "oneOfField"
   )
+  @Nullable
   public final String name;
 
   @WireField(
@@ -342,6 +362,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
       adapter = "com.proto.test2.TestService2Request$NestedMessage#ADAPTER",
       oneofName = "oneOfField"
   )
+  @Nullable
   public final NestedMessage nested;
 
   public TestService2Request(Builder builder, ByteString unknownFields) {
@@ -943,6 +964,7 @@ public final class TestService2Request extends Message<TestService2Request, Test
         tag = 2,
         adapter = "com.squareup.wire.ProtoAdapter#STRING"
     )
+    @Nullable
     public final String title;
 
     @WireField(
@@ -952,11 +974,11 @@ public final class TestService2Request extends Message<TestService2Request, Test
     )
     public final List<String> snippets;
 
-    public NestedMessage(String url, String title, List<String> snippets) {
+    public NestedMessage(String url, @Nullable String title, List<String> snippets) {
       this(url, title, snippets, ByteString.EMPTY);
     }
 
-    public NestedMessage(String url, String title, List<String> snippets,
+    public NestedMessage(String url, @Nullable String title, List<String> snippets,
         ByteString unknownFields) {
       super(ADAPTER, unknownFields);
       this.url = url;
@@ -1049,19 +1071,22 @@ public final class TestService2Request extends Message<TestService2Request, Test
         tag = 1,
         adapter = "com.squareup.wire.ProtoAdapter#STRING"
     )
+    @Nullable
     public final String key;
 
     @WireField(
         tag = 2,
         adapter = "com.proto.test2.TestService2Request$NestedMessage#ADAPTER"
     )
+    @Nullable
     public final NestedMessage value;
 
-    public MapFieldEntry(String key, NestedMessage value) {
+    public MapFieldEntry(@Nullable String key, @Nullable NestedMessage value) {
       this(key, value, ByteString.EMPTY);
     }
 
-    public MapFieldEntry(String key, NestedMessage value, ByteString unknownFields) {
+    public MapFieldEntry(@Nullable String key, @Nullable NestedMessage value,
+        ByteString unknownFields) {
       super(ADAPTER, unknownFields);
       this.key = key;
       this.value = value;
