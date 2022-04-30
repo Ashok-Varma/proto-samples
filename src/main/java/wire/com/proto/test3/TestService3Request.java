@@ -3,18 +3,12 @@
 package com.proto.test3;
 
 import com.squareup.wire.AnyMessage;
-import com.squareup.wire.EnumAdapter;
-import com.squareup.wire.FieldEncoding;
 import com.squareup.wire.Message;
 import com.squareup.wire.ProtoAdapter;
-import com.squareup.wire.ProtoReader;
-import com.squareup.wire.ProtoWriter;
-import com.squareup.wire.ReverseProtoWriter;
 import com.squareup.wire.Syntax;
 import com.squareup.wire.WireEnum;
 import com.squareup.wire.WireField;
 import com.squareup.wire.internal.Internal;
-import java.io.IOException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,14 +16,12 @@ import java.lang.Long;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.StringBuilder;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import okio.ByteString;
 
 public final class TestService3Request extends Message<TestService3Request, TestService3Request.Builder> {
-  public static final ProtoAdapter<TestService3Request> ADAPTER = new ProtoAdapter_TestService3Request();
+  public static final ProtoAdapter<TestService3Request> ADAPTER = ProtoAdapter.newMessageAdapter(TestService3Request.class, "type.googleapis.com/test3.TestService3Request", Syntax.PROTO_3);
 
   private static final long serialVersionUID = 0L;
 
@@ -491,47 +483,6 @@ public final class TestService3Request extends Message<TestService3Request, Test
     return result;
   }
 
-  @Override
-  public String toString() {
-    StringBuilder builder = new StringBuilder();
-    if (optionalDouble != null) builder.append(", optionalDouble=").append(optionalDouble);
-    builder.append(", requiredDouble=").append(requiredDouble);
-    if (optionalInt32 != null) builder.append(", optionalInt32=").append(optionalInt32);
-    builder.append(", requiredInt32=").append(requiredInt32);
-    if (optionalInt64 != null) builder.append(", optionalInt64=").append(optionalInt64);
-    builder.append(", requiredInt64=").append(requiredInt64);
-    if (optionalUint32 != null) builder.append(", optionalUint32=").append(optionalUint32);
-    builder.append(", requiredUint32=").append(requiredUint32);
-    if (optionalUint64 != null) builder.append(", optionalUint64=").append(optionalUint64);
-    builder.append(", requiredUint64=").append(requiredUint64);
-    if (optionalSint32 != null) builder.append(", optionalSint32=").append(optionalSint32);
-    builder.append(", requiredSint32=").append(requiredSint32);
-    if (optionalSint64 != null) builder.append(", optionalSint64=").append(optionalSint64);
-    builder.append(", requiredSint64=").append(requiredSint64);
-    if (optionalFixed32 != null) builder.append(", optionalFixed32=").append(optionalFixed32);
-    builder.append(", requiredFixed32=").append(requiredFixed32);
-    if (optionalFixed64 != null) builder.append(", optionalFixed64=").append(optionalFixed64);
-    builder.append(", requiredFixed64=").append(requiredFixed64);
-    if (optionalSfixed32 != null) builder.append(", optionalSfixed32=").append(optionalSfixed32);
-    builder.append(", requiredSfixed32=").append(requiredSfixed32);
-    if (optionalSfixed64 != null) builder.append(", optionalSfixed64=").append(optionalSfixed64);
-    builder.append(", requiredSfixed64=").append(requiredSfixed64);
-    if (optionalBool != null) builder.append(", optionalBool=").append(optionalBool);
-    builder.append(", requiredBool=").append(requiredBool);
-    if (optionalString != null) builder.append(", optionalString=").append(Internal.sanitize(optionalString));
-    if (requiredString != null) builder.append(", requiredString=").append(Internal.sanitize(requiredString));
-    if (optionalBytes != null) builder.append(", optionalBytes=").append(optionalBytes);
-    if (requiredBytes != null) builder.append(", requiredBytes=").append(requiredBytes);
-    if (corpus != null) builder.append(", corpus=").append(corpus);
-    if (!samples.isEmpty()) builder.append(", samples=").append(samples);
-    if (!map.isEmpty()) builder.append(", map=").append(map);
-    if (!map_field.isEmpty()) builder.append(", map_field=").append(map_field);
-    if (!details.isEmpty()) builder.append(", details=").append(details);
-    if (name != null) builder.append(", name=").append(Internal.sanitize(name));
-    if (nested != null) builder.append(", nested=").append(nested);
-    return builder.replace(0, 2, "TestService3Request{").append('}').toString();
-  }
-
   public static final class Builder extends Message.Builder<TestService3Request, Builder> {
     public Double optionalDouble;
 
@@ -849,7 +800,7 @@ public final class TestService3Request extends Message<TestService3Request, Test
 
     VIDEO(6);
 
-    public static final ProtoAdapter<Corpus> ADAPTER = new ProtoAdapter_Corpus();
+    public static final ProtoAdapter<Corpus> ADAPTER = ProtoAdapter.newEnumAdapter(Corpus.class);
 
     private final int value;
 
@@ -877,17 +828,6 @@ public final class TestService3Request extends Message<TestService3Request, Test
     public int getValue() {
       return value;
     }
-
-    private static final class ProtoAdapter_Corpus extends EnumAdapter<Corpus> {
-      ProtoAdapter_Corpus() {
-        super(Corpus.class, Syntax.PROTO_3, Corpus.UNIVERSAL);
-      }
-
-      @Override
-      protected Corpus fromValue(int value) {
-        return Corpus.fromValue(value);
-      }
-    }
   }
 
   /**
@@ -900,7 +840,7 @@ public final class TestService3Request extends Message<TestService3Request, Test
 
     RUNNING(1);
 
-    public static final ProtoAdapter<EnumAllowingAlias> ADAPTER = new ProtoAdapter_EnumAllowingAlias();
+    public static final ProtoAdapter<EnumAllowingAlias> ADAPTER = ProtoAdapter.newEnumAdapter(EnumAllowingAlias.class);
 
     private final int value;
 
@@ -923,24 +863,13 @@ public final class TestService3Request extends Message<TestService3Request, Test
     public int getValue() {
       return value;
     }
-
-    private static final class ProtoAdapter_EnumAllowingAlias extends EnumAdapter<EnumAllowingAlias> {
-      ProtoAdapter_EnumAllowingAlias() {
-        super(EnumAllowingAlias.class, Syntax.PROTO_3, EnumAllowingAlias.UNKNOWN);
-      }
-
-      @Override
-      protected EnumAllowingAlias fromValue(int value) {
-        return EnumAllowingAlias.fromValue(value);
-      }
-    }
   }
 
   /**
    * https://developers.google.com/protocol-buffers/docs/proto#nested
    */
   public static final class NestedMessage extends Message<NestedMessage, NestedMessage.Builder> {
-    public static final ProtoAdapter<NestedMessage> ADAPTER = new ProtoAdapter_NestedMessage();
+    public static final ProtoAdapter<NestedMessage> ADAPTER = ProtoAdapter.newMessageAdapter(NestedMessage.class, "type.googleapis.com/test3.TestService3Request.NestedMessage", Syntax.PROTO_3);
 
     private static final long serialVersionUID = 0L;
 
@@ -1015,15 +944,6 @@ public final class TestService3Request extends Message<TestService3Request, Test
       return result;
     }
 
-    @Override
-    public String toString() {
-      StringBuilder builder = new StringBuilder();
-      if (url != null) builder.append(", url=").append(Internal.sanitize(url));
-      if (title != null) builder.append(", title=").append(Internal.sanitize(title));
-      if (!snippets.isEmpty()) builder.append(", snippets=").append(Internal.sanitize(snippets));
-      return builder.replace(0, 2, "NestedMessage{").append('}').toString();
-    }
-
     public static final class Builder extends Message.Builder<NestedMessage, Builder> {
       public String url;
 
@@ -1057,72 +977,13 @@ public final class TestService3Request extends Message<TestService3Request, Test
         return new NestedMessage(url, title, snippets, super.buildUnknownFields());
       }
     }
-
-    private static final class ProtoAdapter_NestedMessage extends ProtoAdapter<NestedMessage> {
-      public ProtoAdapter_NestedMessage() {
-        super(FieldEncoding.LENGTH_DELIMITED, NestedMessage.class, "type.googleapis.com/test3.TestService3Request.NestedMessage", Syntax.PROTO_3, null, "test3.proto");
-      }
-
-      @Override
-      public int encodedSize(NestedMessage value) {
-        int result = 0;
-        if (!Objects.equals(value.url, "")) {
-          result += ProtoAdapter.STRING.encodedSizeWithTag(1, value.url);
-        }
-        result += ProtoAdapter.STRING.encodedSizeWithTag(2, value.title);
-        result += ProtoAdapter.STRING.asRepeated().encodedSizeWithTag(3, value.snippets);
-        result += value.unknownFields().size();
-        return result;
-      }
-
-      @Override
-      public void encode(ProtoWriter writer, NestedMessage value) throws IOException {
-        if (!Objects.equals(value.url, "")) ProtoAdapter.STRING.encodeWithTag(writer, 1, value.url);
-        ProtoAdapter.STRING.encodeWithTag(writer, 2, value.title);
-        ProtoAdapter.STRING.asRepeated().encodeWithTag(writer, 3, value.snippets);
-        writer.writeBytes(value.unknownFields());
-      }
-
-      @Override
-      public void encode(ReverseProtoWriter writer, NestedMessage value) throws IOException {
-        writer.writeBytes(value.unknownFields());
-        ProtoAdapter.STRING.asRepeated().encodeWithTag(writer, 3, value.snippets);
-        ProtoAdapter.STRING.encodeWithTag(writer, 2, value.title);
-        if (!Objects.equals(value.url, "")) ProtoAdapter.STRING.encodeWithTag(writer, 1, value.url);
-      }
-
-      @Override
-      public NestedMessage decode(ProtoReader reader) throws IOException {
-        Builder builder = new Builder();
-        long token = reader.beginMessage();
-        for (int tag; (tag = reader.nextTag()) != -1;) {
-          switch (tag) {
-            case 1: builder.url(ProtoAdapter.STRING.decode(reader)); break;
-            case 2: builder.title(ProtoAdapter.STRING.decode(reader)); break;
-            case 3: builder.snippets.add(ProtoAdapter.STRING.decode(reader)); break;
-            default: {
-              reader.readUnknownField(tag);
-            }
-          }
-        }
-        builder.addUnknownFields(reader.endMessageAndGetUnknownFields(token));
-        return builder.build();
-      }
-
-      @Override
-      public NestedMessage redact(NestedMessage value) {
-        Builder builder = value.newBuilder();
-        builder.clearUnknownFields();
-        return builder.build();
-      }
-    }
   }
 
   /**
    * Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
    */
   public static final class MapFieldEntry extends Message<MapFieldEntry, MapFieldEntry.Builder> {
-    public static final ProtoAdapter<MapFieldEntry> ADAPTER = new ProtoAdapter_MapFieldEntry();
+    public static final ProtoAdapter<MapFieldEntry> ADAPTER = ProtoAdapter.newMessageAdapter(MapFieldEntry.class, "type.googleapis.com/test3.TestService3Request.MapFieldEntry", Syntax.PROTO_3);
 
     private static final long serialVersionUID = 0L;
 
@@ -1184,14 +1045,6 @@ public final class TestService3Request extends Message<TestService3Request, Test
       return result;
     }
 
-    @Override
-    public String toString() {
-      StringBuilder builder = new StringBuilder();
-      if (key != null) builder.append(", key=").append(Internal.sanitize(key));
-      if (value != null) builder.append(", value=").append(value);
-      return builder.replace(0, 2, "MapFieldEntry{").append('}').toString();
-    }
-
     public static final class Builder extends Message.Builder<MapFieldEntry, Builder> {
       public String key;
 
@@ -1215,299 +1068,6 @@ public final class TestService3Request extends Message<TestService3Request, Test
       public MapFieldEntry build() {
         return new MapFieldEntry(key, value, super.buildUnknownFields());
       }
-    }
-
-    private static final class ProtoAdapter_MapFieldEntry extends ProtoAdapter<MapFieldEntry> {
-      public ProtoAdapter_MapFieldEntry() {
-        super(FieldEncoding.LENGTH_DELIMITED, MapFieldEntry.class, "type.googleapis.com/test3.TestService3Request.MapFieldEntry", Syntax.PROTO_3, null, "test3.proto");
-      }
-
-      @Override
-      public int encodedSize(MapFieldEntry value) {
-        int result = 0;
-        if (!Objects.equals(value.key, "")) {
-          result += ProtoAdapter.STRING.encodedSizeWithTag(1, value.key);
-        }
-        if (!Objects.equals(value.value, null)) {
-          result += NestedMessage.ADAPTER.encodedSizeWithTag(2, value.value);
-        }
-        result += value.unknownFields().size();
-        return result;
-      }
-
-      @Override
-      public void encode(ProtoWriter writer, MapFieldEntry value) throws IOException {
-        if (!Objects.equals(value.key, "")) ProtoAdapter.STRING.encodeWithTag(writer, 1, value.key);
-        if (!Objects.equals(value.value, null)) NestedMessage.ADAPTER.encodeWithTag(writer, 2, value.value);
-        writer.writeBytes(value.unknownFields());
-      }
-
-      @Override
-      public void encode(ReverseProtoWriter writer, MapFieldEntry value) throws IOException {
-        writer.writeBytes(value.unknownFields());
-        if (!Objects.equals(value.value, null)) NestedMessage.ADAPTER.encodeWithTag(writer, 2, value.value);
-        if (!Objects.equals(value.key, "")) ProtoAdapter.STRING.encodeWithTag(writer, 1, value.key);
-      }
-
-      @Override
-      public MapFieldEntry decode(ProtoReader reader) throws IOException {
-        Builder builder = new Builder();
-        long token = reader.beginMessage();
-        for (int tag; (tag = reader.nextTag()) != -1;) {
-          switch (tag) {
-            case 1: builder.key(ProtoAdapter.STRING.decode(reader)); break;
-            case 2: builder.value(NestedMessage.ADAPTER.decode(reader)); break;
-            default: {
-              reader.readUnknownField(tag);
-            }
-          }
-        }
-        builder.addUnknownFields(reader.endMessageAndGetUnknownFields(token));
-        return builder.build();
-      }
-
-      @Override
-      public MapFieldEntry redact(MapFieldEntry value) {
-        Builder builder = value.newBuilder();
-        if (builder.value != null) builder.value = NestedMessage.ADAPTER.redact(builder.value);
-        builder.clearUnknownFields();
-        return builder.build();
-      }
-    }
-  }
-
-  private static final class ProtoAdapter_TestService3Request extends ProtoAdapter<TestService3Request> {
-    private ProtoAdapter<Map<String, NestedMessage>> map;
-
-    public ProtoAdapter_TestService3Request() {
-      super(FieldEncoding.LENGTH_DELIMITED, TestService3Request.class, "type.googleapis.com/test3.TestService3Request", Syntax.PROTO_3, null, "test3.proto");
-    }
-
-    @Override
-    public int encodedSize(TestService3Request value) {
-      int result = 0;
-      result += ProtoAdapter.DOUBLE.encodedSizeWithTag(1, value.optionalDouble);
-      if (!Objects.equals(value.requiredDouble, 0.0)) {
-        result += ProtoAdapter.DOUBLE.encodedSizeWithTag(3, value.requiredDouble);
-      }
-      result += ProtoAdapter.INT32.encodedSizeWithTag(4, value.optionalInt32);
-      if (!Objects.equals(value.requiredInt32, 0)) {
-        result += ProtoAdapter.INT32.encodedSizeWithTag(5, value.requiredInt32);
-      }
-      result += ProtoAdapter.INT64.encodedSizeWithTag(6, value.optionalInt64);
-      if (!Objects.equals(value.requiredInt64, 0L)) {
-        result += ProtoAdapter.INT64.encodedSizeWithTag(7, value.requiredInt64);
-      }
-      result += ProtoAdapter.UINT32.encodedSizeWithTag(8, value.optionalUint32);
-      if (!Objects.equals(value.requiredUint32, 0)) {
-        result += ProtoAdapter.UINT32.encodedSizeWithTag(12, value.requiredUint32);
-      }
-      result += ProtoAdapter.UINT64.encodedSizeWithTag(13, value.optionalUint64);
-      if (!Objects.equals(value.requiredUint64, 0L)) {
-        result += ProtoAdapter.UINT64.encodedSizeWithTag(14, value.requiredUint64);
-      }
-      result += ProtoAdapter.SINT32.encodedSizeWithTag(16, value.optionalSint32);
-      if (!Objects.equals(value.requiredSint32, 0)) {
-        result += ProtoAdapter.SINT32.encodedSizeWithTag(17, value.requiredSint32);
-      }
-      result += ProtoAdapter.SINT64.encodedSizeWithTag(18, value.optionalSint64);
-      if (!Objects.equals(value.requiredSint64, 0L)) {
-        result += ProtoAdapter.SINT64.encodedSizeWithTag(19, value.requiredSint64);
-      }
-      result += ProtoAdapter.FIXED32.encodedSizeWithTag(20, value.optionalFixed32);
-      if (!Objects.equals(value.requiredFixed32, 0)) {
-        result += ProtoAdapter.FIXED32.encodedSizeWithTag(21, value.requiredFixed32);
-      }
-      result += ProtoAdapter.FIXED64.encodedSizeWithTag(22, value.optionalFixed64);
-      if (!Objects.equals(value.requiredFixed64, 0L)) {
-        result += ProtoAdapter.FIXED64.encodedSizeWithTag(23, value.requiredFixed64);
-      }
-      result += ProtoAdapter.SFIXED32.encodedSizeWithTag(24, value.optionalSfixed32);
-      if (!Objects.equals(value.requiredSfixed32, 0)) {
-        result += ProtoAdapter.SFIXED32.encodedSizeWithTag(25, value.requiredSfixed32);
-      }
-      result += ProtoAdapter.SFIXED64.encodedSizeWithTag(26, value.optionalSfixed64);
-      if (!Objects.equals(value.requiredSfixed64, 0L)) {
-        result += ProtoAdapter.SFIXED64.encodedSizeWithTag(27, value.requiredSfixed64);
-      }
-      result += ProtoAdapter.BOOL.encodedSizeWithTag(28, value.optionalBool);
-      if (!Objects.equals(value.requiredBool, false)) {
-        result += ProtoAdapter.BOOL.encodedSizeWithTag(29, value.requiredBool);
-      }
-      result += ProtoAdapter.STRING.encodedSizeWithTag(30, value.optionalString);
-      if (!Objects.equals(value.requiredString, "")) {
-        result += ProtoAdapter.STRING.encodedSizeWithTag(31, value.requiredString);
-      }
-      result += ProtoAdapter.BYTES.encodedSizeWithTag(32, value.optionalBytes);
-      if (!Objects.equals(value.requiredBytes, ByteString.EMPTY)) {
-        result += ProtoAdapter.BYTES.encodedSizeWithTag(33, value.requiredBytes);
-      }
-      result += Corpus.ADAPTER.encodedSizeWithTag(36, value.corpus);
-      result += ProtoAdapter.INT32.asPacked().encodedSizeWithTag(37, value.samples);
-      result += mapAdapter().encodedSizeWithTag(40, value.map);
-      result += MapFieldEntry.ADAPTER.asRepeated().encodedSizeWithTag(41, value.map_field);
-      result += AnyMessage.ADAPTER.asRepeated().encodedSizeWithTag(42, value.details);
-      result += ProtoAdapter.STRING.encodedSizeWithTag(38, value.name);
-      result += NestedMessage.ADAPTER.encodedSizeWithTag(39, value.nested);
-      result += value.unknownFields().size();
-      return result;
-    }
-
-    @Override
-    public void encode(ProtoWriter writer, TestService3Request value) throws IOException {
-      ProtoAdapter.DOUBLE.encodeWithTag(writer, 1, value.optionalDouble);
-      if (!Objects.equals(value.requiredDouble, 0.0)) ProtoAdapter.DOUBLE.encodeWithTag(writer, 3, value.requiredDouble);
-      ProtoAdapter.INT32.encodeWithTag(writer, 4, value.optionalInt32);
-      if (!Objects.equals(value.requiredInt32, 0)) ProtoAdapter.INT32.encodeWithTag(writer, 5, value.requiredInt32);
-      ProtoAdapter.INT64.encodeWithTag(writer, 6, value.optionalInt64);
-      if (!Objects.equals(value.requiredInt64, 0L)) ProtoAdapter.INT64.encodeWithTag(writer, 7, value.requiredInt64);
-      ProtoAdapter.UINT32.encodeWithTag(writer, 8, value.optionalUint32);
-      if (!Objects.equals(value.requiredUint32, 0)) ProtoAdapter.UINT32.encodeWithTag(writer, 12, value.requiredUint32);
-      ProtoAdapter.UINT64.encodeWithTag(writer, 13, value.optionalUint64);
-      if (!Objects.equals(value.requiredUint64, 0L)) ProtoAdapter.UINT64.encodeWithTag(writer, 14, value.requiredUint64);
-      ProtoAdapter.SINT32.encodeWithTag(writer, 16, value.optionalSint32);
-      if (!Objects.equals(value.requiredSint32, 0)) ProtoAdapter.SINT32.encodeWithTag(writer, 17, value.requiredSint32);
-      ProtoAdapter.SINT64.encodeWithTag(writer, 18, value.optionalSint64);
-      if (!Objects.equals(value.requiredSint64, 0L)) ProtoAdapter.SINT64.encodeWithTag(writer, 19, value.requiredSint64);
-      ProtoAdapter.FIXED32.encodeWithTag(writer, 20, value.optionalFixed32);
-      if (!Objects.equals(value.requiredFixed32, 0)) ProtoAdapter.FIXED32.encodeWithTag(writer, 21, value.requiredFixed32);
-      ProtoAdapter.FIXED64.encodeWithTag(writer, 22, value.optionalFixed64);
-      if (!Objects.equals(value.requiredFixed64, 0L)) ProtoAdapter.FIXED64.encodeWithTag(writer, 23, value.requiredFixed64);
-      ProtoAdapter.SFIXED32.encodeWithTag(writer, 24, value.optionalSfixed32);
-      if (!Objects.equals(value.requiredSfixed32, 0)) ProtoAdapter.SFIXED32.encodeWithTag(writer, 25, value.requiredSfixed32);
-      ProtoAdapter.SFIXED64.encodeWithTag(writer, 26, value.optionalSfixed64);
-      if (!Objects.equals(value.requiredSfixed64, 0L)) ProtoAdapter.SFIXED64.encodeWithTag(writer, 27, value.requiredSfixed64);
-      ProtoAdapter.BOOL.encodeWithTag(writer, 28, value.optionalBool);
-      if (!Objects.equals(value.requiredBool, false)) ProtoAdapter.BOOL.encodeWithTag(writer, 29, value.requiredBool);
-      ProtoAdapter.STRING.encodeWithTag(writer, 30, value.optionalString);
-      if (!Objects.equals(value.requiredString, "")) ProtoAdapter.STRING.encodeWithTag(writer, 31, value.requiredString);
-      ProtoAdapter.BYTES.encodeWithTag(writer, 32, value.optionalBytes);
-      if (!Objects.equals(value.requiredBytes, ByteString.EMPTY)) ProtoAdapter.BYTES.encodeWithTag(writer, 33, value.requiredBytes);
-      Corpus.ADAPTER.encodeWithTag(writer, 36, value.corpus);
-      ProtoAdapter.INT32.asPacked().encodeWithTag(writer, 37, value.samples);
-      mapAdapter().encodeWithTag(writer, 40, value.map);
-      MapFieldEntry.ADAPTER.asRepeated().encodeWithTag(writer, 41, value.map_field);
-      AnyMessage.ADAPTER.asRepeated().encodeWithTag(writer, 42, value.details);
-      ProtoAdapter.STRING.encodeWithTag(writer, 38, value.name);
-      NestedMessage.ADAPTER.encodeWithTag(writer, 39, value.nested);
-      writer.writeBytes(value.unknownFields());
-    }
-
-    @Override
-    public void encode(ReverseProtoWriter writer, TestService3Request value) throws IOException {
-      writer.writeBytes(value.unknownFields());
-      NestedMessage.ADAPTER.encodeWithTag(writer, 39, value.nested);
-      ProtoAdapter.STRING.encodeWithTag(writer, 38, value.name);
-      AnyMessage.ADAPTER.asRepeated().encodeWithTag(writer, 42, value.details);
-      MapFieldEntry.ADAPTER.asRepeated().encodeWithTag(writer, 41, value.map_field);
-      mapAdapter().encodeWithTag(writer, 40, value.map);
-      ProtoAdapter.INT32.asPacked().encodeWithTag(writer, 37, value.samples);
-      Corpus.ADAPTER.encodeWithTag(writer, 36, value.corpus);
-      if (!Objects.equals(value.requiredBytes, ByteString.EMPTY)) ProtoAdapter.BYTES.encodeWithTag(writer, 33, value.requiredBytes);
-      ProtoAdapter.BYTES.encodeWithTag(writer, 32, value.optionalBytes);
-      if (!Objects.equals(value.requiredString, "")) ProtoAdapter.STRING.encodeWithTag(writer, 31, value.requiredString);
-      ProtoAdapter.STRING.encodeWithTag(writer, 30, value.optionalString);
-      if (!Objects.equals(value.requiredBool, false)) ProtoAdapter.BOOL.encodeWithTag(writer, 29, value.requiredBool);
-      ProtoAdapter.BOOL.encodeWithTag(writer, 28, value.optionalBool);
-      if (!Objects.equals(value.requiredSfixed64, 0L)) ProtoAdapter.SFIXED64.encodeWithTag(writer, 27, value.requiredSfixed64);
-      ProtoAdapter.SFIXED64.encodeWithTag(writer, 26, value.optionalSfixed64);
-      if (!Objects.equals(value.requiredSfixed32, 0)) ProtoAdapter.SFIXED32.encodeWithTag(writer, 25, value.requiredSfixed32);
-      ProtoAdapter.SFIXED32.encodeWithTag(writer, 24, value.optionalSfixed32);
-      if (!Objects.equals(value.requiredFixed64, 0L)) ProtoAdapter.FIXED64.encodeWithTag(writer, 23, value.requiredFixed64);
-      ProtoAdapter.FIXED64.encodeWithTag(writer, 22, value.optionalFixed64);
-      if (!Objects.equals(value.requiredFixed32, 0)) ProtoAdapter.FIXED32.encodeWithTag(writer, 21, value.requiredFixed32);
-      ProtoAdapter.FIXED32.encodeWithTag(writer, 20, value.optionalFixed32);
-      if (!Objects.equals(value.requiredSint64, 0L)) ProtoAdapter.SINT64.encodeWithTag(writer, 19, value.requiredSint64);
-      ProtoAdapter.SINT64.encodeWithTag(writer, 18, value.optionalSint64);
-      if (!Objects.equals(value.requiredSint32, 0)) ProtoAdapter.SINT32.encodeWithTag(writer, 17, value.requiredSint32);
-      ProtoAdapter.SINT32.encodeWithTag(writer, 16, value.optionalSint32);
-      if (!Objects.equals(value.requiredUint64, 0L)) ProtoAdapter.UINT64.encodeWithTag(writer, 14, value.requiredUint64);
-      ProtoAdapter.UINT64.encodeWithTag(writer, 13, value.optionalUint64);
-      if (!Objects.equals(value.requiredUint32, 0)) ProtoAdapter.UINT32.encodeWithTag(writer, 12, value.requiredUint32);
-      ProtoAdapter.UINT32.encodeWithTag(writer, 8, value.optionalUint32);
-      if (!Objects.equals(value.requiredInt64, 0L)) ProtoAdapter.INT64.encodeWithTag(writer, 7, value.requiredInt64);
-      ProtoAdapter.INT64.encodeWithTag(writer, 6, value.optionalInt64);
-      if (!Objects.equals(value.requiredInt32, 0)) ProtoAdapter.INT32.encodeWithTag(writer, 5, value.requiredInt32);
-      ProtoAdapter.INT32.encodeWithTag(writer, 4, value.optionalInt32);
-      if (!Objects.equals(value.requiredDouble, 0.0)) ProtoAdapter.DOUBLE.encodeWithTag(writer, 3, value.requiredDouble);
-      ProtoAdapter.DOUBLE.encodeWithTag(writer, 1, value.optionalDouble);
-    }
-
-    @Override
-    public TestService3Request decode(ProtoReader reader) throws IOException {
-      Builder builder = new Builder();
-      long token = reader.beginMessage();
-      for (int tag; (tag = reader.nextTag()) != -1;) {
-        switch (tag) {
-          case 1: builder.optionalDouble(ProtoAdapter.DOUBLE.decode(reader)); break;
-          case 3: builder.requiredDouble(ProtoAdapter.DOUBLE.decode(reader)); break;
-          case 4: builder.optionalInt32(ProtoAdapter.INT32.decode(reader)); break;
-          case 5: builder.requiredInt32(ProtoAdapter.INT32.decode(reader)); break;
-          case 6: builder.optionalInt64(ProtoAdapter.INT64.decode(reader)); break;
-          case 7: builder.requiredInt64(ProtoAdapter.INT64.decode(reader)); break;
-          case 8: builder.optionalUint32(ProtoAdapter.UINT32.decode(reader)); break;
-          case 12: builder.requiredUint32(ProtoAdapter.UINT32.decode(reader)); break;
-          case 13: builder.optionalUint64(ProtoAdapter.UINT64.decode(reader)); break;
-          case 14: builder.requiredUint64(ProtoAdapter.UINT64.decode(reader)); break;
-          case 16: builder.optionalSint32(ProtoAdapter.SINT32.decode(reader)); break;
-          case 17: builder.requiredSint32(ProtoAdapter.SINT32.decode(reader)); break;
-          case 18: builder.optionalSint64(ProtoAdapter.SINT64.decode(reader)); break;
-          case 19: builder.requiredSint64(ProtoAdapter.SINT64.decode(reader)); break;
-          case 20: builder.optionalFixed32(ProtoAdapter.FIXED32.decode(reader)); break;
-          case 21: builder.requiredFixed32(ProtoAdapter.FIXED32.decode(reader)); break;
-          case 22: builder.optionalFixed64(ProtoAdapter.FIXED64.decode(reader)); break;
-          case 23: builder.requiredFixed64(ProtoAdapter.FIXED64.decode(reader)); break;
-          case 24: builder.optionalSfixed32(ProtoAdapter.SFIXED32.decode(reader)); break;
-          case 25: builder.requiredSfixed32(ProtoAdapter.SFIXED32.decode(reader)); break;
-          case 26: builder.optionalSfixed64(ProtoAdapter.SFIXED64.decode(reader)); break;
-          case 27: builder.requiredSfixed64(ProtoAdapter.SFIXED64.decode(reader)); break;
-          case 28: builder.optionalBool(ProtoAdapter.BOOL.decode(reader)); break;
-          case 29: builder.requiredBool(ProtoAdapter.BOOL.decode(reader)); break;
-          case 30: builder.optionalString(ProtoAdapter.STRING.decode(reader)); break;
-          case 31: builder.requiredString(ProtoAdapter.STRING.decode(reader)); break;
-          case 32: builder.optionalBytes(ProtoAdapter.BYTES.decode(reader)); break;
-          case 33: builder.requiredBytes(ProtoAdapter.BYTES.decode(reader)); break;
-          case 36: {
-            try {
-              builder.corpus(Corpus.ADAPTER.decode(reader));
-            } catch (ProtoAdapter.EnumConstantNotFoundException e) {
-              builder.addUnknownField(tag, FieldEncoding.VARINT, (long) e.value);
-            }
-            break;
-          }
-          case 37: builder.samples.add(ProtoAdapter.INT32.decode(reader)); break;
-          case 38: builder.name(ProtoAdapter.STRING.decode(reader)); break;
-          case 39: builder.nested(NestedMessage.ADAPTER.decode(reader)); break;
-          case 40: builder.map.putAll(mapAdapter().decode(reader)); break;
-          case 41: builder.map_field.add(MapFieldEntry.ADAPTER.decode(reader)); break;
-          case 42: builder.details.add(AnyMessage.ADAPTER.decode(reader)); break;
-          default: {
-            reader.readUnknownField(tag);
-          }
-        }
-      }
-      builder.addUnknownFields(reader.endMessageAndGetUnknownFields(token));
-      return builder.build();
-    }
-
-    @Override
-    public TestService3Request redact(TestService3Request value) {
-      Builder builder = value.newBuilder();
-      Internal.redactElements(builder.map, NestedMessage.ADAPTER);
-      Internal.redactElements(builder.map_field, MapFieldEntry.ADAPTER);
-      Internal.redactElements(builder.details, AnyMessage.ADAPTER);
-      if (builder.nested != null) builder.nested = NestedMessage.ADAPTER.redact(builder.nested);
-      builder.clearUnknownFields();
-      return builder.build();
-    }
-
-    private ProtoAdapter<Map<String, NestedMessage>> mapAdapter() {
-      ProtoAdapter<Map<String, NestedMessage>> result = map;
-      if (result == null) {
-        result = ProtoAdapter.newMapAdapter(ProtoAdapter.STRING, NestedMessage.ADAPTER);
-        map = result;
-      }
-      return result;
     }
   }
 }
