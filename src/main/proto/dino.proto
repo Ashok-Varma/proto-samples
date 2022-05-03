@@ -3,7 +3,6 @@ package test3;
 
 option java_package = "com.proto.dino";
 option java_multiple_files = true;
-option optimize_for = CODE_SIZE;
 
 message Dinosaur {
   // Common name of this dinosaur, like "Stegosaurus".
