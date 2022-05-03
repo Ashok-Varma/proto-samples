@@ -5,7 +5,7 @@ package com.proto.test3;
 
 public interface TestService3ResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:test3.TestService3Response)
-    com.google.protobuf.MessageOrBuilder {
+    com.google.protobuf.MessageLiteOrBuilder {
 
   /**
    * <pre>
@@ -351,10 +351,6 @@ public interface TestService3ResponseOrBuilder extends
    * @return The nested.
    */
   com.proto.test3.TestService3Response.NestedMessage getNested();
-  /**
-   * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-   */
-  com.proto.test3.TestService3Response.NestedMessageOrBuilder getNestedOrBuilder();
 
   /**
    * <pre>
@@ -425,16 +421,6 @@ com.proto.test3.TestService3Response.NestedMessage defaultValue);
    * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
    */
   int getMapFieldCount();
-  /**
-   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-   */
-  java.util.List<? extends com.proto.test3.TestService3Response.MapFieldEntryOrBuilder> 
-      getMapFieldOrBuilderList();
-  /**
-   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-   */
-  com.proto.test3.TestService3Response.MapFieldEntryOrBuilder getMapFieldOrBuilder(
-      int index);
 
   /**
    * <pre>
@@ -461,24 +447,6 @@ com.proto.test3.TestService3Response.NestedMessage defaultValue);
    * <code>repeated .google.protobuf.Any details = 42;</code>
    */
   int getDetailsCount();
-  /**
-   * <pre>
-   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-   * </pre>
-   *
-   * <code>repeated .google.protobuf.Any details = 42;</code>
-   */
-  java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-      getDetailsOrBuilderList();
-  /**
-   * <pre>
-   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-   * </pre>
-   *
-   * <code>repeated .google.protobuf.Any details = 42;</code>
-   */
-  com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
-      int index);
 
   public com.proto.test3.TestService3Response.OneOfFieldCase getOneOfFieldCase();
 }

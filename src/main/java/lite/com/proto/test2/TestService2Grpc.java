@@ -34,11 +34,10 @@ public final class TestService2Grpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "test"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.proto.test2.TestService2Request.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.proto.test2.TestService2Response.getDefaultInstance()))
-              .setSchemaDescriptor(new TestService2MethodDescriptorSupplier("test"))
               .build();
         }
       }
@@ -233,41 +232,6 @@ public final class TestService2Grpc {
     }
   }
 
-  private static abstract class TestService2BaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    TestService2BaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.proto.test2.Test2.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("TestService2");
-    }
-  }
-
-  private static final class TestService2FileDescriptorSupplier
-      extends TestService2BaseDescriptorSupplier {
-    TestService2FileDescriptorSupplier() {}
-  }
-
-  private static final class TestService2MethodDescriptorSupplier
-      extends TestService2BaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
-
-    TestService2MethodDescriptorSupplier(String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -277,7 +241,6 @@ public final class TestService2Grpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new TestService2FileDescriptorSupplier())
               .addMethod(getTestMethod())
               .build();
         }

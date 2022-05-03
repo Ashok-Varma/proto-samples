@@ -6,332 +6,20 @@ package com.proto.test3;
 /**
  * Protobuf type {@code test3.TestService3Response}
  */
-public final class TestService3Response extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public  final class TestService3Response extends
+    com.google.protobuf.GeneratedMessageLite<
+        TestService3Response, TestService3Response.Builder> implements
     // @@protoc_insertion_point(message_implements:test3.TestService3Response)
     TestService3ResponseOrBuilder {
-private static final long serialVersionUID = 0L;
-  // Use TestService3Response.newBuilder() to construct.
-  private TestService3Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-    super(builder);
-  }
   private TestService3Response() {
     optionalString_ = "";
     requiredString_ = "";
     optionalBytes_ = com.google.protobuf.ByteString.EMPTY;
     requiredBytes_ = com.google.protobuf.ByteString.EMPTY;
-    corpus_ = 0;
     samples_ = emptyIntList();
-    mapField_ = java.util.Collections.emptyList();
-    details_ = java.util.Collections.emptyList();
+    mapField_ = emptyProtobufList();
+    details_ = emptyProtobufList();
   }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new TestService3Response();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private TestService3Response(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 9: {
-            bitField0_ |= 0x00000001;
-            optionalDouble_ = input.readDouble();
-            break;
-          }
-          case 25: {
-
-            requiredDouble_ = input.readDouble();
-            break;
-          }
-          case 32: {
-            bitField0_ |= 0x00000002;
-            optionalInt32_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            requiredInt32_ = input.readInt32();
-            break;
-          }
-          case 48: {
-            bitField0_ |= 0x00000004;
-            optionalInt64_ = input.readInt64();
-            break;
-          }
-          case 56: {
-
-            requiredInt64_ = input.readInt64();
-            break;
-          }
-          case 64: {
-            bitField0_ |= 0x00000008;
-            optionalUint32_ = input.readUInt32();
-            break;
-          }
-          case 96: {
-
-            requiredUint32_ = input.readUInt32();
-            break;
-          }
-          case 104: {
-            bitField0_ |= 0x00000010;
-            optionalUint64_ = input.readUInt64();
-            break;
-          }
-          case 112: {
-
-            requiredUint64_ = input.readUInt64();
-            break;
-          }
-          case 128: {
-            bitField0_ |= 0x00000020;
-            optionalSint32_ = input.readSInt32();
-            break;
-          }
-          case 136: {
-
-            requiredSint32_ = input.readSInt32();
-            break;
-          }
-          case 144: {
-            bitField0_ |= 0x00000040;
-            optionalSint64_ = input.readSInt64();
-            break;
-          }
-          case 152: {
-
-            requiredSint64_ = input.readSInt64();
-            break;
-          }
-          case 165: {
-            bitField0_ |= 0x00000080;
-            optionalFixed32_ = input.readFixed32();
-            break;
-          }
-          case 173: {
-
-            requiredFixed32_ = input.readFixed32();
-            break;
-          }
-          case 177: {
-            bitField0_ |= 0x00000100;
-            optionalFixed64_ = input.readFixed64();
-            break;
-          }
-          case 185: {
-
-            requiredFixed64_ = input.readFixed64();
-            break;
-          }
-          case 197: {
-            bitField0_ |= 0x00000200;
-            optionalSfixed32_ = input.readSFixed32();
-            break;
-          }
-          case 205: {
-
-            requiredSfixed32_ = input.readSFixed32();
-            break;
-          }
-          case 209: {
-            bitField0_ |= 0x00000400;
-            optionalSfixed64_ = input.readSFixed64();
-            break;
-          }
-          case 217: {
-
-            requiredSfixed64_ = input.readSFixed64();
-            break;
-          }
-          case 224: {
-            bitField0_ |= 0x00000800;
-            optionalBool_ = input.readBool();
-            break;
-          }
-          case 232: {
-
-            requiredBool_ = input.readBool();
-            break;
-          }
-          case 242: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00001000;
-            optionalString_ = s;
-            break;
-          }
-          case 250: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            requiredString_ = s;
-            break;
-          }
-          case 258: {
-            bitField0_ |= 0x00002000;
-            optionalBytes_ = input.readBytes();
-            break;
-          }
-          case 266: {
-
-            requiredBytes_ = input.readBytes();
-            break;
-          }
-          case 288: {
-            int rawValue = input.readEnum();
-            bitField0_ |= 0x00004000;
-            corpus_ = rawValue;
-            break;
-          }
-          case 296: {
-            if (!((mutable_bitField0_ & 0x00008000) != 0)) {
-              samples_ = newIntList();
-              mutable_bitField0_ |= 0x00008000;
-            }
-            samples_.addInt(input.readInt32());
-            break;
-          }
-          case 298: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00008000) != 0) && input.getBytesUntilLimit() > 0) {
-              samples_ = newIntList();
-              mutable_bitField0_ |= 0x00008000;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              samples_.addInt(input.readInt32());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 306: {
-            java.lang.String s = input.readStringRequireUtf8();
-            oneOfFieldCase_ = 38;
-            oneOfField_ = s;
-            break;
-          }
-          case 314: {
-            com.proto.test3.TestService3Response.NestedMessage.Builder subBuilder = null;
-            if (oneOfFieldCase_ == 39) {
-              subBuilder = ((com.proto.test3.TestService3Response.NestedMessage) oneOfField_).toBuilder();
-            }
-            oneOfField_ =
-                input.readMessage(com.proto.test3.TestService3Response.NestedMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.proto.test3.TestService3Response.NestedMessage) oneOfField_);
-              oneOfField_ = subBuilder.buildPartial();
-            }
-            oneOfFieldCase_ = 39;
-            break;
-          }
-          case 322: {
-            if (!((mutable_bitField0_ & 0x00010000) != 0)) {
-              map_ = com.google.protobuf.MapField.newMapField(
-                  MapDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00010000;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
-            map__ = input.readMessage(
-                MapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            map_.getMutableMap().put(
-                map__.getKey(), map__.getValue());
-            break;
-          }
-          case 330: {
-            if (!((mutable_bitField0_ & 0x00020000) != 0)) {
-              mapField_ = new java.util.ArrayList<com.proto.test3.TestService3Response.MapFieldEntry>();
-              mutable_bitField0_ |= 0x00020000;
-            }
-            mapField_.add(
-                input.readMessage(com.proto.test3.TestService3Response.MapFieldEntry.parser(), extensionRegistry));
-            break;
-          }
-          case 338: {
-            if (!((mutable_bitField0_ & 0x00040000) != 0)) {
-              details_ = new java.util.ArrayList<com.google.protobuf.Any>();
-              mutable_bitField0_ |= 0x00040000;
-            }
-            details_.add(
-                input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00008000) != 0)) {
-        samples_.makeImmutable(); // C
-      }
-      if (((mutable_bitField0_ & 0x00020000) != 0)) {
-        mapField_ = java.util.Collections.unmodifiableList(mapField_);
-      }
-      if (((mutable_bitField0_ & 0x00040000) != 0)) {
-        details_ = java.util.Collections.unmodifiableList(details_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.proto.test3.Test3.internal_static_test3_TestService3Response_descriptor;
-  }
-
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapField internalGetMapField(
-      int number) {
-    switch (number) {
-      case 40:
-        return internalGetMap();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-    return com.proto.test3.Test3.internal_static_test3_TestService3Response_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            com.proto.test3.TestService3Response.class, com.proto.test3.TestService3Response.Builder.class);
-  }
-
   /**
    * <pre>
    *  https://developers.google.com/protocol-buffers/docs/proto#enum
@@ -340,7 +28,7 @@ private static final long serialVersionUID = 0L;
    * Protobuf enum {@code test3.TestService3Response.Corpus}
    */
   public enum Corpus
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>UNIVERSAL = 0;</code>
      */
@@ -402,6 +90,7 @@ private static final long serialVersionUID = 0L;
     public static final int VIDEO_VALUE = 6;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -411,8 +100,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -420,10 +109,6 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static Corpus forNumber(int value) {
       switch (value) {
         case 0: return UNIVERSAL;
@@ -444,41 +129,25 @@ private static final long serialVersionUID = 0L;
     private static final com.google.protobuf.Internal.EnumLiteMap<
         Corpus> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<Corpus>() {
+            @java.lang.Override
             public Corpus findValueByNumber(int number) {
               return Corpus.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.proto.test3.TestService3Response.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return CorpusVerifier.INSTANCE;
     }
 
-    private static final Corpus[] VALUES = values();
-
-    public static Corpus valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class CorpusVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new CorpusVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return Corpus.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -493,7 +162,7 @@ private static final long serialVersionUID = 0L;
    * Protobuf enum {@code test3.TestService3Response.EnumAllowingAlias}
    */
   public enum EnumAllowingAlias
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>UNKNOWN = 0;</code>
      */
@@ -523,6 +192,7 @@ private static final long serialVersionUID = 0L;
     public static final int RUNNING_VALUE = 1;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -532,8 +202,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -541,10 +211,6 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static EnumAllowingAlias forNumber(int value) {
       switch (value) {
         case 0: return UNKNOWN;
@@ -560,45 +226,25 @@ private static final long serialVersionUID = 0L;
     private static final com.google.protobuf.Internal.EnumLiteMap<
         EnumAllowingAlias> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<EnumAllowingAlias>() {
+            @java.lang.Override
             public EnumAllowingAlias findValueByNumber(int number) {
               return EnumAllowingAlias.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.proto.test3.TestService3Response.getDescriptor().getEnumTypes().get(1);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return EnumAllowingAliasVerifier.INSTANCE;
     }
 
-    private static final EnumAllowingAlias[] VALUES = getStaticValuesArray();
-    private static EnumAllowingAlias[] getStaticValuesArray() {
-      return new EnumAllowingAlias[] {
-        UNKNOWN, STARTED, RUNNING, 
-      };
-    }
-    public static EnumAllowingAlias valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class EnumAllowingAliasVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new EnumAllowingAliasVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return EnumAllowingAlias.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -611,7 +257,7 @@ private static final long serialVersionUID = 0L;
 
   public interface NestedMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:test3.TestService3Response.NestedMessage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string url = 1;</code>
@@ -661,8 +307,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getSnippets(int index);
     /**
      * <code>repeated string snippets = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the snippets at the given index.
+     * @param index The index of the element to return.
+     * @return The snippets at the given index.
      */
     com.google.protobuf.ByteString
         getSnippetsBytes(int index);
@@ -674,129 +320,26 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code test3.TestService3Response.NestedMessage}
    */
-  public static final class NestedMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class NestedMessage extends
+      com.google.protobuf.GeneratedMessageLite<
+          NestedMessage, NestedMessage.Builder> implements
       // @@protoc_insertion_point(message_implements:test3.TestService3Response.NestedMessage)
       NestedMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use NestedMessage.newBuilder() to construct.
-    private NestedMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private NestedMessage() {
       url_ = "";
       title_ = "";
-      snippets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      snippets_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new NestedMessage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private NestedMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              title_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                snippets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              snippets_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          snippets_ = snippets_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_NestedMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_NestedMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.proto.test3.TestService3Response.NestedMessage.class, com.proto.test3.TestService3Response.NestedMessage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
+    private java.lang.String url_;
     /**
      * <code>string url = 1;</code>
      * @return The url.
      */
     @java.lang.Override
     public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
+      return url_;
     }
     /**
      * <code>string url = 1;</code>
@@ -805,20 +348,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(url_);
+    }
+    /**
+     * <code>string url = 1;</code>
+     * @param value The url to set.
+     */
+    private void setUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      url_ = value;
+    }
+    /**
+     * <code>string url = 1;</code>
+     */
+    private void clearUrl() {
+      
+      url_ = getDefaultInstance().getUrl();
+    }
+    /**
+     * <code>string url = 1;</code>
+     * @param value The bytes for url to set.
+     */
+    private void setUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      url_ = value.toStringUtf8();
+      
     }
 
     public static final int TITLE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object title_;
+    private java.lang.String title_;
     /**
      * <code>optional string title = 2;</code>
      * @return Whether the title field is set.
@@ -833,16 +394,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public java.lang.String getTitle() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        title_ = s;
-        return s;
-      }
+      return title_;
     }
     /**
      * <code>optional string title = 2;</code>
@@ -851,32 +403,51 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.ByteString
         getTitleBytes() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        title_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(title_);
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     * @param value The title to set.
+     */
+    private void setTitle(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      title_ = value;
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     */
+    private void clearTitle() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      title_ = getDefaultInstance().getTitle();
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     * @param value The bytes for title to set.
+     */
+    private void setTitleBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      title_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static final int SNIPPETS_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList snippets_;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> snippets_;
     /**
      * <code>repeated string snippets = 3;</code>
      * @return A list containing the snippets.
      */
-    public com.google.protobuf.ProtocolStringList
-        getSnippetsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSnippetsList() {
       return snippets_;
     }
     /**
      * <code>repeated string snippets = 3;</code>
      * @return The count of snippets.
      */
+    @java.lang.Override
     public int getSnippetsCount() {
       return snippets_.size();
     }
@@ -885,6 +456,7 @@ private static final long serialVersionUID = 0L;
      * @param index The index of the element to return.
      * @return The snippets at the given index.
      */
+    @java.lang.Override
     public java.lang.String getSnippets(int index) {
       return snippets_.get(index);
     }
@@ -893,197 +465,148 @@ private static final long serialVersionUID = 0L;
      * @param index The index of the value to return.
      * @return The bytes of the snippets at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnippetsBytes(int index) {
-      return snippets_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          snippets_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureSnippetsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          snippets_;  if (!tmp.isModifiable()) {
+        snippets_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
-      }
-      for (int i = 0; i < snippets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, snippets_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
+    /**
+     * <code>repeated string snippets = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The snippets to set.
+     */
+    private void setSnippets(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureSnippetsIsMutable();
+      snippets_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < snippets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(snippets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getSnippetsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string snippets = 3;</code>
+     * @param value The snippets to add.
+     */
+    private void addSnippets(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureSnippetsIsMutable();
+      snippets_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.proto.test3.TestService3Response.NestedMessage)) {
-        return super.equals(obj);
-      }
-      com.proto.test3.TestService3Response.NestedMessage other = (com.proto.test3.TestService3Response.NestedMessage) obj;
-
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (hasTitle() != other.hasTitle()) return false;
-      if (hasTitle()) {
-        if (!getTitle()
-            .equals(other.getTitle())) return false;
-      }
-      if (!getSnippetsList()
-          .equals(other.getSnippetsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+    /**
+     * <code>repeated string snippets = 3;</code>
+     * @param values The snippets to add.
+     */
+    private void addAllSnippets(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSnippetsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, snippets_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      if (hasTitle()) {
-        hash = (37 * hash) + TITLE_FIELD_NUMBER;
-        hash = (53 * hash) + getTitle().hashCode();
-      }
-      if (getSnippetsCount() > 0) {
-        hash = (37 * hash) + SNIPPETS_FIELD_NUMBER;
-        hash = (53 * hash) + getSnippetsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string snippets = 3;</code>
+     */
+    private void clearSnippets() {
+      snippets_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string snippets = 3;</code>
+     * @param value The bytes of the snippets to add.
+     */
+    private void addSnippetsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSnippetsIsMutable();
+      snippets_.add(value.toStringUtf8());
     }
 
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.proto.test3.TestService3Response.NestedMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.proto.test3.TestService3Response.NestedMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      *https://developers.google.com/protocol-buffers/docs/proto#nested
@@ -1092,215 +615,32 @@ private static final long serialVersionUID = 0L;
      * Protobuf type {@code test3.TestService3Response.NestedMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.proto.test3.TestService3Response.NestedMessage, Builder> implements
         // @@protoc_insertion_point(builder_implements:test3.TestService3Response.NestedMessage)
         com.proto.test3.TestService3Response.NestedMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.proto.test3.Test3.internal_static_test3_TestService3Response_NestedMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.proto.test3.Test3.internal_static_test3_TestService3Response_NestedMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.proto.test3.TestService3Response.NestedMessage.class, com.proto.test3.TestService3Response.NestedMessage.Builder.class);
-      }
-
       // Construct using com.proto.test3.TestService3Response.NestedMessage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        url_ = "";
 
-        title_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        snippets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.proto.test3.Test3.internal_static_test3_TestService3Response_NestedMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public com.proto.test3.TestService3Response.NestedMessage getDefaultInstanceForType() {
-        return com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.proto.test3.TestService3Response.NestedMessage build() {
-        com.proto.test3.TestService3Response.NestedMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.proto.test3.TestService3Response.NestedMessage buildPartial() {
-        com.proto.test3.TestService3Response.NestedMessage result = new com.proto.test3.TestService3Response.NestedMessage(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.url_ = url_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.title_ = title_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          snippets_ = snippets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.snippets_ = snippets_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.proto.test3.TestService3Response.NestedMessage) {
-          return mergeFrom((com.proto.test3.TestService3Response.NestedMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.proto.test3.TestService3Response.NestedMessage other) {
-        if (other == com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance()) return this;
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        if (other.hasTitle()) {
-          bitField0_ |= 0x00000001;
-          title_ = other.title_;
-          onChanged();
-        }
-        if (!other.snippets_.isEmpty()) {
-          if (snippets_.isEmpty()) {
-            snippets_ = other.snippets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureSnippetsIsMutable();
-            snippets_.addAll(other.snippets_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.proto.test3.TestService3Response.NestedMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.proto.test3.TestService3Response.NestedMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object url_ = "";
       /**
        * <code>string url = 1;</code>
        * @return The url.
        */
+      @java.lang.Override
       public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUrl();
       }
       /**
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUrlBytes();
       }
       /**
        * <code>string url = 1;</code>
@@ -1309,12 +649,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setUrl(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setUrl(value);
         return this;
       }
       /**
@@ -1322,9 +658,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
+        copyOnWrite();
+        instance.clearUrl();
         return this;
       }
       /**
@@ -1334,56 +669,35 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setUrlBytes(value);
         return this;
       }
 
-      private java.lang.Object title_ = "";
       /**
        * <code>optional string title = 2;</code>
        * @return Whether the title field is set.
        */
+      @java.lang.Override
       public boolean hasTitle() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasTitle();
       }
       /**
        * <code>optional string title = 2;</code>
        * @return The title.
        */
+      @java.lang.Override
       public java.lang.String getTitle() {
-        java.lang.Object ref = title_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          title_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getTitle();
       }
       /**
        * <code>optional string title = 2;</code>
        * @return The bytes for title.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTitleBytes() {
-        java.lang.Object ref = title_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          title_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getTitleBytes();
       }
       /**
        * <code>optional string title = 2;</code>
@@ -1392,12 +706,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setTitle(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        title_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setTitle(value);
         return this;
       }
       /**
@@ -1405,9 +715,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        title_ = getDefaultInstance().getTitle();
-        onChanged();
+        copyOnWrite();
+        instance.clearTitle();
         return this;
       }
       /**
@@ -1417,54 +726,47 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
-        title_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setTitleBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringList snippets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSnippetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          snippets_ = new com.google.protobuf.LazyStringArrayList(snippets_);
-          bitField0_ |= 0x00000002;
-         }
-      }
       /**
        * <code>repeated string snippets = 3;</code>
        * @return A list containing the snippets.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getSnippetsList() {
-        return snippets_.getUnmodifiableView();
+        return java.util.Collections.unmodifiableList(
+            instance.getSnippetsList());
       }
       /**
        * <code>repeated string snippets = 3;</code>
        * @return The count of snippets.
        */
+      @java.lang.Override
       public int getSnippetsCount() {
-        return snippets_.size();
+        return instance.getSnippetsCount();
       }
       /**
        * <code>repeated string snippets = 3;</code>
        * @param index The index of the element to return.
        * @return The snippets at the given index.
        */
+      @java.lang.Override
       public java.lang.String getSnippets(int index) {
-        return snippets_.get(index);
+        return instance.getSnippets(index);
       }
       /**
        * <code>repeated string snippets = 3;</code>
        * @param index The index of the value to return.
        * @return The bytes of the snippets at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSnippetsBytes(int index) {
-        return snippets_.getByteString(index);
+        return instance.getSnippetsBytes(index);
       }
       /**
        * <code>repeated string snippets = 3;</code>
@@ -1474,12 +776,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSnippets(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSnippetsIsMutable();
-        snippets_.set(index, value);
-        onChanged();
+        copyOnWrite();
+        instance.setSnippets(index, value);
         return this;
       }
       /**
@@ -1489,12 +787,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addSnippets(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSnippetsIsMutable();
-        snippets_.add(value);
-        onChanged();
+        copyOnWrite();
+        instance.addSnippets(value);
         return this;
       }
       /**
@@ -1504,10 +798,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addAllSnippets(
           java.lang.Iterable<java.lang.String> values) {
-        ensureSnippetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, snippets_);
-        onChanged();
+        copyOnWrite();
+        instance.addAllSnippets(values);
         return this;
       }
       /**
@@ -1515,9 +807,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearSnippets() {
-        snippets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearSnippets();
         return this;
       }
       /**
@@ -1527,71 +818,92 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addSnippetsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSnippetsIsMutable();
-        snippets_.add(value);
-        onChanged();
+        copyOnWrite();
+        instance.addSnippetsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:test3.TestService3Response.NestedMessage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.proto.test3.TestService3Response.NestedMessage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "url_",
+              "title_",
+              "snippets_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.proto.test3.TestService3Response.NestedMessage> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.proto.test3.TestService3Response.NestedMessage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.proto.test3.TestService3Response.NestedMessage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:test3.TestService3Response.NestedMessage)
     private static final com.proto.test3.TestService3Response.NestedMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.proto.test3.TestService3Response.NestedMessage();
+      NestedMessage defaultInstance = new NestedMessage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        NestedMessage.class, defaultInstance);
     }
 
     public static com.proto.test3.TestService3Response.NestedMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NestedMessage>
-        PARSER = new com.google.protobuf.AbstractParser<NestedMessage>() {
-      @java.lang.Override
-      public NestedMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NestedMessage(input, extensionRegistry);
-      }
-    };
+    private static volatile com.google.protobuf.Parser<NestedMessage> PARSER;
 
     public static com.google.protobuf.Parser<NestedMessage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<NestedMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.proto.test3.TestService3Response.NestedMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MapFieldEntryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:test3.TestService3Response.MapFieldEntry)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string key = 1;</code>
@@ -1615,10 +927,6 @@ private static final long serialVersionUID = 0L;
      * @return The value.
      */
     com.proto.test3.TestService3Response.NestedMessage getValue();
-    /**
-     * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-     */
-    com.proto.test3.TestService3Response.NestedMessageOrBuilder getValueOrBuilder();
   }
   /**
    * <pre>
@@ -1627,120 +935,23 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code test3.TestService3Response.MapFieldEntry}
    */
-  public static final class MapFieldEntry extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MapFieldEntry extends
+      com.google.protobuf.GeneratedMessageLite<
+          MapFieldEntry, MapFieldEntry.Builder> implements
       // @@protoc_insertion_point(message_implements:test3.TestService3Response.MapFieldEntry)
       MapFieldEntryOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MapFieldEntry.newBuilder() to construct.
-    private MapFieldEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MapFieldEntry() {
       key_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MapFieldEntry();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MapFieldEntry(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
-              break;
-            }
-            case 18: {
-              com.proto.test3.TestService3Response.NestedMessage.Builder subBuilder = null;
-              if (value_ != null) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(com.proto.test3.TestService3Response.NestedMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_MapFieldEntry_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_MapFieldEntry_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.proto.test3.TestService3Response.MapFieldEntry.class, com.proto.test3.TestService3Response.MapFieldEntry.Builder.class);
-    }
-
     public static final int KEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object key_;
+    private java.lang.String key_;
     /**
      * <code>string key = 1;</code>
      * @return The key.
      */
     @java.lang.Override
     public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
+      return key_;
     }
     /**
      * <code>string key = 1;</code>
@@ -1749,23 +960,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(key_);
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @param value The key to set.
+     */
+    private void setKey(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      key_ = value;
+    }
+    /**
+     * <code>string key = 1;</code>
+     */
+    private void clearKey() {
+      
+      key_ = getDefaultInstance().getKey();
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @param value The bytes for key to set.
+     */
+    private void setKeyBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      key_ = value.toStringUtf8();
+      
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
     private com.proto.test3.TestService3Response.NestedMessage value_;
     /**
      * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-     * @return Whether the value field is set.
      */
     @java.lang.Override
     public boolean hasValue() {
@@ -1773,7 +1001,6 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-     * @return The value.
      */
     @java.lang.Override
     public com.proto.test3.TestService3Response.NestedMessage getValue() {
@@ -1782,181 +1009,114 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
      */
-    @java.lang.Override
-    public com.proto.test3.TestService3Response.NestedMessageOrBuilder getValueOrBuilder() {
-      return getValue();
+    private void setValue(com.proto.test3.TestService3Response.NestedMessage value) {
+      value.getClass();
+  value_ = value;
+      
+      }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeValue(com.proto.test3.TestService3Response.NestedMessage value) {
+      value.getClass();
+  if (value_ != null &&
+          value_ != com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance()) {
+        value_ =
+          com.proto.test3.TestService3Response.NestedMessage.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
-      }
-      if (value_ != null) {
-        output.writeMessage(2, getValue());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
-      }
-      if (value_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getValue());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.proto.test3.TestService3Response.MapFieldEntry)) {
-        return super.equals(obj);
-      }
-      com.proto.test3.TestService3Response.MapFieldEntry other = (com.proto.test3.TestService3Response.MapFieldEntry) obj;
-
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (hasValue() != other.hasValue()) return false;
-      if (hasValue()) {
-        if (!getValue()
-            .equals(other.getValue())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      if (hasValue()) {
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
+     */
+    private void clearValue() {  value_ = null;
+      
     }
 
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.proto.test3.TestService3Response.MapFieldEntry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.proto.test3.TestService3Response.MapFieldEntry prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Map equivalent wire type (Backward compatibility) https://developers.google.com/protocol-buffers/docs/proto#backwards
@@ -1965,197 +1125,32 @@ private static final long serialVersionUID = 0L;
      * Protobuf type {@code test3.TestService3Response.MapFieldEntry}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.proto.test3.TestService3Response.MapFieldEntry, Builder> implements
         // @@protoc_insertion_point(builder_implements:test3.TestService3Response.MapFieldEntry)
         com.proto.test3.TestService3Response.MapFieldEntryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.proto.test3.Test3.internal_static_test3_TestService3Response_MapFieldEntry_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.proto.test3.Test3.internal_static_test3_TestService3Response_MapFieldEntry_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.proto.test3.TestService3Response.MapFieldEntry.class, com.proto.test3.TestService3Response.MapFieldEntry.Builder.class);
-      }
-
       // Construct using com.proto.test3.TestService3Response.MapFieldEntry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        key_ = "";
 
-        if (valueBuilder_ == null) {
-          value_ = null;
-        } else {
-          value_ = null;
-          valueBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.proto.test3.Test3.internal_static_test3_TestService3Response_MapFieldEntry_descriptor;
-      }
-
-      @java.lang.Override
-      public com.proto.test3.TestService3Response.MapFieldEntry getDefaultInstanceForType() {
-        return com.proto.test3.TestService3Response.MapFieldEntry.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.proto.test3.TestService3Response.MapFieldEntry build() {
-        com.proto.test3.TestService3Response.MapFieldEntry result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.proto.test3.TestService3Response.MapFieldEntry buildPartial() {
-        com.proto.test3.TestService3Response.MapFieldEntry result = new com.proto.test3.TestService3Response.MapFieldEntry(this);
-        result.key_ = key_;
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.proto.test3.TestService3Response.MapFieldEntry) {
-          return mergeFrom((com.proto.test3.TestService3Response.MapFieldEntry)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.proto.test3.TestService3Response.MapFieldEntry other) {
-        if (other == com.proto.test3.TestService3Response.MapFieldEntry.getDefaultInstance()) return this;
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        if (other.hasValue()) {
-          mergeValue(other.getValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.proto.test3.TestService3Response.MapFieldEntry parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.proto.test3.TestService3Response.MapFieldEntry) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
       /**
        * <code>string key = 1;</code>
        * @return The key.
        */
+      @java.lang.Override
       public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getKey();
       }
       /**
        * <code>string key = 1;</code>
        * @return The bytes for key.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getKeyBytes();
       }
       /**
        * <code>string key = 1;</code>
@@ -2164,12 +1159,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setKey(value);
         return this;
       }
       /**
@@ -2177,9 +1168,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
+        copyOnWrite();
+        instance.clearKey();
         return this;
       }
       /**
@@ -2189,193 +1179,138 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setKeyBytes(value);
         return this;
       }
 
-      private com.proto.test3.TestService3Response.NestedMessage value_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder> valueBuilder_;
       /**
        * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-       * @return Whether the value field is set.
        */
+      @java.lang.Override
       public boolean hasValue() {
-        return valueBuilder_ != null || value_ != null;
+        return instance.hasValue();
       }
       /**
        * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-       * @return The value.
        */
+      @java.lang.Override
       public com.proto.test3.TestService3Response.NestedMessage getValue() {
-        if (valueBuilder_ == null) {
-          return value_ == null ? com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance() : value_;
-        } else {
-          return valueBuilder_.getMessage();
-        }
+        return instance.getValue();
       }
       /**
        * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
        */
       public Builder setValue(com.proto.test3.TestService3Response.NestedMessage value) {
-        if (valueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(value);
-        }
-
+        copyOnWrite();
+        instance.setValue(value);
         return this;
-      }
+        }
       /**
        * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
        */
       public Builder setValue(
           com.proto.test3.TestService3Response.NestedMessage.Builder builderForValue) {
-        if (valueBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(builderForValue.build());
-        }
-
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
         return this;
       }
       /**
        * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
        */
       public Builder mergeValue(com.proto.test3.TestService3Response.NestedMessage value) {
-        if (valueBuilder_ == null) {
-          if (value_ != null) {
-            value_ =
-              com.proto.test3.TestService3Response.NestedMessage.newBuilder(value_).mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          valueBuilder_.mergeFrom(value);
-        }
-
+        copyOnWrite();
+        instance.mergeValue(value);
         return this;
       }
       /**
        * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
        */
-      public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = null;
-          onChanged();
-        } else {
-          value_ = null;
-          valueBuilder_ = null;
-        }
-
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
         return this;
       }
-      /**
-       * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-       */
-      public com.proto.test3.TestService3Response.NestedMessage.Builder getValueBuilder() {
-        
-        onChanged();
-        return getValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-       */
-      public com.proto.test3.TestService3Response.NestedMessageOrBuilder getValueOrBuilder() {
-        if (valueBuilder_ != null) {
-          return valueBuilder_.getMessageOrBuilder();
-        } else {
-          return value_ == null ?
-              com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance() : value_;
-        }
-      }
-      /**
-       * <code>.test3.TestService3Response.NestedMessage value = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder> 
-          getValueFieldBuilder() {
-        if (valueBuilder_ == null) {
-          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder>(
-                  getValue(),
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        return valueBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:test3.TestService3Response.MapFieldEntry)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.proto.test3.TestService3Response.MapFieldEntry();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "key_",
+              "value_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.proto.test3.TestService3Response.MapFieldEntry> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.proto.test3.TestService3Response.MapFieldEntry.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.proto.test3.TestService3Response.MapFieldEntry>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:test3.TestService3Response.MapFieldEntry)
     private static final com.proto.test3.TestService3Response.MapFieldEntry DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.proto.test3.TestService3Response.MapFieldEntry();
+      MapFieldEntry defaultInstance = new MapFieldEntry();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MapFieldEntry.class, defaultInstance);
     }
 
     public static com.proto.test3.TestService3Response.MapFieldEntry getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MapFieldEntry>
-        PARSER = new com.google.protobuf.AbstractParser<MapFieldEntry>() {
-      @java.lang.Override
-      public MapFieldEntry parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MapFieldEntry(input, extensionRegistry);
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MapFieldEntry> PARSER;
 
     public static com.google.protobuf.Parser<MapFieldEntry> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MapFieldEntry> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.proto.test3.TestService3Response.MapFieldEntry getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   private int bitField0_;
   private int oneOfFieldCase_ = 0;
   private java.lang.Object oneOfField_;
-  public enum OneOfFieldCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+  public enum OneOfFieldCase {
     NAME(38),
     NESTED(39),
     ONEOFFIELD_NOT_SET(0);
@@ -2384,8 +1319,6 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -2406,10 +1339,16 @@ private static final long serialVersionUID = 0L;
     }
   };
 
+  @java.lang.Override
   public OneOfFieldCase
   getOneOfFieldCase() {
     return OneOfFieldCase.forNumber(
         oneOfFieldCase_);
+  }
+
+  private void clearOneOfField() {
+    oneOfFieldCase_ = 0;
+    oneOfField_ = null;
   }
 
   public static final int OPTIONALDOUBLE_FIELD_NUMBER = 1;
@@ -2440,6 +1379,31 @@ private static final long serialVersionUID = 0L;
   public double getOptionalDouble() {
     return optionalDouble_;
   }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
+   *  https://developers.google.com/protocol-buffers/docs/proto#scalar
+   * </pre>
+   *
+   * <code>optional double optionalDouble = 1;</code>
+   * @param value The optionalDouble to set.
+   */
+  private void setOptionalDouble(double value) {
+    bitField0_ |= 0x00000001;
+    optionalDouble_ = value;
+  }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
+   *  https://developers.google.com/protocol-buffers/docs/proto#scalar
+   * </pre>
+   *
+   * <code>optional double optionalDouble = 1;</code>
+   */
+  private void clearOptionalDouble() {
+    bitField0_ = (bitField0_ & ~0x00000001);
+    optionalDouble_ = 0D;
+  }
 
   public static final int REQUIREDDOUBLE_FIELD_NUMBER = 3;
   private double requiredDouble_;
@@ -2450,6 +1414,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getRequiredDouble() {
     return requiredDouble_;
+  }
+  /**
+   * <code>double requiredDouble = 3;</code>
+   * @param value The requiredDouble to set.
+   */
+  private void setRequiredDouble(double value) {
+    
+    requiredDouble_ = value;
+  }
+  /**
+   * <code>double requiredDouble = 3;</code>
+   */
+  private void clearRequiredDouble() {
+    
+    requiredDouble_ = 0D;
   }
 
   public static final int OPTIONALINT32_FIELD_NUMBER = 4;
@@ -2470,6 +1449,21 @@ private static final long serialVersionUID = 0L;
   public int getOptionalInt32() {
     return optionalInt32_;
   }
+  /**
+   * <code>optional int32 optionalInt32 = 4;</code>
+   * @param value The optionalInt32 to set.
+   */
+  private void setOptionalInt32(int value) {
+    bitField0_ |= 0x00000002;
+    optionalInt32_ = value;
+  }
+  /**
+   * <code>optional int32 optionalInt32 = 4;</code>
+   */
+  private void clearOptionalInt32() {
+    bitField0_ = (bitField0_ & ~0x00000002);
+    optionalInt32_ = 0;
+  }
 
   public static final int REQUIREDINT32_FIELD_NUMBER = 5;
   private int requiredInt32_;
@@ -2480,6 +1474,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getRequiredInt32() {
     return requiredInt32_;
+  }
+  /**
+   * <code>int32 requiredInt32 = 5;</code>
+   * @param value The requiredInt32 to set.
+   */
+  private void setRequiredInt32(int value) {
+    
+    requiredInt32_ = value;
+  }
+  /**
+   * <code>int32 requiredInt32 = 5;</code>
+   */
+  private void clearRequiredInt32() {
+    
+    requiredInt32_ = 0;
   }
 
   public static final int OPTIONALINT64_FIELD_NUMBER = 6;
@@ -2500,6 +1509,21 @@ private static final long serialVersionUID = 0L;
   public long getOptionalInt64() {
     return optionalInt64_;
   }
+  /**
+   * <code>optional int64 optionalInt64 = 6;</code>
+   * @param value The optionalInt64 to set.
+   */
+  private void setOptionalInt64(long value) {
+    bitField0_ |= 0x00000004;
+    optionalInt64_ = value;
+  }
+  /**
+   * <code>optional int64 optionalInt64 = 6;</code>
+   */
+  private void clearOptionalInt64() {
+    bitField0_ = (bitField0_ & ~0x00000004);
+    optionalInt64_ = 0L;
+  }
 
   public static final int REQUIREDINT64_FIELD_NUMBER = 7;
   private long requiredInt64_;
@@ -2510,6 +1534,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getRequiredInt64() {
     return requiredInt64_;
+  }
+  /**
+   * <code>int64 requiredInt64 = 7;</code>
+   * @param value The requiredInt64 to set.
+   */
+  private void setRequiredInt64(long value) {
+    
+    requiredInt64_ = value;
+  }
+  /**
+   * <code>int64 requiredInt64 = 7;</code>
+   */
+  private void clearRequiredInt64() {
+    
+    requiredInt64_ = 0L;
   }
 
   public static final int OPTIONALUINT32_FIELD_NUMBER = 8;
@@ -2530,6 +1569,21 @@ private static final long serialVersionUID = 0L;
   public int getOptionalUint32() {
     return optionalUint32_;
   }
+  /**
+   * <code>optional uint32 optionalUint32 = 8;</code>
+   * @param value The optionalUint32 to set.
+   */
+  private void setOptionalUint32(int value) {
+    bitField0_ |= 0x00000008;
+    optionalUint32_ = value;
+  }
+  /**
+   * <code>optional uint32 optionalUint32 = 8;</code>
+   */
+  private void clearOptionalUint32() {
+    bitField0_ = (bitField0_ & ~0x00000008);
+    optionalUint32_ = 0;
+  }
 
   public static final int REQUIREDUINT32_FIELD_NUMBER = 12;
   private int requiredUint32_;
@@ -2540,6 +1594,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getRequiredUint32() {
     return requiredUint32_;
+  }
+  /**
+   * <code>uint32 requiredUint32 = 12;</code>
+   * @param value The requiredUint32 to set.
+   */
+  private void setRequiredUint32(int value) {
+    
+    requiredUint32_ = value;
+  }
+  /**
+   * <code>uint32 requiredUint32 = 12;</code>
+   */
+  private void clearRequiredUint32() {
+    
+    requiredUint32_ = 0;
   }
 
   public static final int OPTIONALUINT64_FIELD_NUMBER = 13;
@@ -2560,6 +1629,21 @@ private static final long serialVersionUID = 0L;
   public long getOptionalUint64() {
     return optionalUint64_;
   }
+  /**
+   * <code>optional uint64 optionalUint64 = 13;</code>
+   * @param value The optionalUint64 to set.
+   */
+  private void setOptionalUint64(long value) {
+    bitField0_ |= 0x00000010;
+    optionalUint64_ = value;
+  }
+  /**
+   * <code>optional uint64 optionalUint64 = 13;</code>
+   */
+  private void clearOptionalUint64() {
+    bitField0_ = (bitField0_ & ~0x00000010);
+    optionalUint64_ = 0L;
+  }
 
   public static final int REQUIREDUINT64_FIELD_NUMBER = 14;
   private long requiredUint64_;
@@ -2570,6 +1654,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getRequiredUint64() {
     return requiredUint64_;
+  }
+  /**
+   * <code>uint64 requiredUint64 = 14;</code>
+   * @param value The requiredUint64 to set.
+   */
+  private void setRequiredUint64(long value) {
+    
+    requiredUint64_ = value;
+  }
+  /**
+   * <code>uint64 requiredUint64 = 14;</code>
+   */
+  private void clearRequiredUint64() {
+    
+    requiredUint64_ = 0L;
   }
 
   public static final int OPTIONALSINT32_FIELD_NUMBER = 16;
@@ -2590,6 +1689,21 @@ private static final long serialVersionUID = 0L;
   public int getOptionalSint32() {
     return optionalSint32_;
   }
+  /**
+   * <code>optional sint32 optionalSint32 = 16;</code>
+   * @param value The optionalSint32 to set.
+   */
+  private void setOptionalSint32(int value) {
+    bitField0_ |= 0x00000020;
+    optionalSint32_ = value;
+  }
+  /**
+   * <code>optional sint32 optionalSint32 = 16;</code>
+   */
+  private void clearOptionalSint32() {
+    bitField0_ = (bitField0_ & ~0x00000020);
+    optionalSint32_ = 0;
+  }
 
   public static final int REQUIREDSINT32_FIELD_NUMBER = 17;
   private int requiredSint32_;
@@ -2600,6 +1714,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getRequiredSint32() {
     return requiredSint32_;
+  }
+  /**
+   * <code>sint32 requiredSint32 = 17;</code>
+   * @param value The requiredSint32 to set.
+   */
+  private void setRequiredSint32(int value) {
+    
+    requiredSint32_ = value;
+  }
+  /**
+   * <code>sint32 requiredSint32 = 17;</code>
+   */
+  private void clearRequiredSint32() {
+    
+    requiredSint32_ = 0;
   }
 
   public static final int OPTIONALSINT64_FIELD_NUMBER = 18;
@@ -2620,6 +1749,21 @@ private static final long serialVersionUID = 0L;
   public long getOptionalSint64() {
     return optionalSint64_;
   }
+  /**
+   * <code>optional sint64 optionalSint64 = 18;</code>
+   * @param value The optionalSint64 to set.
+   */
+  private void setOptionalSint64(long value) {
+    bitField0_ |= 0x00000040;
+    optionalSint64_ = value;
+  }
+  /**
+   * <code>optional sint64 optionalSint64 = 18;</code>
+   */
+  private void clearOptionalSint64() {
+    bitField0_ = (bitField0_ & ~0x00000040);
+    optionalSint64_ = 0L;
+  }
 
   public static final int REQUIREDSINT64_FIELD_NUMBER = 19;
   private long requiredSint64_;
@@ -2630,6 +1774,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getRequiredSint64() {
     return requiredSint64_;
+  }
+  /**
+   * <code>sint64 requiredSint64 = 19;</code>
+   * @param value The requiredSint64 to set.
+   */
+  private void setRequiredSint64(long value) {
+    
+    requiredSint64_ = value;
+  }
+  /**
+   * <code>sint64 requiredSint64 = 19;</code>
+   */
+  private void clearRequiredSint64() {
+    
+    requiredSint64_ = 0L;
   }
 
   public static final int OPTIONALFIXED32_FIELD_NUMBER = 20;
@@ -2650,6 +1809,21 @@ private static final long serialVersionUID = 0L;
   public int getOptionalFixed32() {
     return optionalFixed32_;
   }
+  /**
+   * <code>optional fixed32 optionalFixed32 = 20;</code>
+   * @param value The optionalFixed32 to set.
+   */
+  private void setOptionalFixed32(int value) {
+    bitField0_ |= 0x00000080;
+    optionalFixed32_ = value;
+  }
+  /**
+   * <code>optional fixed32 optionalFixed32 = 20;</code>
+   */
+  private void clearOptionalFixed32() {
+    bitField0_ = (bitField0_ & ~0x00000080);
+    optionalFixed32_ = 0;
+  }
 
   public static final int REQUIREDFIXED32_FIELD_NUMBER = 21;
   private int requiredFixed32_;
@@ -2660,6 +1834,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getRequiredFixed32() {
     return requiredFixed32_;
+  }
+  /**
+   * <code>fixed32 requiredFixed32 = 21;</code>
+   * @param value The requiredFixed32 to set.
+   */
+  private void setRequiredFixed32(int value) {
+    
+    requiredFixed32_ = value;
+  }
+  /**
+   * <code>fixed32 requiredFixed32 = 21;</code>
+   */
+  private void clearRequiredFixed32() {
+    
+    requiredFixed32_ = 0;
   }
 
   public static final int OPTIONALFIXED64_FIELD_NUMBER = 22;
@@ -2680,6 +1869,21 @@ private static final long serialVersionUID = 0L;
   public long getOptionalFixed64() {
     return optionalFixed64_;
   }
+  /**
+   * <code>optional fixed64 optionalFixed64 = 22;</code>
+   * @param value The optionalFixed64 to set.
+   */
+  private void setOptionalFixed64(long value) {
+    bitField0_ |= 0x00000100;
+    optionalFixed64_ = value;
+  }
+  /**
+   * <code>optional fixed64 optionalFixed64 = 22;</code>
+   */
+  private void clearOptionalFixed64() {
+    bitField0_ = (bitField0_ & ~0x00000100);
+    optionalFixed64_ = 0L;
+  }
 
   public static final int REQUIREDFIXED64_FIELD_NUMBER = 23;
   private long requiredFixed64_;
@@ -2690,6 +1894,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getRequiredFixed64() {
     return requiredFixed64_;
+  }
+  /**
+   * <code>fixed64 requiredFixed64 = 23;</code>
+   * @param value The requiredFixed64 to set.
+   */
+  private void setRequiredFixed64(long value) {
+    
+    requiredFixed64_ = value;
+  }
+  /**
+   * <code>fixed64 requiredFixed64 = 23;</code>
+   */
+  private void clearRequiredFixed64() {
+    
+    requiredFixed64_ = 0L;
   }
 
   public static final int OPTIONALSFIXED32_FIELD_NUMBER = 24;
@@ -2710,6 +1929,21 @@ private static final long serialVersionUID = 0L;
   public int getOptionalSfixed32() {
     return optionalSfixed32_;
   }
+  /**
+   * <code>optional sfixed32 optionalSfixed32 = 24;</code>
+   * @param value The optionalSfixed32 to set.
+   */
+  private void setOptionalSfixed32(int value) {
+    bitField0_ |= 0x00000200;
+    optionalSfixed32_ = value;
+  }
+  /**
+   * <code>optional sfixed32 optionalSfixed32 = 24;</code>
+   */
+  private void clearOptionalSfixed32() {
+    bitField0_ = (bitField0_ & ~0x00000200);
+    optionalSfixed32_ = 0;
+  }
 
   public static final int REQUIREDSFIXED32_FIELD_NUMBER = 25;
   private int requiredSfixed32_;
@@ -2720,6 +1954,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getRequiredSfixed32() {
     return requiredSfixed32_;
+  }
+  /**
+   * <code>sfixed32 requiredSfixed32 = 25;</code>
+   * @param value The requiredSfixed32 to set.
+   */
+  private void setRequiredSfixed32(int value) {
+    
+    requiredSfixed32_ = value;
+  }
+  /**
+   * <code>sfixed32 requiredSfixed32 = 25;</code>
+   */
+  private void clearRequiredSfixed32() {
+    
+    requiredSfixed32_ = 0;
   }
 
   public static final int OPTIONALSFIXED64_FIELD_NUMBER = 26;
@@ -2740,6 +1989,21 @@ private static final long serialVersionUID = 0L;
   public long getOptionalSfixed64() {
     return optionalSfixed64_;
   }
+  /**
+   * <code>optional sfixed64 optionalSfixed64 = 26;</code>
+   * @param value The optionalSfixed64 to set.
+   */
+  private void setOptionalSfixed64(long value) {
+    bitField0_ |= 0x00000400;
+    optionalSfixed64_ = value;
+  }
+  /**
+   * <code>optional sfixed64 optionalSfixed64 = 26;</code>
+   */
+  private void clearOptionalSfixed64() {
+    bitField0_ = (bitField0_ & ~0x00000400);
+    optionalSfixed64_ = 0L;
+  }
 
   public static final int REQUIREDSFIXED64_FIELD_NUMBER = 27;
   private long requiredSfixed64_;
@@ -2750,6 +2014,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getRequiredSfixed64() {
     return requiredSfixed64_;
+  }
+  /**
+   * <code>sfixed64 requiredSfixed64 = 27;</code>
+   * @param value The requiredSfixed64 to set.
+   */
+  private void setRequiredSfixed64(long value) {
+    
+    requiredSfixed64_ = value;
+  }
+  /**
+   * <code>sfixed64 requiredSfixed64 = 27;</code>
+   */
+  private void clearRequiredSfixed64() {
+    
+    requiredSfixed64_ = 0L;
   }
 
   public static final int OPTIONALBOOL_FIELD_NUMBER = 28;
@@ -2770,6 +2049,21 @@ private static final long serialVersionUID = 0L;
   public boolean getOptionalBool() {
     return optionalBool_;
   }
+  /**
+   * <code>optional bool optionalBool = 28;</code>
+   * @param value The optionalBool to set.
+   */
+  private void setOptionalBool(boolean value) {
+    bitField0_ |= 0x00000800;
+    optionalBool_ = value;
+  }
+  /**
+   * <code>optional bool optionalBool = 28;</code>
+   */
+  private void clearOptionalBool() {
+    bitField0_ = (bitField0_ & ~0x00000800);
+    optionalBool_ = false;
+  }
 
   public static final int REQUIREDBOOL_FIELD_NUMBER = 29;
   private boolean requiredBool_;
@@ -2781,9 +2075,24 @@ private static final long serialVersionUID = 0L;
   public boolean getRequiredBool() {
     return requiredBool_;
   }
+  /**
+   * <code>bool requiredBool = 29;</code>
+   * @param value The requiredBool to set.
+   */
+  private void setRequiredBool(boolean value) {
+    
+    requiredBool_ = value;
+  }
+  /**
+   * <code>bool requiredBool = 29;</code>
+   */
+  private void clearRequiredBool() {
+    
+    requiredBool_ = false;
+  }
 
   public static final int OPTIONALSTRING_FIELD_NUMBER = 30;
-  private volatile java.lang.Object optionalString_;
+  private java.lang.String optionalString_;
   /**
    * <code>optional string optionalString = 30;</code>
    * @return Whether the optionalString field is set.
@@ -2798,16 +2107,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public java.lang.String getOptionalString() {
-    java.lang.Object ref = optionalString_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      optionalString_ = s;
-      return s;
-    }
+    return optionalString_;
   }
   /**
    * <code>optional string optionalString = 30;</code>
@@ -2816,36 +2116,45 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.ByteString
       getOptionalStringBytes() {
-    java.lang.Object ref = optionalString_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      optionalString_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+    return com.google.protobuf.ByteString.copyFromUtf8(optionalString_);
+  }
+  /**
+   * <code>optional string optionalString = 30;</code>
+   * @param value The optionalString to set.
+   */
+  private void setOptionalString(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00001000;
+    optionalString_ = value;
+  }
+  /**
+   * <code>optional string optionalString = 30;</code>
+   */
+  private void clearOptionalString() {
+    bitField0_ = (bitField0_ & ~0x00001000);
+    optionalString_ = getDefaultInstance().getOptionalString();
+  }
+  /**
+   * <code>optional string optionalString = 30;</code>
+   * @param value The bytes for optionalString to set.
+   */
+  private void setOptionalStringBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    optionalString_ = value.toStringUtf8();
+    bitField0_ |= 0x00001000;
   }
 
   public static final int REQUIREDSTRING_FIELD_NUMBER = 31;
-  private volatile java.lang.Object requiredString_;
+  private java.lang.String requiredString_;
   /**
    * <code>string requiredString = 31;</code>
    * @return The requiredString.
    */
   @java.lang.Override
   public java.lang.String getRequiredString() {
-    java.lang.Object ref = requiredString_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      requiredString_ = s;
-      return s;
-    }
+    return requiredString_;
   }
   /**
    * <code>string requiredString = 31;</code>
@@ -2854,16 +2163,34 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.ByteString
       getRequiredStringBytes() {
-    java.lang.Object ref = requiredString_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      requiredString_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+    return com.google.protobuf.ByteString.copyFromUtf8(requiredString_);
+  }
+  /**
+   * <code>string requiredString = 31;</code>
+   * @param value The requiredString to set.
+   */
+  private void setRequiredString(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  
+    requiredString_ = value;
+  }
+  /**
+   * <code>string requiredString = 31;</code>
+   */
+  private void clearRequiredString() {
+    
+    requiredString_ = getDefaultInstance().getRequiredString();
+  }
+  /**
+   * <code>string requiredString = 31;</code>
+   * @param value The bytes for requiredString to set.
+   */
+  private void setRequiredStringBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    requiredString_ = value.toStringUtf8();
+    
   }
 
   public static final int OPTIONALBYTES_FIELD_NUMBER = 32;
@@ -2884,6 +2211,22 @@ private static final long serialVersionUID = 0L;
   public com.google.protobuf.ByteString getOptionalBytes() {
     return optionalBytes_;
   }
+  /**
+   * <code>optional bytes optionalBytes = 32;</code>
+   * @param value The optionalBytes to set.
+   */
+  private void setOptionalBytes(com.google.protobuf.ByteString value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00002000;
+    optionalBytes_ = value;
+  }
+  /**
+   * <code>optional bytes optionalBytes = 32;</code>
+   */
+  private void clearOptionalBytes() {
+    bitField0_ = (bitField0_ & ~0x00002000);
+    optionalBytes_ = getDefaultInstance().getOptionalBytes();
+  }
 
   public static final int REQUIREDBYTES_FIELD_NUMBER = 33;
   private com.google.protobuf.ByteString requiredBytes_;
@@ -2894,6 +2237,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.ByteString getRequiredBytes() {
     return requiredBytes_;
+  }
+  /**
+   * <code>bytes requiredBytes = 33;</code>
+   * @param value The requiredBytes to set.
+   */
+  private void setRequiredBytes(com.google.protobuf.ByteString value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  
+    requiredBytes_ = value;
+  }
+  /**
+   * <code>bytes requiredBytes = 33;</code>
+   */
+  private void clearRequiredBytes() {
+    
+    requiredBytes_ = getDefaultInstance().getRequiredBytes();
   }
 
   public static final int CORPUS_FIELD_NUMBER = 36;
@@ -2906,7 +2265,8 @@ private static final long serialVersionUID = 0L;
    * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
    * @return Whether the corpus field is set.
    */
-  @java.lang.Override public boolean hasCorpus() {
+  @java.lang.Override
+  public boolean hasCorpus() {
     return ((bitField0_ & 0x00004000) != 0);
   }
   /**
@@ -2917,7 +2277,8 @@ private static final long serialVersionUID = 0L;
    * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
    * @return The enum numeric value on the wire for corpus.
    */
-  @java.lang.Override public int getCorpusValue() {
+  @java.lang.Override
+  public int getCorpusValue() {
     return corpus_;
   }
   /**
@@ -2928,10 +2289,44 @@ private static final long serialVersionUID = 0L;
    * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
    * @return The corpus.
    */
-  @java.lang.Override public com.proto.test3.TestService3Response.Corpus getCorpus() {
-    @SuppressWarnings("deprecation")
-    com.proto.test3.TestService3Response.Corpus result = com.proto.test3.TestService3Response.Corpus.valueOf(corpus_);
+  @java.lang.Override
+  public com.proto.test3.TestService3Response.Corpus getCorpus() {
+    com.proto.test3.TestService3Response.Corpus result = com.proto.test3.TestService3Response.Corpus.forNumber(corpus_);
     return result == null ? com.proto.test3.TestService3Response.Corpus.UNRECOGNIZED : result;
+  }
+  /**
+   * <pre>
+   *  [default = UNIVERSAL];
+   * </pre>
+   *
+   * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
+   * @param value The enum numeric value on the wire for corpus to set.
+   */
+  private void setCorpusValue(int value) {
+    bitField0_ |= 0x00004000;  corpus_ = value;
+  }
+  /**
+   * <pre>
+   *  [default = UNIVERSAL];
+   * </pre>
+   *
+   * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
+   * @param value The corpus to set.
+   */
+  private void setCorpus(com.proto.test3.TestService3Response.Corpus value) {
+    corpus_ = value.getNumber();
+    bitField0_ |= 0x00004000;
+  }
+  /**
+   * <pre>
+   *  [default = UNIVERSAL];
+   * </pre>
+   *
+   * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
+   */
+  private void clearCorpus() {
+    bitField0_ = (bitField0_ & ~0x00004000);
+    corpus_ = 0;
   }
 
   public static final int SAMPLES_FIELD_NUMBER = 37;
@@ -2957,6 +2352,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated int32 samples = 37 [packed = true];</code>
    * @return The count of samples.
    */
+  @java.lang.Override
   public int getSamplesCount() {
     return samples_.size();
   }
@@ -2969,16 +2365,75 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the element to return.
    * @return The samples at the given index.
    */
+  @java.lang.Override
   public int getSamples(int index) {
     return samples_.getInt(index);
   }
   private int samplesMemoizedSerializedSize = -1;
+  private void ensureSamplesIsMutable() {
+    com.google.protobuf.Internal.IntList tmp = samples_;
+    if (!tmp.isModifiable()) {
+      samples_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
+  }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#other
+   * </pre>
+   *
+   * <code>repeated int32 samples = 37 [packed = true];</code>
+   * @param index The index to set the value at.
+   * @param value The samples to set.
+   */
+  private void setSamples(
+      int index, int value) {
+    ensureSamplesIsMutable();
+    samples_.setInt(index, value);
+  }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#other
+   * </pre>
+   *
+   * <code>repeated int32 samples = 37 [packed = true];</code>
+   * @param value The samples to add.
+   */
+  private void addSamples(int value) {
+    ensureSamplesIsMutable();
+    samples_.addInt(value);
+  }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#other
+   * </pre>
+   *
+   * <code>repeated int32 samples = 37 [packed = true];</code>
+   * @param values The samples to add.
+   */
+  private void addAllSamples(
+      java.lang.Iterable<? extends java.lang.Integer> values) {
+    ensureSamplesIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, samples_);
+  }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#other
+   * </pre>
+   *
+   * <code>repeated int32 samples = 37 [packed = true];</code>
+   */
+  private void clearSamples() {
+    samples_ = emptyIntList();
+  }
 
   public static final int NAME_FIELD_NUMBER = 38;
   /**
    * <code>string name = 38;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return oneOfFieldCase_ == 38;
   }
@@ -2986,50 +2441,60 @@ private static final long serialVersionUID = 0L;
    * <code>string name = 38;</code>
    * @return The name.
    */
+  @java.lang.Override
   public java.lang.String getName() {
-    java.lang.Object ref = "";
+    java.lang.String ref = "";
     if (oneOfFieldCase_ == 38) {
-      ref = oneOfField_;
+      ref = (java.lang.String) oneOfField_;
     }
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      if (oneOfFieldCase_ == 38) {
-        oneOfField_ = s;
-      }
-      return s;
-    }
+    return ref;
   }
   /**
    * <code>string name = 38;</code>
    * @return The bytes for name.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNameBytes() {
-    java.lang.Object ref = "";
+    java.lang.String ref = "";
     if (oneOfFieldCase_ == 38) {
-      ref = oneOfField_;
+      ref = (java.lang.String) oneOfField_;
     }
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      if (oneOfFieldCase_ == 38) {
-        oneOfField_ = b;
-      }
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
+    return com.google.protobuf.ByteString.copyFromUtf8(ref);
+  }
+  /**
+   * <code>string name = 38;</code>
+   * @param value The name to set.
+   */
+  private void setName(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  oneOfFieldCase_ = 38;
+    oneOfField_ = value;
+  }
+  /**
+   * <code>string name = 38;</code>
+   */
+  private void clearName() {
+    if (oneOfFieldCase_ == 38) {
+      oneOfFieldCase_ = 0;
+      oneOfField_ = null;
     }
+  }
+  /**
+   * <code>string name = 38;</code>
+   * @param value The bytes for name to set.
+   */
+  private void setNameBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    oneOfField_ = value.toStringUtf8();
+    oneOfFieldCase_ = 38;
   }
 
   public static final int NESTED_FIELD_NUMBER = 39;
   /**
    * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-   * @return Whether the nested field is set.
    */
   @java.lang.Override
   public boolean hasNested() {
@@ -3037,7 +2502,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-   * @return The nested.
    */
   @java.lang.Override
   public com.proto.test3.TestService3Response.NestedMessage getNested() {
@@ -3049,39 +2513,64 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
    */
-  @java.lang.Override
-  public com.proto.test3.TestService3Response.NestedMessageOrBuilder getNestedOrBuilder() {
-    if (oneOfFieldCase_ == 39) {
-       return (com.proto.test3.TestService3Response.NestedMessage) oneOfField_;
+  private void setNested(com.proto.test3.TestService3Response.NestedMessage value) {
+    value.getClass();
+  oneOfField_ = value;
+    oneOfFieldCase_ = 39;
+  }
+  /**
+   * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
+   */
+  private void mergeNested(com.proto.test3.TestService3Response.NestedMessage value) {
+    value.getClass();
+  if (oneOfFieldCase_ == 39 &&
+        oneOfField_ != com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance()) {
+      oneOfField_ = com.proto.test3.TestService3Response.NestedMessage.newBuilder((com.proto.test3.TestService3Response.NestedMessage) oneOfField_)
+          .mergeFrom(value).buildPartial();
+    } else {
+      oneOfField_ = value;
     }
-    return com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance();
+    oneOfFieldCase_ = 39;
+  }
+  /**
+   * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
+   */
+  private void clearNested() {
+    if (oneOfFieldCase_ == 39) {
+      oneOfFieldCase_ = 0;
+      oneOfField_ = null;
+    }
   }
 
   public static final int MAP_FIELD_NUMBER = 40;
   private static final class MapDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
+    static final com.google.protobuf.MapEntryLite<
         java.lang.String, com.proto.test3.TestService3Response.NestedMessage> defaultEntry =
-            com.google.protobuf.MapEntry
+            com.google.protobuf.MapEntryLite
             .<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>newDefaultInstance(
-                com.proto.test3.Test3.internal_static_test3_TestService3Response_MapEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance());
   }
-  private com.google.protobuf.MapField<
-      java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map_;
-  private com.google.protobuf.MapField<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
+  private com.google.protobuf.MapFieldLite<
+      java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map_ =
+          com.google.protobuf.MapFieldLite.emptyMapField();
+  private com.google.protobuf.MapFieldLite<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
   internalGetMap() {
-    if (map_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          MapDefaultEntryHolder.defaultEntry);
+    return map_;
+  }
+  private com.google.protobuf.MapFieldLite<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
+  internalGetMutableMap() {
+    if (!map_.isMutable()) {
+      map_ = map_.mutableCopy();
     }
     return map_;
   }
+  @java.lang.Override
 
   public int getMapCount() {
-    return internalGetMap().getMap().size();
+    return internalGetMap().size();
   }
   /**
    * <pre>
@@ -3090,12 +2579,12 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
    */
-
   @java.lang.Override
+
   public boolean containsMap(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetMap().getMap().containsKey(key);
+    java.lang.Class<?> keyClass = key.getClass();
+    return internalGetMap().containsKey(key);
   }
   /**
    * Use {@link #getMapMap()} instead.
@@ -3115,7 +2604,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
 
   public java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> getMapMap() {
-    return internalGetMap().getMap();
+    return java.util.Collections.unmodifiableMap(
+        internalGetMap());
   }
   /**
    * <pre>
@@ -3129,9 +2619,9 @@ private static final long serialVersionUID = 0L;
   public com.proto.test3.TestService3Response.NestedMessage getMapOrDefault(
       java.lang.String key,
       com.proto.test3.TestService3Response.NestedMessage defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    java.lang.Class<?> keyClass = key.getClass();
     java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map =
-        internalGetMap().getMap();
+        internalGetMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
@@ -3145,17 +2635,28 @@ private static final long serialVersionUID = 0L;
 
   public com.proto.test3.TestService3Response.NestedMessage getMapOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    java.lang.Class<?> keyClass = key.getClass();
     java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map =
-        internalGetMap().getMap();
+        internalGetMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
     }
     return map.get(key);
   }
+  /**
+   * <pre>
+   *  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
+   * </pre>
+   *
+   * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
+   */
+  private java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
+  getMutableMapMap() {
+    return internalGetMutableMap();
+  }
 
   public static final int MAP_FIELD_FIELD_NUMBER = 41;
-  private java.util.List<com.proto.test3.TestService3Response.MapFieldEntry> mapField_;
+  private com.google.protobuf.Internal.ProtobufList<com.proto.test3.TestService3Response.MapFieldEntry> mapField_;
   /**
    * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
    */
@@ -3166,7 +2667,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.proto.test3.TestService3Response.MapFieldEntryOrBuilder> 
       getMapFieldOrBuilderList() {
     return mapField_;
@@ -3188,14 +2688,69 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
    */
-  @java.lang.Override
   public com.proto.test3.TestService3Response.MapFieldEntryOrBuilder getMapFieldOrBuilder(
       int index) {
     return mapField_.get(index);
   }
+  private void ensureMapFieldIsMutable() {
+    com.google.protobuf.Internal.ProtobufList<com.proto.test3.TestService3Response.MapFieldEntry> tmp = mapField_;
+    if (!tmp.isModifiable()) {
+      mapField_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
+  }
+
+  /**
+   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
+   */
+  private void setMapField(
+      int index, com.proto.test3.TestService3Response.MapFieldEntry value) {
+    value.getClass();
+  ensureMapFieldIsMutable();
+    mapField_.set(index, value);
+  }
+  /**
+   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
+   */
+  private void addMapField(com.proto.test3.TestService3Response.MapFieldEntry value) {
+    value.getClass();
+  ensureMapFieldIsMutable();
+    mapField_.add(value);
+  }
+  /**
+   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
+   */
+  private void addMapField(
+      int index, com.proto.test3.TestService3Response.MapFieldEntry value) {
+    value.getClass();
+  ensureMapFieldIsMutable();
+    mapField_.add(index, value);
+  }
+  /**
+   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
+   */
+  private void addAllMapField(
+      java.lang.Iterable<? extends com.proto.test3.TestService3Response.MapFieldEntry> values) {
+    ensureMapFieldIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, mapField_);
+  }
+  /**
+   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
+   */
+  private void clearMapField() {
+    mapField_ = emptyProtobufList();
+  }
+  /**
+   * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
+   */
+  private void removeMapField(int index) {
+    ensureMapFieldIsMutable();
+    mapField_.remove(index);
+  }
 
   public static final int DETAILS_FIELD_NUMBER = 42;
-  private java.util.List<com.google.protobuf.Any> details_;
+  private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Any> details_;
   /**
    * <pre>
    * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
@@ -3214,7 +2769,6 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Any details = 42;</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
       getDetailsOrBuilderList() {
     return details_;
@@ -3248,1216 +2802,198 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Any details = 42;</code>
    */
-  @java.lang.Override
   public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
       int index) {
     return details_.get(index);
   }
-
-  private byte memoizedIsInitialized = -1;
-  @java.lang.Override
-  public final boolean isInitialized() {
-    byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
-
-    memoizedIsInitialized = 1;
-    return true;
+  private void ensureDetailsIsMutable() {
+    com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Any> tmp = details_;
+    if (!tmp.isModifiable()) {
+      details_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
   }
 
-  @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
-    getSerializedSize();
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeDouble(1, optionalDouble_);
-    }
-    if (java.lang.Double.doubleToRawLongBits(requiredDouble_) != 0) {
-      output.writeDouble(3, requiredDouble_);
-    }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeInt32(4, optionalInt32_);
-    }
-    if (requiredInt32_ != 0) {
-      output.writeInt32(5, requiredInt32_);
-    }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeInt64(6, optionalInt64_);
-    }
-    if (requiredInt64_ != 0L) {
-      output.writeInt64(7, requiredInt64_);
-    }
-    if (((bitField0_ & 0x00000008) != 0)) {
-      output.writeUInt32(8, optionalUint32_);
-    }
-    if (requiredUint32_ != 0) {
-      output.writeUInt32(12, requiredUint32_);
-    }
-    if (((bitField0_ & 0x00000010) != 0)) {
-      output.writeUInt64(13, optionalUint64_);
-    }
-    if (requiredUint64_ != 0L) {
-      output.writeUInt64(14, requiredUint64_);
-    }
-    if (((bitField0_ & 0x00000020) != 0)) {
-      output.writeSInt32(16, optionalSint32_);
-    }
-    if (requiredSint32_ != 0) {
-      output.writeSInt32(17, requiredSint32_);
-    }
-    if (((bitField0_ & 0x00000040) != 0)) {
-      output.writeSInt64(18, optionalSint64_);
-    }
-    if (requiredSint64_ != 0L) {
-      output.writeSInt64(19, requiredSint64_);
-    }
-    if (((bitField0_ & 0x00000080) != 0)) {
-      output.writeFixed32(20, optionalFixed32_);
-    }
-    if (requiredFixed32_ != 0) {
-      output.writeFixed32(21, requiredFixed32_);
-    }
-    if (((bitField0_ & 0x00000100) != 0)) {
-      output.writeFixed64(22, optionalFixed64_);
-    }
-    if (requiredFixed64_ != 0L) {
-      output.writeFixed64(23, requiredFixed64_);
-    }
-    if (((bitField0_ & 0x00000200) != 0)) {
-      output.writeSFixed32(24, optionalSfixed32_);
-    }
-    if (requiredSfixed32_ != 0) {
-      output.writeSFixed32(25, requiredSfixed32_);
-    }
-    if (((bitField0_ & 0x00000400) != 0)) {
-      output.writeSFixed64(26, optionalSfixed64_);
-    }
-    if (requiredSfixed64_ != 0L) {
-      output.writeSFixed64(27, requiredSfixed64_);
-    }
-    if (((bitField0_ & 0x00000800) != 0)) {
-      output.writeBool(28, optionalBool_);
-    }
-    if (requiredBool_ != false) {
-      output.writeBool(29, requiredBool_);
-    }
-    if (((bitField0_ & 0x00001000) != 0)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 30, optionalString_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requiredString_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 31, requiredString_);
-    }
-    if (((bitField0_ & 0x00002000) != 0)) {
-      output.writeBytes(32, optionalBytes_);
-    }
-    if (!requiredBytes_.isEmpty()) {
-      output.writeBytes(33, requiredBytes_);
-    }
-    if (((bitField0_ & 0x00004000) != 0)) {
-      output.writeEnum(36, corpus_);
-    }
-    if (getSamplesList().size() > 0) {
-      output.writeUInt32NoTag(298);
-      output.writeUInt32NoTag(samplesMemoizedSerializedSize);
-    }
-    for (int i = 0; i < samples_.size(); i++) {
-      output.writeInt32NoTag(samples_.getInt(i));
-    }
-    if (oneOfFieldCase_ == 38) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 38, oneOfField_);
-    }
-    if (oneOfFieldCase_ == 39) {
-      output.writeMessage(39, (com.proto.test3.TestService3Response.NestedMessage) oneOfField_);
-    }
-    com.google.protobuf.GeneratedMessageV3
-      .serializeStringMapTo(
-        output,
-        internalGetMap(),
-        MapDefaultEntryHolder.defaultEntry,
-        40);
-    for (int i = 0; i < mapField_.size(); i++) {
-      output.writeMessage(41, mapField_.get(i));
-    }
-    for (int i = 0; i < details_.size(); i++) {
-      output.writeMessage(42, details_.get(i));
-    }
-    unknownFields.writeTo(output);
+  /**
+   * <pre>
+   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.Any details = 42;</code>
+   */
+  private void setDetails(
+      int index, com.google.protobuf.Any value) {
+    value.getClass();
+  ensureDetailsIsMutable();
+    details_.set(index, value);
   }
-
-  @java.lang.Override
-  public int getSerializedSize() {
-    int size = memoizedSize;
-    if (size != -1) return size;
-
-    size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, optionalDouble_);
-    }
-    if (java.lang.Double.doubleToRawLongBits(requiredDouble_) != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(3, requiredDouble_);
-    }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, optionalInt32_);
-    }
-    if (requiredInt32_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, requiredInt32_);
-    }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, optionalInt64_);
-    }
-    if (requiredInt64_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(7, requiredInt64_);
-    }
-    if (((bitField0_ & 0x00000008) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(8, optionalUint32_);
-    }
-    if (requiredUint32_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(12, requiredUint32_);
-    }
-    if (((bitField0_ & 0x00000010) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(13, optionalUint64_);
-    }
-    if (requiredUint64_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(14, requiredUint64_);
-    }
-    if (((bitField0_ & 0x00000020) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSInt32Size(16, optionalSint32_);
-    }
-    if (requiredSint32_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSInt32Size(17, requiredSint32_);
-    }
-    if (((bitField0_ & 0x00000040) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSInt64Size(18, optionalSint64_);
-    }
-    if (requiredSint64_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSInt64Size(19, requiredSint64_);
-    }
-    if (((bitField0_ & 0x00000080) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFixed32Size(20, optionalFixed32_);
-    }
-    if (requiredFixed32_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFixed32Size(21, requiredFixed32_);
-    }
-    if (((bitField0_ & 0x00000100) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFixed64Size(22, optionalFixed64_);
-    }
-    if (requiredFixed64_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFixed64Size(23, requiredFixed64_);
-    }
-    if (((bitField0_ & 0x00000200) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSFixed32Size(24, optionalSfixed32_);
-    }
-    if (requiredSfixed32_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSFixed32Size(25, requiredSfixed32_);
-    }
-    if (((bitField0_ & 0x00000400) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSFixed64Size(26, optionalSfixed64_);
-    }
-    if (requiredSfixed64_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeSFixed64Size(27, requiredSfixed64_);
-    }
-    if (((bitField0_ & 0x00000800) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(28, optionalBool_);
-    }
-    if (requiredBool_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(29, requiredBool_);
-    }
-    if (((bitField0_ & 0x00001000) != 0)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, optionalString_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requiredString_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, requiredString_);
-    }
-    if (((bitField0_ & 0x00002000) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(32, optionalBytes_);
-    }
-    if (!requiredBytes_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(33, requiredBytes_);
-    }
-    if (((bitField0_ & 0x00004000) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(36, corpus_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < samples_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt32SizeNoTag(samples_.getInt(i));
-      }
-      size += dataSize;
-      if (!getSamplesList().isEmpty()) {
-        size += 2;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      samplesMemoizedSerializedSize = dataSize;
-    }
-    if (oneOfFieldCase_ == 38) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, oneOfField_);
-    }
-    if (oneOfFieldCase_ == 39) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(39, (com.proto.test3.TestService3Response.NestedMessage) oneOfField_);
-    }
-    for (java.util.Map.Entry<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> entry
-         : internalGetMap().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
-      map__ = MapDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(40, map__);
-    }
-    for (int i = 0; i < mapField_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(41, mapField_.get(i));
-    }
-    for (int i = 0; i < details_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(42, details_.get(i));
-    }
-    size += unknownFields.getSerializedSize();
-    memoizedSize = size;
-    return size;
+  /**
+   * <pre>
+   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.Any details = 42;</code>
+   */
+  private void addDetails(com.google.protobuf.Any value) {
+    value.getClass();
+  ensureDetailsIsMutable();
+    details_.add(value);
   }
-
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
-    if (obj == this) {
-     return true;
-    }
-    if (!(obj instanceof com.proto.test3.TestService3Response)) {
-      return super.equals(obj);
-    }
-    com.proto.test3.TestService3Response other = (com.proto.test3.TestService3Response) obj;
-
-    if (hasOptionalDouble() != other.hasOptionalDouble()) return false;
-    if (hasOptionalDouble()) {
-      if (java.lang.Double.doubleToLongBits(getOptionalDouble())
-          != java.lang.Double.doubleToLongBits(
-              other.getOptionalDouble())) return false;
-    }
-    if (java.lang.Double.doubleToLongBits(getRequiredDouble())
-        != java.lang.Double.doubleToLongBits(
-            other.getRequiredDouble())) return false;
-    if (hasOptionalInt32() != other.hasOptionalInt32()) return false;
-    if (hasOptionalInt32()) {
-      if (getOptionalInt32()
-          != other.getOptionalInt32()) return false;
-    }
-    if (getRequiredInt32()
-        != other.getRequiredInt32()) return false;
-    if (hasOptionalInt64() != other.hasOptionalInt64()) return false;
-    if (hasOptionalInt64()) {
-      if (getOptionalInt64()
-          != other.getOptionalInt64()) return false;
-    }
-    if (getRequiredInt64()
-        != other.getRequiredInt64()) return false;
-    if (hasOptionalUint32() != other.hasOptionalUint32()) return false;
-    if (hasOptionalUint32()) {
-      if (getOptionalUint32()
-          != other.getOptionalUint32()) return false;
-    }
-    if (getRequiredUint32()
-        != other.getRequiredUint32()) return false;
-    if (hasOptionalUint64() != other.hasOptionalUint64()) return false;
-    if (hasOptionalUint64()) {
-      if (getOptionalUint64()
-          != other.getOptionalUint64()) return false;
-    }
-    if (getRequiredUint64()
-        != other.getRequiredUint64()) return false;
-    if (hasOptionalSint32() != other.hasOptionalSint32()) return false;
-    if (hasOptionalSint32()) {
-      if (getOptionalSint32()
-          != other.getOptionalSint32()) return false;
-    }
-    if (getRequiredSint32()
-        != other.getRequiredSint32()) return false;
-    if (hasOptionalSint64() != other.hasOptionalSint64()) return false;
-    if (hasOptionalSint64()) {
-      if (getOptionalSint64()
-          != other.getOptionalSint64()) return false;
-    }
-    if (getRequiredSint64()
-        != other.getRequiredSint64()) return false;
-    if (hasOptionalFixed32() != other.hasOptionalFixed32()) return false;
-    if (hasOptionalFixed32()) {
-      if (getOptionalFixed32()
-          != other.getOptionalFixed32()) return false;
-    }
-    if (getRequiredFixed32()
-        != other.getRequiredFixed32()) return false;
-    if (hasOptionalFixed64() != other.hasOptionalFixed64()) return false;
-    if (hasOptionalFixed64()) {
-      if (getOptionalFixed64()
-          != other.getOptionalFixed64()) return false;
-    }
-    if (getRequiredFixed64()
-        != other.getRequiredFixed64()) return false;
-    if (hasOptionalSfixed32() != other.hasOptionalSfixed32()) return false;
-    if (hasOptionalSfixed32()) {
-      if (getOptionalSfixed32()
-          != other.getOptionalSfixed32()) return false;
-    }
-    if (getRequiredSfixed32()
-        != other.getRequiredSfixed32()) return false;
-    if (hasOptionalSfixed64() != other.hasOptionalSfixed64()) return false;
-    if (hasOptionalSfixed64()) {
-      if (getOptionalSfixed64()
-          != other.getOptionalSfixed64()) return false;
-    }
-    if (getRequiredSfixed64()
-        != other.getRequiredSfixed64()) return false;
-    if (hasOptionalBool() != other.hasOptionalBool()) return false;
-    if (hasOptionalBool()) {
-      if (getOptionalBool()
-          != other.getOptionalBool()) return false;
-    }
-    if (getRequiredBool()
-        != other.getRequiredBool()) return false;
-    if (hasOptionalString() != other.hasOptionalString()) return false;
-    if (hasOptionalString()) {
-      if (!getOptionalString()
-          .equals(other.getOptionalString())) return false;
-    }
-    if (!getRequiredString()
-        .equals(other.getRequiredString())) return false;
-    if (hasOptionalBytes() != other.hasOptionalBytes()) return false;
-    if (hasOptionalBytes()) {
-      if (!getOptionalBytes()
-          .equals(other.getOptionalBytes())) return false;
-    }
-    if (!getRequiredBytes()
-        .equals(other.getRequiredBytes())) return false;
-    if (hasCorpus() != other.hasCorpus()) return false;
-    if (hasCorpus()) {
-      if (corpus_ != other.corpus_) return false;
-    }
-    if (!getSamplesList()
-        .equals(other.getSamplesList())) return false;
-    if (!internalGetMap().equals(
-        other.internalGetMap())) return false;
-    if (!getMapFieldList()
-        .equals(other.getMapFieldList())) return false;
-    if (!getDetailsList()
-        .equals(other.getDetailsList())) return false;
-    if (!getOneOfFieldCase().equals(other.getOneOfFieldCase())) return false;
-    switch (oneOfFieldCase_) {
-      case 38:
-        if (!getName()
-            .equals(other.getName())) return false;
-        break;
-      case 39:
-        if (!getNested()
-            .equals(other.getNested())) return false;
-        break;
-      case 0:
-      default:
-    }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+  /**
+   * <pre>
+   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.Any details = 42;</code>
+   */
+  private void addDetails(
+      int index, com.google.protobuf.Any value) {
+    value.getClass();
+  ensureDetailsIsMutable();
+    details_.add(index, value);
   }
-
-  @java.lang.Override
-  public int hashCode() {
-    if (memoizedHashCode != 0) {
-      return memoizedHashCode;
-    }
-    int hash = 41;
-    hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasOptionalDouble()) {
-      hash = (37 * hash) + OPTIONALDOUBLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getOptionalDouble()));
-    }
-    hash = (37 * hash) + REQUIREDDOUBLE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getRequiredDouble()));
-    if (hasOptionalInt32()) {
-      hash = (37 * hash) + OPTIONALINT32_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalInt32();
-    }
-    hash = (37 * hash) + REQUIREDINT32_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredInt32();
-    if (hasOptionalInt64()) {
-      hash = (37 * hash) + OPTIONALINT64_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getOptionalInt64());
-    }
-    hash = (37 * hash) + REQUIREDINT64_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getRequiredInt64());
-    if (hasOptionalUint32()) {
-      hash = (37 * hash) + OPTIONALUINT32_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalUint32();
-    }
-    hash = (37 * hash) + REQUIREDUINT32_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredUint32();
-    if (hasOptionalUint64()) {
-      hash = (37 * hash) + OPTIONALUINT64_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getOptionalUint64());
-    }
-    hash = (37 * hash) + REQUIREDUINT64_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getRequiredUint64());
-    if (hasOptionalSint32()) {
-      hash = (37 * hash) + OPTIONALSINT32_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalSint32();
-    }
-    hash = (37 * hash) + REQUIREDSINT32_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredSint32();
-    if (hasOptionalSint64()) {
-      hash = (37 * hash) + OPTIONALSINT64_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getOptionalSint64());
-    }
-    hash = (37 * hash) + REQUIREDSINT64_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getRequiredSint64());
-    if (hasOptionalFixed32()) {
-      hash = (37 * hash) + OPTIONALFIXED32_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalFixed32();
-    }
-    hash = (37 * hash) + REQUIREDFIXED32_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredFixed32();
-    if (hasOptionalFixed64()) {
-      hash = (37 * hash) + OPTIONALFIXED64_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getOptionalFixed64());
-    }
-    hash = (37 * hash) + REQUIREDFIXED64_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getRequiredFixed64());
-    if (hasOptionalSfixed32()) {
-      hash = (37 * hash) + OPTIONALSFIXED32_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalSfixed32();
-    }
-    hash = (37 * hash) + REQUIREDSFIXED32_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredSfixed32();
-    if (hasOptionalSfixed64()) {
-      hash = (37 * hash) + OPTIONALSFIXED64_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getOptionalSfixed64());
-    }
-    hash = (37 * hash) + REQUIREDSFIXED64_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getRequiredSfixed64());
-    if (hasOptionalBool()) {
-      hash = (37 * hash) + OPTIONALBOOL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getOptionalBool());
-    }
-    hash = (37 * hash) + REQUIREDBOOL_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getRequiredBool());
-    if (hasOptionalString()) {
-      hash = (37 * hash) + OPTIONALSTRING_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalString().hashCode();
-    }
-    hash = (37 * hash) + REQUIREDSTRING_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredString().hashCode();
-    if (hasOptionalBytes()) {
-      hash = (37 * hash) + OPTIONALBYTES_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionalBytes().hashCode();
-    }
-    hash = (37 * hash) + REQUIREDBYTES_FIELD_NUMBER;
-    hash = (53 * hash) + getRequiredBytes().hashCode();
-    if (hasCorpus()) {
-      hash = (37 * hash) + CORPUS_FIELD_NUMBER;
-      hash = (53 * hash) + corpus_;
-    }
-    if (getSamplesCount() > 0) {
-      hash = (37 * hash) + SAMPLES_FIELD_NUMBER;
-      hash = (53 * hash) + getSamplesList().hashCode();
-    }
-    if (!internalGetMap().getMap().isEmpty()) {
-      hash = (37 * hash) + MAP_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetMap().hashCode();
-    }
-    if (getMapFieldCount() > 0) {
-      hash = (37 * hash) + MAP_FIELD_FIELD_NUMBER;
-      hash = (53 * hash) + getMapFieldList().hashCode();
-    }
-    if (getDetailsCount() > 0) {
-      hash = (37 * hash) + DETAILS_FIELD_NUMBER;
-      hash = (53 * hash) + getDetailsList().hashCode();
-    }
-    switch (oneOfFieldCase_) {
-      case 38:
-        hash = (37 * hash) + NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getName().hashCode();
-        break;
-      case 39:
-        hash = (37 * hash) + NESTED_FIELD_NUMBER;
-        hash = (53 * hash) + getNested().hashCode();
-        break;
-      case 0:
-      default:
-    }
-    hash = (29 * hash) + unknownFields.hashCode();
-    memoizedHashCode = hash;
-    return hash;
+  /**
+   * <pre>
+   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.Any details = 42;</code>
+   */
+  private void addAllDetails(
+      java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+    ensureDetailsIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, details_);
+  }
+  /**
+   * <pre>
+   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.Any details = 42;</code>
+   */
+  private void clearDetails() {
+    details_ = emptyProtobufList();
+  }
+  /**
+   * <pre>
+   * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.Any details = 42;</code>
+   */
+  private void removeDetails(int index) {
+    ensureDetailsIsMutable();
+    details_.remove(index);
   }
 
   public static com.proto.test3.TestService3Response parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.test3.TestService3Response parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.test3.TestService3Response parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.test3.TestService3Response parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
   public static com.proto.test3.TestService3Response parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.test3.TestService3Response parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
+    return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
   public static Builder newBuilder(com.proto.test3.TestService3Response prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
-  @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-    Builder builder = new Builder(parent);
-    return builder;
-  }
   /**
    * Protobuf type {@code test3.TestService3Response}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+      com.google.protobuf.GeneratedMessageLite.Builder<
+        com.proto.test3.TestService3Response, Builder> implements
       // @@protoc_insertion_point(builder_implements:test3.TestService3Response)
       com.proto.test3.TestService3ResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 40:
-          return internalGetMap();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMutableMapField(
-        int number) {
-      switch (number) {
-        case 40:
-          return internalGetMutableMap();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.proto.test3.TestService3Response.class, com.proto.test3.TestService3Response.Builder.class);
-    }
-
     // Construct using com.proto.test3.TestService3Response.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
-    }
-
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMapFieldFieldBuilder();
-        getDetailsFieldBuilder();
-      }
-    }
-    @java.lang.Override
-    public Builder clear() {
-      super.clear();
-      optionalDouble_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      requiredDouble_ = 0D;
-
-      optionalInt32_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
-      requiredInt32_ = 0;
-
-      optionalInt64_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
-      requiredInt64_ = 0L;
-
-      optionalUint32_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000008);
-      requiredUint32_ = 0;
-
-      optionalUint64_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
-      requiredUint64_ = 0L;
-
-      optionalSint32_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000020);
-      requiredSint32_ = 0;
-
-      optionalSint64_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000040);
-      requiredSint64_ = 0L;
-
-      optionalFixed32_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000080);
-      requiredFixed32_ = 0;
-
-      optionalFixed64_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000100);
-      requiredFixed64_ = 0L;
-
-      optionalSfixed32_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000200);
-      requiredSfixed32_ = 0;
-
-      optionalSfixed64_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000400);
-      requiredSfixed64_ = 0L;
-
-      optionalBool_ = false;
-      bitField0_ = (bitField0_ & ~0x00000800);
-      requiredBool_ = false;
-
-      optionalString_ = "";
-      bitField0_ = (bitField0_ & ~0x00001000);
-      requiredString_ = "";
-
-      optionalBytes_ = com.google.protobuf.ByteString.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00002000);
-      requiredBytes_ = com.google.protobuf.ByteString.EMPTY;
-
-      corpus_ = 0;
-      bitField0_ = (bitField0_ & ~0x00004000);
-      samples_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00008000);
-      internalGetMutableMap().clear();
-      if (mapFieldBuilder_ == null) {
-        mapField_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00020000);
-      } else {
-        mapFieldBuilder_.clear();
-      }
-      if (detailsBuilder_ == null) {
-        details_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
-      } else {
-        detailsBuilder_.clear();
-      }
-      oneOfFieldCase_ = 0;
-      oneOfField_ = null;
-      return this;
+      super(DEFAULT_INSTANCE);
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.proto.test3.Test3.internal_static_test3_TestService3Response_descriptor;
-    }
-
-    @java.lang.Override
-    public com.proto.test3.TestService3Response getDefaultInstanceForType() {
-      return com.proto.test3.TestService3Response.getDefaultInstance();
-    }
-
-    @java.lang.Override
-    public com.proto.test3.TestService3Response build() {
-      com.proto.test3.TestService3Response result = buildPartial();
-      if (!result.isInitialized()) {
-        throw newUninitializedMessageException(result);
-      }
-      return result;
-    }
-
-    @java.lang.Override
-    public com.proto.test3.TestService3Response buildPartial() {
-      com.proto.test3.TestService3Response result = new com.proto.test3.TestService3Response(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.optionalDouble_ = optionalDouble_;
-        to_bitField0_ |= 0x00000001;
-      }
-      result.requiredDouble_ = requiredDouble_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.optionalInt32_ = optionalInt32_;
-        to_bitField0_ |= 0x00000002;
-      }
-      result.requiredInt32_ = requiredInt32_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.optionalInt64_ = optionalInt64_;
-        to_bitField0_ |= 0x00000004;
-      }
-      result.requiredInt64_ = requiredInt64_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.optionalUint32_ = optionalUint32_;
-        to_bitField0_ |= 0x00000008;
-      }
-      result.requiredUint32_ = requiredUint32_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.optionalUint64_ = optionalUint64_;
-        to_bitField0_ |= 0x00000010;
-      }
-      result.requiredUint64_ = requiredUint64_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.optionalSint32_ = optionalSint32_;
-        to_bitField0_ |= 0x00000020;
-      }
-      result.requiredSint32_ = requiredSint32_;
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.optionalSint64_ = optionalSint64_;
-        to_bitField0_ |= 0x00000040;
-      }
-      result.requiredSint64_ = requiredSint64_;
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.optionalFixed32_ = optionalFixed32_;
-        to_bitField0_ |= 0x00000080;
-      }
-      result.requiredFixed32_ = requiredFixed32_;
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.optionalFixed64_ = optionalFixed64_;
-        to_bitField0_ |= 0x00000100;
-      }
-      result.requiredFixed64_ = requiredFixed64_;
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.optionalSfixed32_ = optionalSfixed32_;
-        to_bitField0_ |= 0x00000200;
-      }
-      result.requiredSfixed32_ = requiredSfixed32_;
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.optionalSfixed64_ = optionalSfixed64_;
-        to_bitField0_ |= 0x00000400;
-      }
-      result.requiredSfixed64_ = requiredSfixed64_;
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.optionalBool_ = optionalBool_;
-        to_bitField0_ |= 0x00000800;
-      }
-      result.requiredBool_ = requiredBool_;
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        to_bitField0_ |= 0x00001000;
-      }
-      result.optionalString_ = optionalString_;
-      result.requiredString_ = requiredString_;
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        to_bitField0_ |= 0x00002000;
-      }
-      result.optionalBytes_ = optionalBytes_;
-      result.requiredBytes_ = requiredBytes_;
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        to_bitField0_ |= 0x00004000;
-      }
-      result.corpus_ = corpus_;
-      if (((bitField0_ & 0x00008000) != 0)) {
-        samples_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00008000);
-      }
-      result.samples_ = samples_;
-      if (oneOfFieldCase_ == 38) {
-        result.oneOfField_ = oneOfField_;
-      }
-      if (oneOfFieldCase_ == 39) {
-        if (nestedBuilder_ == null) {
-          result.oneOfField_ = oneOfField_;
-        } else {
-          result.oneOfField_ = nestedBuilder_.build();
-        }
-      }
-      result.map_ = internalGetMap();
-      result.map_.makeImmutable();
-      if (mapFieldBuilder_ == null) {
-        if (((bitField0_ & 0x00020000) != 0)) {
-          mapField_ = java.util.Collections.unmodifiableList(mapField_);
-          bitField0_ = (bitField0_ & ~0x00020000);
-        }
-        result.mapField_ = mapField_;
-      } else {
-        result.mapField_ = mapFieldBuilder_.build();
-      }
-      if (detailsBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0)) {
-          details_ = java.util.Collections.unmodifiableList(details_);
-          bitField0_ = (bitField0_ & ~0x00040000);
-        }
-        result.details_ = details_;
-      } else {
-        result.details_ = detailsBuilder_.build();
-      }
-      result.bitField0_ = to_bitField0_;
-      result.oneOfFieldCase_ = oneOfFieldCase_;
-      onBuilt();
-      return result;
-    }
-
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
-    @java.lang.Override
-    public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.proto.test3.TestService3Response) {
-        return mergeFrom((com.proto.test3.TestService3Response)other);
-      } else {
-        super.mergeFrom(other);
-        return this;
-      }
-    }
-
-    public Builder mergeFrom(com.proto.test3.TestService3Response other) {
-      if (other == com.proto.test3.TestService3Response.getDefaultInstance()) return this;
-      if (other.hasOptionalDouble()) {
-        setOptionalDouble(other.getOptionalDouble());
-      }
-      if (other.getRequiredDouble() != 0D) {
-        setRequiredDouble(other.getRequiredDouble());
-      }
-      if (other.hasOptionalInt32()) {
-        setOptionalInt32(other.getOptionalInt32());
-      }
-      if (other.getRequiredInt32() != 0) {
-        setRequiredInt32(other.getRequiredInt32());
-      }
-      if (other.hasOptionalInt64()) {
-        setOptionalInt64(other.getOptionalInt64());
-      }
-      if (other.getRequiredInt64() != 0L) {
-        setRequiredInt64(other.getRequiredInt64());
-      }
-      if (other.hasOptionalUint32()) {
-        setOptionalUint32(other.getOptionalUint32());
-      }
-      if (other.getRequiredUint32() != 0) {
-        setRequiredUint32(other.getRequiredUint32());
-      }
-      if (other.hasOptionalUint64()) {
-        setOptionalUint64(other.getOptionalUint64());
-      }
-      if (other.getRequiredUint64() != 0L) {
-        setRequiredUint64(other.getRequiredUint64());
-      }
-      if (other.hasOptionalSint32()) {
-        setOptionalSint32(other.getOptionalSint32());
-      }
-      if (other.getRequiredSint32() != 0) {
-        setRequiredSint32(other.getRequiredSint32());
-      }
-      if (other.hasOptionalSint64()) {
-        setOptionalSint64(other.getOptionalSint64());
-      }
-      if (other.getRequiredSint64() != 0L) {
-        setRequiredSint64(other.getRequiredSint64());
-      }
-      if (other.hasOptionalFixed32()) {
-        setOptionalFixed32(other.getOptionalFixed32());
-      }
-      if (other.getRequiredFixed32() != 0) {
-        setRequiredFixed32(other.getRequiredFixed32());
-      }
-      if (other.hasOptionalFixed64()) {
-        setOptionalFixed64(other.getOptionalFixed64());
-      }
-      if (other.getRequiredFixed64() != 0L) {
-        setRequiredFixed64(other.getRequiredFixed64());
-      }
-      if (other.hasOptionalSfixed32()) {
-        setOptionalSfixed32(other.getOptionalSfixed32());
-      }
-      if (other.getRequiredSfixed32() != 0) {
-        setRequiredSfixed32(other.getRequiredSfixed32());
-      }
-      if (other.hasOptionalSfixed64()) {
-        setOptionalSfixed64(other.getOptionalSfixed64());
-      }
-      if (other.getRequiredSfixed64() != 0L) {
-        setRequiredSfixed64(other.getRequiredSfixed64());
-      }
-      if (other.hasOptionalBool()) {
-        setOptionalBool(other.getOptionalBool());
-      }
-      if (other.getRequiredBool() != false) {
-        setRequiredBool(other.getRequiredBool());
-      }
-      if (other.hasOptionalString()) {
-        bitField0_ |= 0x00001000;
-        optionalString_ = other.optionalString_;
-        onChanged();
-      }
-      if (!other.getRequiredString().isEmpty()) {
-        requiredString_ = other.requiredString_;
-        onChanged();
-      }
-      if (other.hasOptionalBytes()) {
-        setOptionalBytes(other.getOptionalBytes());
-      }
-      if (other.getRequiredBytes() != com.google.protobuf.ByteString.EMPTY) {
-        setRequiredBytes(other.getRequiredBytes());
-      }
-      if (other.hasCorpus()) {
-        setCorpus(other.getCorpus());
-      }
-      if (!other.samples_.isEmpty()) {
-        if (samples_.isEmpty()) {
-          samples_ = other.samples_;
-          bitField0_ = (bitField0_ & ~0x00008000);
-        } else {
-          ensureSamplesIsMutable();
-          samples_.addAll(other.samples_);
-        }
-        onChanged();
-      }
-      internalGetMutableMap().mergeFrom(
-          other.internalGetMap());
-      if (mapFieldBuilder_ == null) {
-        if (!other.mapField_.isEmpty()) {
-          if (mapField_.isEmpty()) {
-            mapField_ = other.mapField_;
-            bitField0_ = (bitField0_ & ~0x00020000);
-          } else {
-            ensureMapFieldIsMutable();
-            mapField_.addAll(other.mapField_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.mapField_.isEmpty()) {
-          if (mapFieldBuilder_.isEmpty()) {
-            mapFieldBuilder_.dispose();
-            mapFieldBuilder_ = null;
-            mapField_ = other.mapField_;
-            bitField0_ = (bitField0_ & ~0x00020000);
-            mapFieldBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getMapFieldFieldBuilder() : null;
-          } else {
-            mapFieldBuilder_.addAllMessages(other.mapField_);
-          }
-        }
-      }
-      if (detailsBuilder_ == null) {
-        if (!other.details_.isEmpty()) {
-          if (details_.isEmpty()) {
-            details_ = other.details_;
-            bitField0_ = (bitField0_ & ~0x00040000);
-          } else {
-            ensureDetailsIsMutable();
-            details_.addAll(other.details_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.details_.isEmpty()) {
-          if (detailsBuilder_.isEmpty()) {
-            detailsBuilder_.dispose();
-            detailsBuilder_ = null;
-            details_ = other.details_;
-            bitField0_ = (bitField0_ & ~0x00040000);
-            detailsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDetailsFieldBuilder() : null;
-          } else {
-            detailsBuilder_.addAllMessages(other.details_);
-          }
-        }
-      }
-      switch (other.getOneOfFieldCase()) {
-        case NAME: {
-          oneOfFieldCase_ = 38;
-          oneOfField_ = other.oneOfField_;
-          onChanged();
-          break;
-        }
-        case NESTED: {
-          mergeNested(other.getNested());
-          break;
-        }
-        case ONEOFFIELD_NOT_SET: {
-          break;
-        }
-      }
-      this.mergeUnknownFields(other.unknownFields);
-      onChanged();
-      return this;
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      return true;
-    }
-
-    @java.lang.Override
-    public Builder mergeFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      com.proto.test3.TestService3Response parsedMessage = null;
-      try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.proto.test3.TestService3Response) e.getUnfinishedMessage();
-        throw e.unwrapIOException();
-      } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
-      return this;
-    }
-    private int oneOfFieldCase_ = 0;
-    private java.lang.Object oneOfField_;
     public OneOfFieldCase
         getOneOfFieldCase() {
-      return OneOfFieldCase.forNumber(
-          oneOfFieldCase_);
+      return instance.getOneOfFieldCase();
     }
 
     public Builder clearOneOfField() {
-      oneOfFieldCase_ = 0;
-      oneOfField_ = null;
-      onChanged();
+      copyOnWrite();
+      instance.clearOneOfField();
       return this;
     }
 
-    private int bitField0_;
 
-    private double optionalDouble_ ;
     /**
      * <pre>
      *  https://developers.google.com/protocol-buffers/docs/proto#specifying-rules
@@ -4469,7 +3005,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOptionalDouble() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return instance.hasOptionalDouble();
     }
     /**
      * <pre>
@@ -4482,7 +3018,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public double getOptionalDouble() {
-      return optionalDouble_;
+      return instance.getOptionalDouble();
     }
     /**
      * <pre>
@@ -4495,9 +3031,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalDouble(double value) {
-      bitField0_ |= 0x00000001;
-      optionalDouble_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalDouble(value);
       return this;
     }
     /**
@@ -4510,20 +3045,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalDouble() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      optionalDouble_ = 0D;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalDouble();
       return this;
     }
 
-    private double requiredDouble_ ;
     /**
      * <code>double requiredDouble = 3;</code>
      * @return The requiredDouble.
      */
     @java.lang.Override
     public double getRequiredDouble() {
-      return requiredDouble_;
+      return instance.getRequiredDouble();
     }
     /**
      * <code>double requiredDouble = 3;</code>
@@ -4531,9 +3064,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredDouble(double value) {
-      
-      requiredDouble_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredDouble(value);
       return this;
     }
     /**
@@ -4541,20 +3073,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredDouble() {
-      
-      requiredDouble_ = 0D;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredDouble();
       return this;
     }
 
-    private int optionalInt32_ ;
     /**
      * <code>optional int32 optionalInt32 = 4;</code>
      * @return Whether the optionalInt32 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalInt32() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return instance.hasOptionalInt32();
     }
     /**
      * <code>optional int32 optionalInt32 = 4;</code>
@@ -4562,7 +3092,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public int getOptionalInt32() {
-      return optionalInt32_;
+      return instance.getOptionalInt32();
     }
     /**
      * <code>optional int32 optionalInt32 = 4;</code>
@@ -4570,9 +3100,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalInt32(int value) {
-      bitField0_ |= 0x00000002;
-      optionalInt32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalInt32(value);
       return this;
     }
     /**
@@ -4580,20 +3109,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalInt32() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      optionalInt32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalInt32();
       return this;
     }
 
-    private int requiredInt32_ ;
     /**
      * <code>int32 requiredInt32 = 5;</code>
      * @return The requiredInt32.
      */
     @java.lang.Override
     public int getRequiredInt32() {
-      return requiredInt32_;
+      return instance.getRequiredInt32();
     }
     /**
      * <code>int32 requiredInt32 = 5;</code>
@@ -4601,9 +3128,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredInt32(int value) {
-      
-      requiredInt32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredInt32(value);
       return this;
     }
     /**
@@ -4611,20 +3137,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredInt32() {
-      
-      requiredInt32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredInt32();
       return this;
     }
 
-    private long optionalInt64_ ;
     /**
      * <code>optional int64 optionalInt64 = 6;</code>
      * @return Whether the optionalInt64 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalInt64() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return instance.hasOptionalInt64();
     }
     /**
      * <code>optional int64 optionalInt64 = 6;</code>
@@ -4632,7 +3156,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public long getOptionalInt64() {
-      return optionalInt64_;
+      return instance.getOptionalInt64();
     }
     /**
      * <code>optional int64 optionalInt64 = 6;</code>
@@ -4640,9 +3164,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalInt64(long value) {
-      bitField0_ |= 0x00000004;
-      optionalInt64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalInt64(value);
       return this;
     }
     /**
@@ -4650,20 +3173,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalInt64() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      optionalInt64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalInt64();
       return this;
     }
 
-    private long requiredInt64_ ;
     /**
      * <code>int64 requiredInt64 = 7;</code>
      * @return The requiredInt64.
      */
     @java.lang.Override
     public long getRequiredInt64() {
-      return requiredInt64_;
+      return instance.getRequiredInt64();
     }
     /**
      * <code>int64 requiredInt64 = 7;</code>
@@ -4671,9 +3192,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredInt64(long value) {
-      
-      requiredInt64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredInt64(value);
       return this;
     }
     /**
@@ -4681,20 +3201,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredInt64() {
-      
-      requiredInt64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredInt64();
       return this;
     }
 
-    private int optionalUint32_ ;
     /**
      * <code>optional uint32 optionalUint32 = 8;</code>
      * @return Whether the optionalUint32 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalUint32() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return instance.hasOptionalUint32();
     }
     /**
      * <code>optional uint32 optionalUint32 = 8;</code>
@@ -4702,7 +3220,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public int getOptionalUint32() {
-      return optionalUint32_;
+      return instance.getOptionalUint32();
     }
     /**
      * <code>optional uint32 optionalUint32 = 8;</code>
@@ -4710,9 +3228,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalUint32(int value) {
-      bitField0_ |= 0x00000008;
-      optionalUint32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalUint32(value);
       return this;
     }
     /**
@@ -4720,20 +3237,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalUint32() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      optionalUint32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalUint32();
       return this;
     }
 
-    private int requiredUint32_ ;
     /**
      * <code>uint32 requiredUint32 = 12;</code>
      * @return The requiredUint32.
      */
     @java.lang.Override
     public int getRequiredUint32() {
-      return requiredUint32_;
+      return instance.getRequiredUint32();
     }
     /**
      * <code>uint32 requiredUint32 = 12;</code>
@@ -4741,9 +3256,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredUint32(int value) {
-      
-      requiredUint32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredUint32(value);
       return this;
     }
     /**
@@ -4751,20 +3265,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredUint32() {
-      
-      requiredUint32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredUint32();
       return this;
     }
 
-    private long optionalUint64_ ;
     /**
      * <code>optional uint64 optionalUint64 = 13;</code>
      * @return Whether the optionalUint64 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalUint64() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return instance.hasOptionalUint64();
     }
     /**
      * <code>optional uint64 optionalUint64 = 13;</code>
@@ -4772,7 +3284,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public long getOptionalUint64() {
-      return optionalUint64_;
+      return instance.getOptionalUint64();
     }
     /**
      * <code>optional uint64 optionalUint64 = 13;</code>
@@ -4780,9 +3292,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalUint64(long value) {
-      bitField0_ |= 0x00000010;
-      optionalUint64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalUint64(value);
       return this;
     }
     /**
@@ -4790,20 +3301,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalUint64() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      optionalUint64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalUint64();
       return this;
     }
 
-    private long requiredUint64_ ;
     /**
      * <code>uint64 requiredUint64 = 14;</code>
      * @return The requiredUint64.
      */
     @java.lang.Override
     public long getRequiredUint64() {
-      return requiredUint64_;
+      return instance.getRequiredUint64();
     }
     /**
      * <code>uint64 requiredUint64 = 14;</code>
@@ -4811,9 +3320,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredUint64(long value) {
-      
-      requiredUint64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredUint64(value);
       return this;
     }
     /**
@@ -4821,20 +3329,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredUint64() {
-      
-      requiredUint64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredUint64();
       return this;
     }
 
-    private int optionalSint32_ ;
     /**
      * <code>optional sint32 optionalSint32 = 16;</code>
      * @return Whether the optionalSint32 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalSint32() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return instance.hasOptionalSint32();
     }
     /**
      * <code>optional sint32 optionalSint32 = 16;</code>
@@ -4842,7 +3348,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public int getOptionalSint32() {
-      return optionalSint32_;
+      return instance.getOptionalSint32();
     }
     /**
      * <code>optional sint32 optionalSint32 = 16;</code>
@@ -4850,9 +3356,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalSint32(int value) {
-      bitField0_ |= 0x00000020;
-      optionalSint32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalSint32(value);
       return this;
     }
     /**
@@ -4860,20 +3365,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalSint32() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      optionalSint32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalSint32();
       return this;
     }
 
-    private int requiredSint32_ ;
     /**
      * <code>sint32 requiredSint32 = 17;</code>
      * @return The requiredSint32.
      */
     @java.lang.Override
     public int getRequiredSint32() {
-      return requiredSint32_;
+      return instance.getRequiredSint32();
     }
     /**
      * <code>sint32 requiredSint32 = 17;</code>
@@ -4881,9 +3384,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredSint32(int value) {
-      
-      requiredSint32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredSint32(value);
       return this;
     }
     /**
@@ -4891,20 +3393,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredSint32() {
-      
-      requiredSint32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredSint32();
       return this;
     }
 
-    private long optionalSint64_ ;
     /**
      * <code>optional sint64 optionalSint64 = 18;</code>
      * @return Whether the optionalSint64 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalSint64() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return instance.hasOptionalSint64();
     }
     /**
      * <code>optional sint64 optionalSint64 = 18;</code>
@@ -4912,7 +3412,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public long getOptionalSint64() {
-      return optionalSint64_;
+      return instance.getOptionalSint64();
     }
     /**
      * <code>optional sint64 optionalSint64 = 18;</code>
@@ -4920,9 +3420,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalSint64(long value) {
-      bitField0_ |= 0x00000040;
-      optionalSint64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalSint64(value);
       return this;
     }
     /**
@@ -4930,20 +3429,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalSint64() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      optionalSint64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalSint64();
       return this;
     }
 
-    private long requiredSint64_ ;
     /**
      * <code>sint64 requiredSint64 = 19;</code>
      * @return The requiredSint64.
      */
     @java.lang.Override
     public long getRequiredSint64() {
-      return requiredSint64_;
+      return instance.getRequiredSint64();
     }
     /**
      * <code>sint64 requiredSint64 = 19;</code>
@@ -4951,9 +3448,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredSint64(long value) {
-      
-      requiredSint64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredSint64(value);
       return this;
     }
     /**
@@ -4961,20 +3457,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredSint64() {
-      
-      requiredSint64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredSint64();
       return this;
     }
 
-    private int optionalFixed32_ ;
     /**
      * <code>optional fixed32 optionalFixed32 = 20;</code>
      * @return Whether the optionalFixed32 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalFixed32() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return instance.hasOptionalFixed32();
     }
     /**
      * <code>optional fixed32 optionalFixed32 = 20;</code>
@@ -4982,7 +3476,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public int getOptionalFixed32() {
-      return optionalFixed32_;
+      return instance.getOptionalFixed32();
     }
     /**
      * <code>optional fixed32 optionalFixed32 = 20;</code>
@@ -4990,9 +3484,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalFixed32(int value) {
-      bitField0_ |= 0x00000080;
-      optionalFixed32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalFixed32(value);
       return this;
     }
     /**
@@ -5000,20 +3493,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalFixed32() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      optionalFixed32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalFixed32();
       return this;
     }
 
-    private int requiredFixed32_ ;
     /**
      * <code>fixed32 requiredFixed32 = 21;</code>
      * @return The requiredFixed32.
      */
     @java.lang.Override
     public int getRequiredFixed32() {
-      return requiredFixed32_;
+      return instance.getRequiredFixed32();
     }
     /**
      * <code>fixed32 requiredFixed32 = 21;</code>
@@ -5021,9 +3512,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredFixed32(int value) {
-      
-      requiredFixed32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredFixed32(value);
       return this;
     }
     /**
@@ -5031,20 +3521,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredFixed32() {
-      
-      requiredFixed32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredFixed32();
       return this;
     }
 
-    private long optionalFixed64_ ;
     /**
      * <code>optional fixed64 optionalFixed64 = 22;</code>
      * @return Whether the optionalFixed64 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalFixed64() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return instance.hasOptionalFixed64();
     }
     /**
      * <code>optional fixed64 optionalFixed64 = 22;</code>
@@ -5052,7 +3540,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public long getOptionalFixed64() {
-      return optionalFixed64_;
+      return instance.getOptionalFixed64();
     }
     /**
      * <code>optional fixed64 optionalFixed64 = 22;</code>
@@ -5060,9 +3548,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalFixed64(long value) {
-      bitField0_ |= 0x00000100;
-      optionalFixed64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalFixed64(value);
       return this;
     }
     /**
@@ -5070,20 +3557,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalFixed64() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      optionalFixed64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalFixed64();
       return this;
     }
 
-    private long requiredFixed64_ ;
     /**
      * <code>fixed64 requiredFixed64 = 23;</code>
      * @return The requiredFixed64.
      */
     @java.lang.Override
     public long getRequiredFixed64() {
-      return requiredFixed64_;
+      return instance.getRequiredFixed64();
     }
     /**
      * <code>fixed64 requiredFixed64 = 23;</code>
@@ -5091,9 +3576,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredFixed64(long value) {
-      
-      requiredFixed64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredFixed64(value);
       return this;
     }
     /**
@@ -5101,20 +3585,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredFixed64() {
-      
-      requiredFixed64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredFixed64();
       return this;
     }
 
-    private int optionalSfixed32_ ;
     /**
      * <code>optional sfixed32 optionalSfixed32 = 24;</code>
      * @return Whether the optionalSfixed32 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalSfixed32() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return instance.hasOptionalSfixed32();
     }
     /**
      * <code>optional sfixed32 optionalSfixed32 = 24;</code>
@@ -5122,7 +3604,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public int getOptionalSfixed32() {
-      return optionalSfixed32_;
+      return instance.getOptionalSfixed32();
     }
     /**
      * <code>optional sfixed32 optionalSfixed32 = 24;</code>
@@ -5130,9 +3612,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalSfixed32(int value) {
-      bitField0_ |= 0x00000200;
-      optionalSfixed32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalSfixed32(value);
       return this;
     }
     /**
@@ -5140,20 +3621,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalSfixed32() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      optionalSfixed32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalSfixed32();
       return this;
     }
 
-    private int requiredSfixed32_ ;
     /**
      * <code>sfixed32 requiredSfixed32 = 25;</code>
      * @return The requiredSfixed32.
      */
     @java.lang.Override
     public int getRequiredSfixed32() {
-      return requiredSfixed32_;
+      return instance.getRequiredSfixed32();
     }
     /**
      * <code>sfixed32 requiredSfixed32 = 25;</code>
@@ -5161,9 +3640,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredSfixed32(int value) {
-      
-      requiredSfixed32_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredSfixed32(value);
       return this;
     }
     /**
@@ -5171,20 +3649,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredSfixed32() {
-      
-      requiredSfixed32_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredSfixed32();
       return this;
     }
 
-    private long optionalSfixed64_ ;
     /**
      * <code>optional sfixed64 optionalSfixed64 = 26;</code>
      * @return Whether the optionalSfixed64 field is set.
      */
     @java.lang.Override
     public boolean hasOptionalSfixed64() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return instance.hasOptionalSfixed64();
     }
     /**
      * <code>optional sfixed64 optionalSfixed64 = 26;</code>
@@ -5192,7 +3668,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public long getOptionalSfixed64() {
-      return optionalSfixed64_;
+      return instance.getOptionalSfixed64();
     }
     /**
      * <code>optional sfixed64 optionalSfixed64 = 26;</code>
@@ -5200,9 +3676,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalSfixed64(long value) {
-      bitField0_ |= 0x00000400;
-      optionalSfixed64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalSfixed64(value);
       return this;
     }
     /**
@@ -5210,20 +3685,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalSfixed64() {
-      bitField0_ = (bitField0_ & ~0x00000400);
-      optionalSfixed64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalSfixed64();
       return this;
     }
 
-    private long requiredSfixed64_ ;
     /**
      * <code>sfixed64 requiredSfixed64 = 27;</code>
      * @return The requiredSfixed64.
      */
     @java.lang.Override
     public long getRequiredSfixed64() {
-      return requiredSfixed64_;
+      return instance.getRequiredSfixed64();
     }
     /**
      * <code>sfixed64 requiredSfixed64 = 27;</code>
@@ -5231,9 +3704,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredSfixed64(long value) {
-      
-      requiredSfixed64_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredSfixed64(value);
       return this;
     }
     /**
@@ -5241,20 +3713,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredSfixed64() {
-      
-      requiredSfixed64_ = 0L;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredSfixed64();
       return this;
     }
 
-    private boolean optionalBool_ ;
     /**
      * <code>optional bool optionalBool = 28;</code>
      * @return Whether the optionalBool field is set.
      */
     @java.lang.Override
     public boolean hasOptionalBool() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return instance.hasOptionalBool();
     }
     /**
      * <code>optional bool optionalBool = 28;</code>
@@ -5262,7 +3732,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean getOptionalBool() {
-      return optionalBool_;
+      return instance.getOptionalBool();
     }
     /**
      * <code>optional bool optionalBool = 28;</code>
@@ -5270,9 +3740,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalBool(boolean value) {
-      bitField0_ |= 0x00000800;
-      optionalBool_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalBool(value);
       return this;
     }
     /**
@@ -5280,20 +3749,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalBool() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      optionalBool_ = false;
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalBool();
       return this;
     }
 
-    private boolean requiredBool_ ;
     /**
      * <code>bool requiredBool = 29;</code>
      * @return The requiredBool.
      */
     @java.lang.Override
     public boolean getRequiredBool() {
-      return requiredBool_;
+      return instance.getRequiredBool();
     }
     /**
      * <code>bool requiredBool = 29;</code>
@@ -5301,9 +3768,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredBool(boolean value) {
-      
-      requiredBool_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredBool(value);
       return this;
     }
     /**
@@ -5311,52 +3777,35 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredBool() {
-      
-      requiredBool_ = false;
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredBool();
       return this;
     }
 
-    private java.lang.Object optionalString_ = "";
     /**
      * <code>optional string optionalString = 30;</code>
      * @return Whether the optionalString field is set.
      */
+    @java.lang.Override
     public boolean hasOptionalString() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return instance.hasOptionalString();
     }
     /**
      * <code>optional string optionalString = 30;</code>
      * @return The optionalString.
      */
+    @java.lang.Override
     public java.lang.String getOptionalString() {
-      java.lang.Object ref = optionalString_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        optionalString_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+      return instance.getOptionalString();
     }
     /**
      * <code>optional string optionalString = 30;</code>
      * @return The bytes for optionalString.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOptionalStringBytes() {
-      java.lang.Object ref = optionalString_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        optionalString_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return instance.getOptionalStringBytes();
     }
     /**
      * <code>optional string optionalString = 30;</code>
@@ -5365,12 +3814,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOptionalString(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
-      optionalString_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalString(value);
       return this;
     }
     /**
@@ -5378,9 +3823,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalString() {
-      bitField0_ = (bitField0_ & ~0x00001000);
-      optionalString_ = getDefaultInstance().getOptionalString();
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalString();
       return this;
     }
     /**
@@ -5390,49 +3834,27 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOptionalStringBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00001000;
-      optionalString_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalStringBytes(value);
       return this;
     }
 
-    private java.lang.Object requiredString_ = "";
     /**
      * <code>string requiredString = 31;</code>
      * @return The requiredString.
      */
+    @java.lang.Override
     public java.lang.String getRequiredString() {
-      java.lang.Object ref = requiredString_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        requiredString_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+      return instance.getRequiredString();
     }
     /**
      * <code>string requiredString = 31;</code>
      * @return The bytes for requiredString.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRequiredStringBytes() {
-      java.lang.Object ref = requiredString_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        requiredString_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return instance.getRequiredStringBytes();
     }
     /**
      * <code>string requiredString = 31;</code>
@@ -5441,12 +3863,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRequiredString(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      requiredString_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredString(value);
       return this;
     }
     /**
@@ -5454,9 +3872,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredString() {
-      
-      requiredString_ = getDefaultInstance().getRequiredString();
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredString();
       return this;
     }
     /**
@@ -5466,24 +3883,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRequiredStringBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      requiredString_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredStringBytes(value);
       return this;
     }
 
-    private com.google.protobuf.ByteString optionalBytes_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>optional bytes optionalBytes = 32;</code>
      * @return Whether the optionalBytes field is set.
      */
     @java.lang.Override
     public boolean hasOptionalBytes() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return instance.hasOptionalBytes();
     }
     /**
      * <code>optional bytes optionalBytes = 32;</code>
@@ -5491,7 +3902,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getOptionalBytes() {
-      return optionalBytes_;
+      return instance.getOptionalBytes();
     }
     /**
      * <code>optional bytes optionalBytes = 32;</code>
@@ -5499,12 +3910,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptionalBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00002000;
-      optionalBytes_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setOptionalBytes(value);
       return this;
     }
     /**
@@ -5512,20 +3919,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptionalBytes() {
-      bitField0_ = (bitField0_ & ~0x00002000);
-      optionalBytes_ = getDefaultInstance().getOptionalBytes();
-      onChanged();
+      copyOnWrite();
+      instance.clearOptionalBytes();
       return this;
     }
 
-    private com.google.protobuf.ByteString requiredBytes_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes requiredBytes = 33;</code>
      * @return The requiredBytes.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getRequiredBytes() {
-      return requiredBytes_;
+      return instance.getRequiredBytes();
     }
     /**
      * <code>bytes requiredBytes = 33;</code>
@@ -5533,12 +3938,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredBytes(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      requiredBytes_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setRequiredBytes(value);
       return this;
     }
     /**
@@ -5546,13 +3947,11 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredBytes() {
-      
-      requiredBytes_ = getDefaultInstance().getRequiredBytes();
-      onChanged();
+      copyOnWrite();
+      instance.clearRequiredBytes();
       return this;
     }
 
-    private int corpus_ = 0;
     /**
      * <pre>
      *  [default = UNIVERSAL];
@@ -5561,8 +3960,9 @@ private static final long serialVersionUID = 0L;
      * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
      * @return Whether the corpus field is set.
      */
-    @java.lang.Override public boolean hasCorpus() {
-      return ((bitField0_ & 0x00004000) != 0);
+    @java.lang.Override
+    public boolean hasCorpus() {
+      return instance.hasCorpus();
     }
     /**
      * <pre>
@@ -5572,8 +3972,9 @@ private static final long serialVersionUID = 0L;
      * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
      * @return The enum numeric value on the wire for corpus.
      */
-    @java.lang.Override public int getCorpusValue() {
-      return corpus_;
+    @java.lang.Override
+    public int getCorpusValue() {
+      return instance.getCorpusValue();
     }
     /**
      * <pre>
@@ -5581,13 +3982,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
-     * @param value The enum numeric value on the wire for corpus to set.
+     * @param value The corpus to set.
      * @return This builder for chaining.
      */
     public Builder setCorpusValue(int value) {
-      bitField0_ |= 0x00004000;
-      corpus_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setCorpusValue(value);
       return this;
     }
     /**
@@ -5600,9 +4000,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.proto.test3.TestService3Response.Corpus getCorpus() {
-      @SuppressWarnings("deprecation")
-      com.proto.test3.TestService3Response.Corpus result = com.proto.test3.TestService3Response.Corpus.valueOf(corpus_);
-      return result == null ? com.proto.test3.TestService3Response.Corpus.UNRECOGNIZED : result;
+      return instance.getCorpus();
     }
     /**
      * <pre>
@@ -5610,16 +4008,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional .test3.TestService3Response.Corpus corpus = 36;</code>
-     * @param value The corpus to set.
+     * @param value The enum numeric value on the wire for corpus to set.
      * @return This builder for chaining.
      */
     public Builder setCorpus(com.proto.test3.TestService3Response.Corpus value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00004000;
-      corpus_ = value.getNumber();
-      onChanged();
+      copyOnWrite();
+      instance.setCorpus(value);
       return this;
     }
     /**
@@ -5631,19 +4025,11 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCorpus() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      corpus_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearCorpus();
       return this;
     }
 
-    private com.google.protobuf.Internal.IntList samples_ = emptyIntList();
-    private void ensureSamplesIsMutable() {
-      if (!((bitField0_ & 0x00008000) != 0)) {
-        samples_ = mutableCopy(samples_);
-        bitField0_ |= 0x00008000;
-       }
-    }
     /**
      * <pre>
      *  https://developers.google.com/protocol-buffers/docs/proto#other
@@ -5652,10 +4038,11 @@ private static final long serialVersionUID = 0L;
      * <code>repeated int32 samples = 37 [packed = true];</code>
      * @return A list containing the samples.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
         getSamplesList() {
-      return ((bitField0_ & 0x00008000) != 0) ?
-               java.util.Collections.unmodifiableList(samples_) : samples_;
+      return java.util.Collections.unmodifiableList(
+          instance.getSamplesList());
     }
     /**
      * <pre>
@@ -5665,8 +4052,9 @@ private static final long serialVersionUID = 0L;
      * <code>repeated int32 samples = 37 [packed = true];</code>
      * @return The count of samples.
      */
+    @java.lang.Override
     public int getSamplesCount() {
-      return samples_.size();
+      return instance.getSamplesCount();
     }
     /**
      * <pre>
@@ -5677,8 +4065,9 @@ private static final long serialVersionUID = 0L;
      * @param index The index of the element to return.
      * @return The samples at the given index.
      */
+    @java.lang.Override
     public int getSamples(int index) {
-      return samples_.getInt(index);
+      return instance.getSamples(index);
     }
     /**
      * <pre>
@@ -5686,15 +4075,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int32 samples = 37 [packed = true];</code>
-     * @param index The index to set the value at.
      * @param value The samples to set.
      * @return This builder for chaining.
      */
     public Builder setSamples(
         int index, int value) {
-      ensureSamplesIsMutable();
-      samples_.setInt(index, value);
-      onChanged();
+      copyOnWrite();
+      instance.setSamples(index, value);
       return this;
     }
     /**
@@ -5707,9 +4094,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addSamples(int value) {
-      ensureSamplesIsMutable();
-      samples_.addInt(value);
-      onChanged();
+      copyOnWrite();
+      instance.addSamples(value);
       return this;
     }
     /**
@@ -5723,10 +4109,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllSamples(
         java.lang.Iterable<? extends java.lang.Integer> values) {
-      ensureSamplesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, samples_);
-      onChanged();
+      copyOnWrite();
+      instance.addAllSamples(values);
       return this;
     }
     /**
@@ -5738,9 +4122,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSamples() {
-      samples_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00008000);
-      onChanged();
+      copyOnWrite();
+      instance.clearSamples();
       return this;
     }
 
@@ -5750,7 +4133,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasName() {
-      return oneOfFieldCase_ == 38;
+      return instance.hasName();
     }
     /**
      * <code>string name = 38;</code>
@@ -5758,21 +4141,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = "";
-      if (oneOfFieldCase_ == 38) {
-        ref = oneOfField_;
-      }
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (oneOfFieldCase_ == 38) {
-          oneOfField_ = s;
-        }
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+      return instance.getName();
     }
     /**
      * <code>string name = 38;</code>
@@ -5781,21 +4150,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = "";
-      if (oneOfFieldCase_ == 38) {
-        ref = oneOfField_;
-      }
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (oneOfFieldCase_ == 38) {
-          oneOfField_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return instance.getNameBytes();
     }
     /**
      * <code>string name = 38;</code>
@@ -5804,12 +4159,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  oneOfFieldCase_ = 38;
-      oneOfField_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setName(value);
       return this;
     }
     /**
@@ -5817,11 +4168,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      if (oneOfFieldCase_ == 38) {
-        oneOfFieldCase_ = 0;
-        oneOfField_ = null;
-        onChanged();
-      }
+      copyOnWrite();
+      instance.clearName();
       return this;
     }
     /**
@@ -5831,58 +4179,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      oneOfFieldCase_ = 38;
-      oneOfField_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setNameBytes(value);
       return this;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder> nestedBuilder_;
     /**
      * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-     * @return Whether the nested field is set.
      */
     @java.lang.Override
     public boolean hasNested() {
-      return oneOfFieldCase_ == 39;
+      return instance.hasNested();
     }
     /**
      * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-     * @return The nested.
      */
     @java.lang.Override
     public com.proto.test3.TestService3Response.NestedMessage getNested() {
-      if (nestedBuilder_ == null) {
-        if (oneOfFieldCase_ == 39) {
-          return (com.proto.test3.TestService3Response.NestedMessage) oneOfField_;
-        }
-        return com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance();
-      } else {
-        if (oneOfFieldCase_ == 39) {
-          return nestedBuilder_.getMessage();
-        }
-        return com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance();
-      }
+      return instance.getNested();
     }
     /**
      * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
      */
     public Builder setNested(com.proto.test3.TestService3Response.NestedMessage value) {
-      if (nestedBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        oneOfField_ = value;
-        onChanged();
-      } else {
-        nestedBuilder_.setMessage(value);
-      }
-      oneOfFieldCase_ = 39;
+      copyOnWrite();
+      instance.setNested(value);
       return this;
     }
     /**
@@ -5890,124 +4211,51 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNested(
         com.proto.test3.TestService3Response.NestedMessage.Builder builderForValue) {
-      if (nestedBuilder_ == null) {
-        oneOfField_ = builderForValue.build();
-        onChanged();
-      } else {
-        nestedBuilder_.setMessage(builderForValue.build());
-      }
-      oneOfFieldCase_ = 39;
+      copyOnWrite();
+      instance.setNested(builderForValue.build());
       return this;
     }
     /**
      * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
      */
     public Builder mergeNested(com.proto.test3.TestService3Response.NestedMessage value) {
-      if (nestedBuilder_ == null) {
-        if (oneOfFieldCase_ == 39 &&
-            oneOfField_ != com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance()) {
-          oneOfField_ = com.proto.test3.TestService3Response.NestedMessage.newBuilder((com.proto.test3.TestService3Response.NestedMessage) oneOfField_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          oneOfField_ = value;
-        }
-        onChanged();
-      } else {
-        if (oneOfFieldCase_ == 39) {
-          nestedBuilder_.mergeFrom(value);
-        } else {
-          nestedBuilder_.setMessage(value);
-        }
-      }
-      oneOfFieldCase_ = 39;
+      copyOnWrite();
+      instance.mergeNested(value);
       return this;
     }
     /**
      * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
      */
     public Builder clearNested() {
-      if (nestedBuilder_ == null) {
-        if (oneOfFieldCase_ == 39) {
-          oneOfFieldCase_ = 0;
-          oneOfField_ = null;
-          onChanged();
-        }
-      } else {
-        if (oneOfFieldCase_ == 39) {
-          oneOfFieldCase_ = 0;
-          oneOfField_ = null;
-        }
-        nestedBuilder_.clear();
-      }
+      copyOnWrite();
+      instance.clearNested();
       return this;
     }
-    /**
-     * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-     */
-    public com.proto.test3.TestService3Response.NestedMessage.Builder getNestedBuilder() {
-      return getNestedFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-     */
-    @java.lang.Override
-    public com.proto.test3.TestService3Response.NestedMessageOrBuilder getNestedOrBuilder() {
-      if ((oneOfFieldCase_ == 39) && (nestedBuilder_ != null)) {
-        return nestedBuilder_.getMessageOrBuilder();
-      } else {
-        if (oneOfFieldCase_ == 39) {
-          return (com.proto.test3.TestService3Response.NestedMessage) oneOfField_;
-        }
-        return com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.test3.TestService3Response.NestedMessage nested = 39;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder> 
-        getNestedFieldBuilder() {
-      if (nestedBuilder_ == null) {
-        if (!(oneOfFieldCase_ == 39)) {
-          oneOfField_ = com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance();
-        }
-        nestedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder>(
-                (com.proto.test3.TestService3Response.NestedMessage) oneOfField_,
-                getParentForChildren(),
-                isClean());
-        oneOfField_ = null;
-      }
-      oneOfFieldCase_ = 39;
-      onChanged();;
-      return nestedBuilder_;
-    }
 
-    private com.google.protobuf.MapField<
-        java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map_;
-    private com.google.protobuf.MapField<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
-    internalGetMap() {
-      if (map_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MapDefaultEntryHolder.defaultEntry);
-      }
-      return map_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
-    internalGetMutableMap() {
-      onChanged();;
-      if (map_ == null) {
-        map_ = com.google.protobuf.MapField.newMapField(
-            MapDefaultEntryHolder.defaultEntry);
-      }
-      if (!map_.isMutable()) {
-        map_ = map_.copy();
-      }
-      return map_;
-    }
+    @java.lang.Override
 
     public int getMapCount() {
-      return internalGetMap().getMap().size();
+      return instance.getMapMap().size();
+    }
+    /**
+     * <pre>
+     *  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
+     * </pre>
+     *
+     * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
+     */
+    @java.lang.Override
+
+    public boolean containsMap(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return instance.getMapMap().containsKey(key);
+    }
+
+    public Builder clearMap() {
+      copyOnWrite();
+      instance.getMutableMapMap().clear();
+      return this;
     }
     /**
      * <pre>
@@ -6017,11 +4265,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
      */
 
-    @java.lang.Override
-    public boolean containsMap(
+    public Builder removeMap(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetMap().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      copyOnWrite();
+      instance.getMutableMapMap().remove(key);
+      return this;
     }
     /**
      * Use {@link #getMapMap()} instead.
@@ -6039,9 +4288,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> getMapMap() {
-      return internalGetMap().getMap();
+      return java.util.Collections.unmodifiableMap(
+          instance.getMapMap());
     }
     /**
      * <pre>
@@ -6055,9 +4304,9 @@ private static final long serialVersionUID = 0L;
     public com.proto.test3.TestService3Response.NestedMessage getMapOrDefault(
         java.lang.String key,
         com.proto.test3.TestService3Response.NestedMessage defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map =
-          internalGetMap().getMap();
+          instance.getMapMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
@@ -6071,42 +4320,13 @@ private static final long serialVersionUID = 0L;
 
     public com.proto.test3.TestService3Response.NestedMessage getMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> map =
-          internalGetMap().getMap();
+          instance.getMapMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
-    }
-
-    public Builder clearMap() {
-      internalGetMutableMap().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <pre>
-     *  https://developers.google.com/protocol-buffers/docs/proto#maps (MAps can't have lables)
-     * </pre>
-     *
-     * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
-     */
-
-    public Builder removeMap(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableMap().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage>
-    getMutableMap() {
-      return internalGetMutableMap().getMutableMap();
     }
     /**
      * <pre>
@@ -6118,13 +4338,10 @@ private static final long serialVersionUID = 0L;
     public Builder putMap(
         java.lang.String key,
         com.proto.test3.TestService3Response.NestedMessage value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) {
-  throw new NullPointerException("map value");
-}
-
-      internalGetMutableMap().getMutableMap()
-          .put(key, value);
+      java.lang.Class<?> keyClass = key.getClass();
+      java.lang.Class<?> valueClass = value.getClass();
+      copyOnWrite();
+      instance.getMutableMapMap().put(key, value);
       return this;
     }
     /**
@@ -6134,71 +4351,41 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .test3.TestService3Response.NestedMessage&gt; map = 40;</code>
      */
-
     public Builder putAllMap(
         java.util.Map<java.lang.String, com.proto.test3.TestService3Response.NestedMessage> values) {
-      internalGetMutableMap().getMutableMap()
-          .putAll(values);
+      copyOnWrite();
+      instance.getMutableMapMap().putAll(values);
       return this;
     }
 
-    private java.util.List<com.proto.test3.TestService3Response.MapFieldEntry> mapField_ =
-      java.util.Collections.emptyList();
-    private void ensureMapFieldIsMutable() {
-      if (!((bitField0_ & 0x00020000) != 0)) {
-        mapField_ = new java.util.ArrayList<com.proto.test3.TestService3Response.MapFieldEntry>(mapField_);
-        bitField0_ |= 0x00020000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.proto.test3.TestService3Response.MapFieldEntry, com.proto.test3.TestService3Response.MapFieldEntry.Builder, com.proto.test3.TestService3Response.MapFieldEntryOrBuilder> mapFieldBuilder_;
-
     /**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
+    @java.lang.Override
     public java.util.List<com.proto.test3.TestService3Response.MapFieldEntry> getMapFieldList() {
-      if (mapFieldBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(mapField_);
-      } else {
-        return mapFieldBuilder_.getMessageList();
-      }
+      return java.util.Collections.unmodifiableList(
+          instance.getMapFieldList());
     }
     /**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
+    @java.lang.Override
     public int getMapFieldCount() {
-      if (mapFieldBuilder_ == null) {
-        return mapField_.size();
-      } else {
-        return mapFieldBuilder_.getCount();
-      }
-    }
-    /**
+      return instance.getMapFieldCount();
+    }/**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
+    @java.lang.Override
     public com.proto.test3.TestService3Response.MapFieldEntry getMapField(int index) {
-      if (mapFieldBuilder_ == null) {
-        return mapField_.get(index);
-      } else {
-        return mapFieldBuilder_.getMessage(index);
-      }
+      return instance.getMapField(index);
     }
     /**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
     public Builder setMapField(
         int index, com.proto.test3.TestService3Response.MapFieldEntry value) {
-      if (mapFieldBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMapFieldIsMutable();
-        mapField_.set(index, value);
-        onChanged();
-      } else {
-        mapFieldBuilder_.setMessage(index, value);
-      }
+      copyOnWrite();
+      instance.setMapField(index, value);
       return this;
     }
     /**
@@ -6206,29 +4393,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMapField(
         int index, com.proto.test3.TestService3Response.MapFieldEntry.Builder builderForValue) {
-      if (mapFieldBuilder_ == null) {
-        ensureMapFieldIsMutable();
-        mapField_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        mapFieldBuilder_.setMessage(index, builderForValue.build());
-      }
+      copyOnWrite();
+      instance.setMapField(index,
+          builderForValue.build());
       return this;
     }
     /**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
     public Builder addMapField(com.proto.test3.TestService3Response.MapFieldEntry value) {
-      if (mapFieldBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMapFieldIsMutable();
-        mapField_.add(value);
-        onChanged();
-      } else {
-        mapFieldBuilder_.addMessage(value);
-      }
+      copyOnWrite();
+      instance.addMapField(value);
       return this;
     }
     /**
@@ -6236,16 +4411,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMapField(
         int index, com.proto.test3.TestService3Response.MapFieldEntry value) {
-      if (mapFieldBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMapFieldIsMutable();
-        mapField_.add(index, value);
-        onChanged();
-      } else {
-        mapFieldBuilder_.addMessage(index, value);
-      }
+      copyOnWrite();
+      instance.addMapField(index, value);
       return this;
     }
     /**
@@ -6253,13 +4420,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMapField(
         com.proto.test3.TestService3Response.MapFieldEntry.Builder builderForValue) {
-      if (mapFieldBuilder_ == null) {
-        ensureMapFieldIsMutable();
-        mapField_.add(builderForValue.build());
-        onChanged();
-      } else {
-        mapFieldBuilder_.addMessage(builderForValue.build());
-      }
+      copyOnWrite();
+      instance.addMapField(builderForValue.build());
       return this;
     }
     /**
@@ -6267,13 +4429,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMapField(
         int index, com.proto.test3.TestService3Response.MapFieldEntry.Builder builderForValue) {
-      if (mapFieldBuilder_ == null) {
-        ensureMapFieldIsMutable();
-        mapField_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        mapFieldBuilder_.addMessage(index, builderForValue.build());
-      }
+      copyOnWrite();
+      instance.addMapField(index,
+          builderForValue.build());
       return this;
     }
     /**
@@ -6281,118 +4439,26 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllMapField(
         java.lang.Iterable<? extends com.proto.test3.TestService3Response.MapFieldEntry> values) {
-      if (mapFieldBuilder_ == null) {
-        ensureMapFieldIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, mapField_);
-        onChanged();
-      } else {
-        mapFieldBuilder_.addAllMessages(values);
-      }
+      copyOnWrite();
+      instance.addAllMapField(values);
       return this;
     }
     /**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
     public Builder clearMapField() {
-      if (mapFieldBuilder_ == null) {
-        mapField_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00020000);
-        onChanged();
-      } else {
-        mapFieldBuilder_.clear();
-      }
+      copyOnWrite();
+      instance.clearMapField();
       return this;
     }
     /**
      * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
      */
     public Builder removeMapField(int index) {
-      if (mapFieldBuilder_ == null) {
-        ensureMapFieldIsMutable();
-        mapField_.remove(index);
-        onChanged();
-      } else {
-        mapFieldBuilder_.remove(index);
-      }
+      copyOnWrite();
+      instance.removeMapField(index);
       return this;
     }
-    /**
-     * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-     */
-    public com.proto.test3.TestService3Response.MapFieldEntry.Builder getMapFieldBuilder(
-        int index) {
-      return getMapFieldFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-     */
-    public com.proto.test3.TestService3Response.MapFieldEntryOrBuilder getMapFieldOrBuilder(
-        int index) {
-      if (mapFieldBuilder_ == null) {
-        return mapField_.get(index);  } else {
-        return mapFieldBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-     */
-    public java.util.List<? extends com.proto.test3.TestService3Response.MapFieldEntryOrBuilder> 
-         getMapFieldOrBuilderList() {
-      if (mapFieldBuilder_ != null) {
-        return mapFieldBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(mapField_);
-      }
-    }
-    /**
-     * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-     */
-    public com.proto.test3.TestService3Response.MapFieldEntry.Builder addMapFieldBuilder() {
-      return getMapFieldFieldBuilder().addBuilder(
-          com.proto.test3.TestService3Response.MapFieldEntry.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-     */
-    public com.proto.test3.TestService3Response.MapFieldEntry.Builder addMapFieldBuilder(
-        int index) {
-      return getMapFieldFieldBuilder().addBuilder(
-          index, com.proto.test3.TestService3Response.MapFieldEntry.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .test3.TestService3Response.MapFieldEntry map_field = 41;</code>
-     */
-    public java.util.List<com.proto.test3.TestService3Response.MapFieldEntry.Builder> 
-         getMapFieldBuilderList() {
-      return getMapFieldFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.proto.test3.TestService3Response.MapFieldEntry, com.proto.test3.TestService3Response.MapFieldEntry.Builder, com.proto.test3.TestService3Response.MapFieldEntryOrBuilder> 
-        getMapFieldFieldBuilder() {
-      if (mapFieldBuilder_ == null) {
-        mapFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.proto.test3.TestService3Response.MapFieldEntry, com.proto.test3.TestService3Response.MapFieldEntry.Builder, com.proto.test3.TestService3Response.MapFieldEntryOrBuilder>(
-                mapField_,
-                ((bitField0_ & 0x00020000) != 0),
-                getParentForChildren(),
-                isClean());
-        mapField_ = null;
-      }
-      return mapFieldBuilder_;
-    }
-
-    private java.util.List<com.google.protobuf.Any> details_ =
-      java.util.Collections.emptyList();
-    private void ensureDetailsIsMutable() {
-      if (!((bitField0_ & 0x00040000) != 0)) {
-        details_ = new java.util.ArrayList<com.google.protobuf.Any>(details_);
-        bitField0_ |= 0x00040000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> detailsBuilder_;
 
     /**
      * <pre>
@@ -6401,12 +4467,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 42;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.Any> getDetailsList() {
-      if (detailsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(details_);
-      } else {
-        return detailsBuilder_.getMessageList();
-      }
+      return java.util.Collections.unmodifiableList(
+          instance.getDetailsList());
     }
     /**
      * <pre>
@@ -6415,26 +4479,19 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 42;</code>
      */
+    @java.lang.Override
     public int getDetailsCount() {
-      if (detailsBuilder_ == null) {
-        return details_.size();
-      } else {
-        return detailsBuilder_.getCount();
-      }
-    }
-    /**
+      return instance.getDetailsCount();
+    }/**
      * <pre>
      * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
      * </pre>
      *
      * <code>repeated .google.protobuf.Any details = 42;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Any getDetails(int index) {
-      if (detailsBuilder_ == null) {
-        return details_.get(index);
-      } else {
-        return detailsBuilder_.getMessage(index);
-      }
+      return instance.getDetails(index);
     }
     /**
      * <pre>
@@ -6445,16 +4502,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDetails(
         int index, com.google.protobuf.Any value) {
-      if (detailsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDetailsIsMutable();
-        details_.set(index, value);
-        onChanged();
-      } else {
-        detailsBuilder_.setMessage(index, value);
-      }
+      copyOnWrite();
+      instance.setDetails(index, value);
       return this;
     }
     /**
@@ -6466,13 +4515,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDetails(
         int index, com.google.protobuf.Any.Builder builderForValue) {
-      if (detailsBuilder_ == null) {
-        ensureDetailsIsMutable();
-        details_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        detailsBuilder_.setMessage(index, builderForValue.build());
-      }
+      copyOnWrite();
+      instance.setDetails(index,
+          builderForValue.build());
       return this;
     }
     /**
@@ -6483,16 +4528,8 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.protobuf.Any details = 42;</code>
      */
     public Builder addDetails(com.google.protobuf.Any value) {
-      if (detailsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDetailsIsMutable();
-        details_.add(value);
-        onChanged();
-      } else {
-        detailsBuilder_.addMessage(value);
-      }
+      copyOnWrite();
+      instance.addDetails(value);
       return this;
     }
     /**
@@ -6504,16 +4541,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDetails(
         int index, com.google.protobuf.Any value) {
-      if (detailsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDetailsIsMutable();
-        details_.add(index, value);
-        onChanged();
-      } else {
-        detailsBuilder_.addMessage(index, value);
-      }
+      copyOnWrite();
+      instance.addDetails(index, value);
       return this;
     }
     /**
@@ -6525,13 +4554,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDetails(
         com.google.protobuf.Any.Builder builderForValue) {
-      if (detailsBuilder_ == null) {
-        ensureDetailsIsMutable();
-        details_.add(builderForValue.build());
-        onChanged();
-      } else {
-        detailsBuilder_.addMessage(builderForValue.build());
-      }
+      copyOnWrite();
+      instance.addDetails(builderForValue.build());
       return this;
     }
     /**
@@ -6543,13 +4567,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDetails(
         int index, com.google.protobuf.Any.Builder builderForValue) {
-      if (detailsBuilder_ == null) {
-        ensureDetailsIsMutable();
-        details_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        detailsBuilder_.addMessage(index, builderForValue.build());
-      }
+      copyOnWrite();
+      instance.addDetails(index,
+          builderForValue.build());
       return this;
     }
     /**
@@ -6561,14 +4581,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllDetails(
         java.lang.Iterable<? extends com.google.protobuf.Any> values) {
-      if (detailsBuilder_ == null) {
-        ensureDetailsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, details_);
-        onChanged();
-      } else {
-        detailsBuilder_.addAllMessages(values);
-      }
+      copyOnWrite();
+      instance.addAllDetails(values);
       return this;
     }
     /**
@@ -6579,13 +4593,8 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.protobuf.Any details = 42;</code>
      */
     public Builder clearDetails() {
-      if (detailsBuilder_ == null) {
-        details_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
-        onChanged();
-      } else {
-        detailsBuilder_.clear();
-      }
+      copyOnWrite();
+      instance.clearDetails();
       return this;
     }
     /**
@@ -6596,153 +4605,126 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.protobuf.Any details = 42;</code>
      */
     public Builder removeDetails(int index) {
-      if (detailsBuilder_ == null) {
-        ensureDetailsIsMutable();
-        details_.remove(index);
-        onChanged();
-      } else {
-        detailsBuilder_.remove(index);
-      }
+      copyOnWrite();
+      instance.removeDetails(index);
       return this;
     }
-    /**
-     * <pre>
-     * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Any details = 42;</code>
-     */
-    public com.google.protobuf.Any.Builder getDetailsBuilder(
-        int index) {
-      return getDetailsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Any details = 42;</code>
-     */
-    public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
-        int index) {
-      if (detailsBuilder_ == null) {
-        return details_.get(index);  } else {
-        return detailsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Any details = 42;</code>
-     */
-    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-         getDetailsOrBuilderList() {
-      if (detailsBuilder_ != null) {
-        return detailsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(details_);
-      }
-    }
-    /**
-     * <pre>
-     * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Any details = 42;</code>
-     */
-    public com.google.protobuf.Any.Builder addDetailsBuilder() {
-      return getDetailsFieldBuilder().addBuilder(
-          com.google.protobuf.Any.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Any details = 42;</code>
-     */
-    public com.google.protobuf.Any.Builder addDetailsBuilder(
-        int index) {
-      return getDetailsFieldBuilder().addBuilder(
-          index, com.google.protobuf.Any.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Any details = 42;</code>
-     */
-    public java.util.List<com.google.protobuf.Any.Builder> 
-         getDetailsBuilderList() {
-      return getDetailsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
-        getDetailsFieldBuilder() {
-      if (detailsBuilder_ == null) {
-        detailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                details_,
-                ((bitField0_ & 0x00040000) != 0),
-                getParentForChildren(),
-                isClean());
-        details_ = null;
-      }
-      return detailsBuilder_;
-    }
-    @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
-    }
-
-    @java.lang.Override
-    public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.mergeUnknownFields(unknownFields);
-    }
-
 
     // @@protoc_insertion_point(builder_scope:test3.TestService3Response)
   }
+  @java.lang.Override
+  @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+  protected final java.lang.Object dynamicMethod(
+      com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+      java.lang.Object arg0, java.lang.Object arg1) {
+    switch (method) {
+      case NEW_MUTABLE_INSTANCE: {
+        return new com.proto.test3.TestService3Response();
+      }
+      case NEW_BUILDER: {
+        return new Builder();
+      }
+      case BUILD_MESSAGE_INFO: {
+          java.lang.Object[] objects = new java.lang.Object[] {
+            "oneOfField_",
+            "oneOfFieldCase_",
+            "bitField0_",
+            "optionalDouble_",
+            "requiredDouble_",
+            "optionalInt32_",
+            "requiredInt32_",
+            "optionalInt64_",
+            "requiredInt64_",
+            "optionalUint32_",
+            "requiredUint32_",
+            "optionalUint64_",
+            "requiredUint64_",
+            "optionalSint32_",
+            "requiredSint32_",
+            "optionalSint64_",
+            "requiredSint64_",
+            "optionalFixed32_",
+            "requiredFixed32_",
+            "optionalFixed64_",
+            "requiredFixed64_",
+            "optionalSfixed32_",
+            "requiredSfixed32_",
+            "optionalSfixed64_",
+            "requiredSfixed64_",
+            "optionalBool_",
+            "requiredBool_",
+            "optionalString_",
+            "requiredString_",
+            "optionalBytes_",
+            "requiredBytes_",
+            "corpus_",
+            "samples_",
+            com.proto.test3.TestService3Response.NestedMessage.class,
+            "map_",
+            MapDefaultEntryHolder.defaultEntry,
+            "mapField_",
+            com.proto.test3.TestService3Response.MapFieldEntry.class,
+            "details_",
+            com.google.protobuf.Any.class,
+          };
+          java.lang.String info =
+              "\u0000#\u0001\u0001\u0001*#\u0001\u0003\u0000\u0001\u1000\u0000\u0003\u0000\u0004" +
+              "\u1004\u0001\u0005\u0004\u0006\u1002\u0002\u0007\u0002\b\u100b\u0003\f\u000b\r\u1003" +
+              "\u0004\u000e\u0003\u0010\u100f\u0005\u0011\u000f\u0012\u1010\u0006\u0013\u0010\u0014" +
+              "\u1006\u0007\u0015\u0006\u0016\u1005\b\u0017\u0005\u0018\u100d\t\u0019\r\u001a\u100e" +
+              "\n\u001b\u000e\u001c\u1007\u000b\u001d\u0007\u001e\u1208\f\u001f\u0208 \u100a\r!" +
+              "\n$\u100c\u000e%\'&\u023b\u0000\'<\u0000(2)\u001b*\u001b";
+          return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+      }
+      // fall through
+      case GET_DEFAULT_INSTANCE: {
+        return DEFAULT_INSTANCE;
+      }
+      case GET_PARSER: {
+        com.google.protobuf.Parser<com.proto.test3.TestService3Response> parser = PARSER;
+        if (parser == null) {
+          synchronized (com.proto.test3.TestService3Response.class) {
+            parser = PARSER;
+            if (parser == null) {
+              parser =
+                  new DefaultInstanceBasedParser<com.proto.test3.TestService3Response>(
+                      DEFAULT_INSTANCE);
+              PARSER = parser;
+            }
+          }
+        }
+        return parser;
+    }
+    case GET_MEMOIZED_IS_INITIALIZED: {
+      return (byte) 1;
+    }
+    case SET_MEMOIZED_IS_INITIALIZED: {
+      return null;
+    }
+    }
+    throw new UnsupportedOperationException();
+  }
+
 
   // @@protoc_insertion_point(class_scope:test3.TestService3Response)
   private static final com.proto.test3.TestService3Response DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.proto.test3.TestService3Response();
+    TestService3Response defaultInstance = new TestService3Response();
+    // New instances are implicitly immutable so no need to make
+    // immutable.
+    DEFAULT_INSTANCE = defaultInstance;
+    com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+      TestService3Response.class, defaultInstance);
   }
 
   public static com.proto.test3.TestService3Response getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TestService3Response>
-      PARSER = new com.google.protobuf.AbstractParser<TestService3Response>() {
-    @java.lang.Override
-    public TestService3Response parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TestService3Response(input, extensionRegistry);
-    }
-  };
+  private static volatile com.google.protobuf.Parser<TestService3Response> PARSER;
 
   public static com.google.protobuf.Parser<TestService3Response> parser() {
-    return PARSER;
+    return DEFAULT_INSTANCE.getParserForType();
   }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<TestService3Response> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.proto.test3.TestService3Response getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
-  }
-
 }
 

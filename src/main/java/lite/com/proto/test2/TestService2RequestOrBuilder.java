@@ -3,10 +3,11 @@
 
 package com.proto.test2;
 
-public interface TestService2RequestOrBuilder extends
+public interface TestService2RequestOrBuilder extends 
     // @@protoc_insertion_point(interface_extends:test2.TestService2Request)
-    com.google.protobuf.GeneratedMessageV3.
-        ExtendableMessageOrBuilder<TestService2Request> {
+     com.google.protobuf.GeneratedMessageLite.
+          ExtendableMessageOrBuilder<
+              TestService2Request, TestService2Request.Builder> {
 
   /**
    * <pre>
@@ -433,10 +434,6 @@ public interface TestService2RequestOrBuilder extends
    * @return The nested.
    */
   com.proto.test2.TestService2Request.NestedMessage getNested();
-  /**
-   * <code>.test2.TestService2Request.NestedMessage nested = 39;</code>
-   */
-  com.proto.test2.TestService2Request.NestedMessageOrBuilder getNestedOrBuilder();
 
   /**
    * <pre>
@@ -507,16 +504,6 @@ com.proto.test2.TestService2Request.NestedMessage defaultValue);
    * <code>repeated .test2.TestService2Request.MapFieldEntry map_field = 41;</code>
    */
   int getMapFieldCount();
-  /**
-   * <code>repeated .test2.TestService2Request.MapFieldEntry map_field = 41;</code>
-   */
-  java.util.List<? extends com.proto.test2.TestService2Request.MapFieldEntryOrBuilder> 
-      getMapFieldOrBuilderList();
-  /**
-   * <code>repeated .test2.TestService2Request.MapFieldEntry map_field = 41;</code>
-   */
-  com.proto.test2.TestService2Request.MapFieldEntryOrBuilder getMapFieldOrBuilder(
-      int index);
 
   public com.proto.test2.TestService2Request.OneOfFieldCase getOneOfFieldCase();
 }
