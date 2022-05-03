@@ -7,7 +7,7 @@ package com.proto.dino;
  * Protobuf enum {@code test3.Period}
  */
 public enum Period
-    implements com.google.protobuf.ProtocolMessageEnum {
+    implements com.google.protobuf.Internal.EnumLite {
   /**
    * <pre>
    * 145.5 million years ago — 66.0 million years ago.
@@ -61,6 +61,7 @@ public enum Period
   public static final int TRIASSIC_VALUE = 2;
 
 
+  @java.lang.Override
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalArgumentException(
@@ -70,8 +71,8 @@ public enum Period
   }
 
   /**
-   * @param value The numeric wire value of the corresponding enum entry.
-   * @return The enum associated with the given numeric wire value.
+   * @param value The number of the enum to look for.
+   * @return The enum associated with the given number.
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
@@ -79,10 +80,6 @@ public enum Period
     return forNumber(value);
   }
 
-  /**
-   * @param value The numeric wire value of the corresponding enum entry.
-   * @return The enum associated with the given numeric wire value.
-   */
   public static Period forNumber(int value) {
     switch (value) {
       case 0: return CRETACEOUS;
@@ -99,41 +96,25 @@ public enum Period
   private static final com.google.protobuf.Internal.EnumLiteMap<
       Period> internalValueMap =
         new com.google.protobuf.Internal.EnumLiteMap<Period>() {
+          @java.lang.Override
           public Period findValueByNumber(int number) {
             return Period.forNumber(number);
           }
         };
 
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
-    if (this == UNRECOGNIZED) {
-      throw new java.lang.IllegalStateException(
-          "Can't get the descriptor of an unrecognized enum value.");
-    }
-    return getDescriptor().getValues().get(ordinal());
-  }
-  public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
-    return getDescriptor();
-  }
-  public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
-    return com.proto.dino.Dino.getDescriptor().getEnumTypes().get(0);
+  public static com.google.protobuf.Internal.EnumVerifier 
+      internalGetVerifier() {
+    return PeriodVerifier.INSTANCE;
   }
 
-  private static final Period[] VALUES = values();
-
-  public static Period valueOf(
-      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-    if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
-    }
-    if (desc.getIndex() == -1) {
-      return UNRECOGNIZED;
-    }
-    return VALUES[desc.getIndex()];
-  }
+  private static final class PeriodVerifier implements 
+       com.google.protobuf.Internal.EnumVerifier { 
+          static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PeriodVerifier();
+          @java.lang.Override
+          public boolean isInRange(int number) {
+            return Period.forNumber(number) != null;
+          }
+        };
 
   private final int value;
 

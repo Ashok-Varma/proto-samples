@@ -5,7 +5,7 @@ package com.proto.dino;
 
 public interface FindDinoResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:test3.FindDinoResponse)
-    com.google.protobuf.MessageOrBuilder {
+    com.google.protobuf.MessageLiteOrBuilder {
 
   /**
    * <pre>
@@ -32,22 +32,4 @@ public interface FindDinoResponseOrBuilder extends
    * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
    */
   int getDinosaursCount();
-  /**
-   * <pre>
-   * Dinosaurs with matching search string
-   * </pre>
-   *
-   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-   */
-  java.util.List<? extends com.proto.dino.DinosaurOrBuilder> 
-      getDinosaursOrBuilderList();
-  /**
-   * <pre>
-   * Dinosaurs with matching search string
-   * </pre>
-   *
-   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-   */
-  com.proto.dino.DinosaurOrBuilder getDinosaursOrBuilder(
-      int index);
 }

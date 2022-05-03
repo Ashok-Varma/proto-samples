@@ -6,98 +6,16 @@ package com.proto.dino;
 /**
  * Protobuf type {@code test3.FindDinoResponse}
  */
-public final class FindDinoResponse extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public  final class FindDinoResponse extends
+    com.google.protobuf.GeneratedMessageLite<
+        FindDinoResponse, FindDinoResponse.Builder> implements
     // @@protoc_insertion_point(message_implements:test3.FindDinoResponse)
     FindDinoResponseOrBuilder {
-private static final long serialVersionUID = 0L;
-  // Use FindDinoResponse.newBuilder() to construct.
-  private FindDinoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-    super(builder);
-  }
   private FindDinoResponse() {
-    dinosaurs_ = java.util.Collections.emptyList();
+    dinosaurs_ = emptyProtobufList();
   }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new FindDinoResponse();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private FindDinoResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dinosaurs_ = new java.util.ArrayList<com.proto.dino.Dinosaur>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            dinosaurs_.add(
-                input.readMessage(com.proto.dino.Dinosaur.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        dinosaurs_ = java.util.Collections.unmodifiableList(dinosaurs_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.proto.dino.Dino.internal_static_test3_FindDinoResponse_descriptor;
-  }
-
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-    return com.proto.dino.Dino.internal_static_test3_FindDinoResponse_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            com.proto.dino.FindDinoResponse.class, com.proto.dino.FindDinoResponse.Builder.class);
-  }
-
   public static final int DINOSAURS_FIELD_NUMBER = 1;
-  private java.util.List<com.proto.dino.Dinosaur> dinosaurs_;
+  private com.google.protobuf.Internal.ProtobufList<com.proto.dino.Dinosaur> dinosaurs_;
   /**
    * <pre>
    * Dinosaurs with matching search string
@@ -116,7 +34,6 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.proto.dino.DinosaurOrBuilder> 
       getDinosaursOrBuilderList() {
     return dinosaurs_;
@@ -150,365 +67,185 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
    */
-  @java.lang.Override
   public com.proto.dino.DinosaurOrBuilder getDinosaursOrBuilder(
       int index) {
     return dinosaurs_.get(index);
   }
-
-  private byte memoizedIsInitialized = -1;
-  @java.lang.Override
-  public final boolean isInitialized() {
-    byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
-
-    memoizedIsInitialized = 1;
-    return true;
+  private void ensureDinosaursIsMutable() {
+    com.google.protobuf.Internal.ProtobufList<com.proto.dino.Dinosaur> tmp = dinosaurs_;
+    if (!tmp.isModifiable()) {
+      dinosaurs_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
   }
 
-  @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
-    for (int i = 0; i < dinosaurs_.size(); i++) {
-      output.writeMessage(1, dinosaurs_.get(i));
-    }
-    unknownFields.writeTo(output);
+  /**
+   * <pre>
+   * Dinosaurs with matching search string
+   * </pre>
+   *
+   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
+   */
+  private void setDinosaurs(
+      int index, com.proto.dino.Dinosaur value) {
+    value.getClass();
+  ensureDinosaursIsMutable();
+    dinosaurs_.set(index, value);
   }
-
-  @java.lang.Override
-  public int getSerializedSize() {
-    int size = memoizedSize;
-    if (size != -1) return size;
-
-    size = 0;
-    for (int i = 0; i < dinosaurs_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, dinosaurs_.get(i));
-    }
-    size += unknownFields.getSerializedSize();
-    memoizedSize = size;
-    return size;
+  /**
+   * <pre>
+   * Dinosaurs with matching search string
+   * </pre>
+   *
+   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
+   */
+  private void addDinosaurs(com.proto.dino.Dinosaur value) {
+    value.getClass();
+  ensureDinosaursIsMutable();
+    dinosaurs_.add(value);
   }
-
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
-    if (obj == this) {
-     return true;
-    }
-    if (!(obj instanceof com.proto.dino.FindDinoResponse)) {
-      return super.equals(obj);
-    }
-    com.proto.dino.FindDinoResponse other = (com.proto.dino.FindDinoResponse) obj;
-
-    if (!getDinosaursList()
-        .equals(other.getDinosaursList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+  /**
+   * <pre>
+   * Dinosaurs with matching search string
+   * </pre>
+   *
+   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
+   */
+  private void addDinosaurs(
+      int index, com.proto.dino.Dinosaur value) {
+    value.getClass();
+  ensureDinosaursIsMutable();
+    dinosaurs_.add(index, value);
   }
-
-  @java.lang.Override
-  public int hashCode() {
-    if (memoizedHashCode != 0) {
-      return memoizedHashCode;
-    }
-    int hash = 41;
-    hash = (19 * hash) + getDescriptor().hashCode();
-    if (getDinosaursCount() > 0) {
-      hash = (37 * hash) + DINOSAURS_FIELD_NUMBER;
-      hash = (53 * hash) + getDinosaursList().hashCode();
-    }
-    hash = (29 * hash) + unknownFields.hashCode();
-    memoizedHashCode = hash;
-    return hash;
+  /**
+   * <pre>
+   * Dinosaurs with matching search string
+   * </pre>
+   *
+   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
+   */
+  private void addAllDinosaurs(
+      java.lang.Iterable<? extends com.proto.dino.Dinosaur> values) {
+    ensureDinosaursIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, dinosaurs_);
+  }
+  /**
+   * <pre>
+   * Dinosaurs with matching search string
+   * </pre>
+   *
+   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
+   */
+  private void clearDinosaurs() {
+    dinosaurs_ = emptyProtobufList();
+  }
+  /**
+   * <pre>
+   * Dinosaurs with matching search string
+   * </pre>
+   *
+   * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
+   */
+  private void removeDinosaurs(int index) {
+    ensureDinosaursIsMutable();
+    dinosaurs_.remove(index);
   }
 
   public static com.proto.dino.FindDinoResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.dino.FindDinoResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.FindDinoResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.FindDinoResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
+    return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
   public static Builder newBuilder(com.proto.dino.FindDinoResponse prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
-  @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-    Builder builder = new Builder(parent);
-    return builder;
-  }
   /**
    * Protobuf type {@code test3.FindDinoResponse}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+      com.google.protobuf.GeneratedMessageLite.Builder<
+        com.proto.dino.FindDinoResponse, Builder> implements
       // @@protoc_insertion_point(builder_implements:test3.FindDinoResponse)
       com.proto.dino.FindDinoResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.proto.dino.Dino.internal_static_test3_FindDinoResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.proto.dino.Dino.internal_static_test3_FindDinoResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.proto.dino.FindDinoResponse.class, com.proto.dino.FindDinoResponse.Builder.class);
-    }
-
     // Construct using com.proto.dino.FindDinoResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+      super(DEFAULT_INSTANCE);
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDinosaursFieldBuilder();
-      }
-    }
-    @java.lang.Override
-    public Builder clear() {
-      super.clear();
-      if (dinosaursBuilder_ == null) {
-        dinosaurs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      } else {
-        dinosaursBuilder_.clear();
-      }
-      return this;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.proto.dino.Dino.internal_static_test3_FindDinoResponse_descriptor;
-    }
-
-    @java.lang.Override
-    public com.proto.dino.FindDinoResponse getDefaultInstanceForType() {
-      return com.proto.dino.FindDinoResponse.getDefaultInstance();
-    }
-
-    @java.lang.Override
-    public com.proto.dino.FindDinoResponse build() {
-      com.proto.dino.FindDinoResponse result = buildPartial();
-      if (!result.isInitialized()) {
-        throw newUninitializedMessageException(result);
-      }
-      return result;
-    }
-
-    @java.lang.Override
-    public com.proto.dino.FindDinoResponse buildPartial() {
-      com.proto.dino.FindDinoResponse result = new com.proto.dino.FindDinoResponse(this);
-      int from_bitField0_ = bitField0_;
-      if (dinosaursBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          dinosaurs_ = java.util.Collections.unmodifiableList(dinosaurs_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.dinosaurs_ = dinosaurs_;
-      } else {
-        result.dinosaurs_ = dinosaursBuilder_.build();
-      }
-      onBuilt();
-      return result;
-    }
-
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
-    @java.lang.Override
-    public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.proto.dino.FindDinoResponse) {
-        return mergeFrom((com.proto.dino.FindDinoResponse)other);
-      } else {
-        super.mergeFrom(other);
-        return this;
-      }
-    }
-
-    public Builder mergeFrom(com.proto.dino.FindDinoResponse other) {
-      if (other == com.proto.dino.FindDinoResponse.getDefaultInstance()) return this;
-      if (dinosaursBuilder_ == null) {
-        if (!other.dinosaurs_.isEmpty()) {
-          if (dinosaurs_.isEmpty()) {
-            dinosaurs_ = other.dinosaurs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureDinosaursIsMutable();
-            dinosaurs_.addAll(other.dinosaurs_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.dinosaurs_.isEmpty()) {
-          if (dinosaursBuilder_.isEmpty()) {
-            dinosaursBuilder_.dispose();
-            dinosaursBuilder_ = null;
-            dinosaurs_ = other.dinosaurs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            dinosaursBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDinosaursFieldBuilder() : null;
-          } else {
-            dinosaursBuilder_.addAllMessages(other.dinosaurs_);
-          }
-        }
-      }
-      this.mergeUnknownFields(other.unknownFields);
-      onChanged();
-      return this;
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      return true;
-    }
-
-    @java.lang.Override
-    public Builder mergeFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      com.proto.dino.FindDinoResponse parsedMessage = null;
-      try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.proto.dino.FindDinoResponse) e.getUnfinishedMessage();
-        throw e.unwrapIOException();
-      } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
-      return this;
-    }
-    private int bitField0_;
-
-    private java.util.List<com.proto.dino.Dinosaur> dinosaurs_ =
-      java.util.Collections.emptyList();
-    private void ensureDinosaursIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        dinosaurs_ = new java.util.ArrayList<com.proto.dino.Dinosaur>(dinosaurs_);
-        bitField0_ |= 0x00000001;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.proto.dino.Dinosaur, com.proto.dino.Dinosaur.Builder, com.proto.dino.DinosaurOrBuilder> dinosaursBuilder_;
 
     /**
      * <pre>
@@ -517,12 +254,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.proto.dino.Dinosaur> getDinosaursList() {
-      if (dinosaursBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(dinosaurs_);
-      } else {
-        return dinosaursBuilder_.getMessageList();
-      }
+      return java.util.Collections.unmodifiableList(
+          instance.getDinosaursList());
     }
     /**
      * <pre>
@@ -531,26 +266,19 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
      */
+    @java.lang.Override
     public int getDinosaursCount() {
-      if (dinosaursBuilder_ == null) {
-        return dinosaurs_.size();
-      } else {
-        return dinosaursBuilder_.getCount();
-      }
-    }
-    /**
+      return instance.getDinosaursCount();
+    }/**
      * <pre>
      * Dinosaurs with matching search string
      * </pre>
      *
      * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
      */
+    @java.lang.Override
     public com.proto.dino.Dinosaur getDinosaurs(int index) {
-      if (dinosaursBuilder_ == null) {
-        return dinosaurs_.get(index);
-      } else {
-        return dinosaursBuilder_.getMessage(index);
-      }
+      return instance.getDinosaurs(index);
     }
     /**
      * <pre>
@@ -561,16 +289,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDinosaurs(
         int index, com.proto.dino.Dinosaur value) {
-      if (dinosaursBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDinosaursIsMutable();
-        dinosaurs_.set(index, value);
-        onChanged();
-      } else {
-        dinosaursBuilder_.setMessage(index, value);
-      }
+      copyOnWrite();
+      instance.setDinosaurs(index, value);
       return this;
     }
     /**
@@ -582,13 +302,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDinosaurs(
         int index, com.proto.dino.Dinosaur.Builder builderForValue) {
-      if (dinosaursBuilder_ == null) {
-        ensureDinosaursIsMutable();
-        dinosaurs_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        dinosaursBuilder_.setMessage(index, builderForValue.build());
-      }
+      copyOnWrite();
+      instance.setDinosaurs(index,
+          builderForValue.build());
       return this;
     }
     /**
@@ -599,16 +315,8 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
      */
     public Builder addDinosaurs(com.proto.dino.Dinosaur value) {
-      if (dinosaursBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDinosaursIsMutable();
-        dinosaurs_.add(value);
-        onChanged();
-      } else {
-        dinosaursBuilder_.addMessage(value);
-      }
+      copyOnWrite();
+      instance.addDinosaurs(value);
       return this;
     }
     /**
@@ -620,16 +328,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDinosaurs(
         int index, com.proto.dino.Dinosaur value) {
-      if (dinosaursBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDinosaursIsMutable();
-        dinosaurs_.add(index, value);
-        onChanged();
-      } else {
-        dinosaursBuilder_.addMessage(index, value);
-      }
+      copyOnWrite();
+      instance.addDinosaurs(index, value);
       return this;
     }
     /**
@@ -641,13 +341,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDinosaurs(
         com.proto.dino.Dinosaur.Builder builderForValue) {
-      if (dinosaursBuilder_ == null) {
-        ensureDinosaursIsMutable();
-        dinosaurs_.add(builderForValue.build());
-        onChanged();
-      } else {
-        dinosaursBuilder_.addMessage(builderForValue.build());
-      }
+      copyOnWrite();
+      instance.addDinosaurs(builderForValue.build());
       return this;
     }
     /**
@@ -659,13 +354,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDinosaurs(
         int index, com.proto.dino.Dinosaur.Builder builderForValue) {
-      if (dinosaursBuilder_ == null) {
-        ensureDinosaursIsMutable();
-        dinosaurs_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        dinosaursBuilder_.addMessage(index, builderForValue.build());
-      }
+      copyOnWrite();
+      instance.addDinosaurs(index,
+          builderForValue.build());
       return this;
     }
     /**
@@ -677,14 +368,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllDinosaurs(
         java.lang.Iterable<? extends com.proto.dino.Dinosaur> values) {
-      if (dinosaursBuilder_ == null) {
-        ensureDinosaursIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, dinosaurs_);
-        onChanged();
-      } else {
-        dinosaursBuilder_.addAllMessages(values);
-      }
+      copyOnWrite();
+      instance.addAllDinosaurs(values);
       return this;
     }
     /**
@@ -695,13 +380,8 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
      */
     public Builder clearDinosaurs() {
-      if (dinosaursBuilder_ == null) {
-        dinosaurs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-      } else {
-        dinosaursBuilder_.clear();
-      }
+      copyOnWrite();
+      instance.clearDinosaurs();
       return this;
     }
     /**
@@ -712,153 +392,83 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
      */
     public Builder removeDinosaurs(int index) {
-      if (dinosaursBuilder_ == null) {
-        ensureDinosaursIsMutable();
-        dinosaurs_.remove(index);
-        onChanged();
-      } else {
-        dinosaursBuilder_.remove(index);
-      }
+      copyOnWrite();
+      instance.removeDinosaurs(index);
       return this;
     }
-    /**
-     * <pre>
-     * Dinosaurs with matching search string
-     * </pre>
-     *
-     * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-     */
-    public com.proto.dino.Dinosaur.Builder getDinosaursBuilder(
-        int index) {
-      return getDinosaursFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Dinosaurs with matching search string
-     * </pre>
-     *
-     * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-     */
-    public com.proto.dino.DinosaurOrBuilder getDinosaursOrBuilder(
-        int index) {
-      if (dinosaursBuilder_ == null) {
-        return dinosaurs_.get(index);  } else {
-        return dinosaursBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * Dinosaurs with matching search string
-     * </pre>
-     *
-     * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-     */
-    public java.util.List<? extends com.proto.dino.DinosaurOrBuilder> 
-         getDinosaursOrBuilderList() {
-      if (dinosaursBuilder_ != null) {
-        return dinosaursBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(dinosaurs_);
-      }
-    }
-    /**
-     * <pre>
-     * Dinosaurs with matching search string
-     * </pre>
-     *
-     * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-     */
-    public com.proto.dino.Dinosaur.Builder addDinosaursBuilder() {
-      return getDinosaursFieldBuilder().addBuilder(
-          com.proto.dino.Dinosaur.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Dinosaurs with matching search string
-     * </pre>
-     *
-     * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-     */
-    public com.proto.dino.Dinosaur.Builder addDinosaursBuilder(
-        int index) {
-      return getDinosaursFieldBuilder().addBuilder(
-          index, com.proto.dino.Dinosaur.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Dinosaurs with matching search string
-     * </pre>
-     *
-     * <code>repeated .test3.Dinosaur dinosaurs = 1;</code>
-     */
-    public java.util.List<com.proto.dino.Dinosaur.Builder> 
-         getDinosaursBuilderList() {
-      return getDinosaursFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.proto.dino.Dinosaur, com.proto.dino.Dinosaur.Builder, com.proto.dino.DinosaurOrBuilder> 
-        getDinosaursFieldBuilder() {
-      if (dinosaursBuilder_ == null) {
-        dinosaursBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.proto.dino.Dinosaur, com.proto.dino.Dinosaur.Builder, com.proto.dino.DinosaurOrBuilder>(
-                dinosaurs_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
-        dinosaurs_ = null;
-      }
-      return dinosaursBuilder_;
-    }
-    @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
-    }
-
-    @java.lang.Override
-    public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.mergeUnknownFields(unknownFields);
-    }
-
 
     // @@protoc_insertion_point(builder_scope:test3.FindDinoResponse)
   }
+  @java.lang.Override
+  @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+  protected final java.lang.Object dynamicMethod(
+      com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+      java.lang.Object arg0, java.lang.Object arg1) {
+    switch (method) {
+      case NEW_MUTABLE_INSTANCE: {
+        return new com.proto.dino.FindDinoResponse();
+      }
+      case NEW_BUILDER: {
+        return new Builder();
+      }
+      case BUILD_MESSAGE_INFO: {
+          java.lang.Object[] objects = new java.lang.Object[] {
+            "dinosaurs_",
+            com.proto.dino.Dinosaur.class,
+          };
+          java.lang.String info =
+              "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+          return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+      }
+      // fall through
+      case GET_DEFAULT_INSTANCE: {
+        return DEFAULT_INSTANCE;
+      }
+      case GET_PARSER: {
+        com.google.protobuf.Parser<com.proto.dino.FindDinoResponse> parser = PARSER;
+        if (parser == null) {
+          synchronized (com.proto.dino.FindDinoResponse.class) {
+            parser = PARSER;
+            if (parser == null) {
+              parser =
+                  new DefaultInstanceBasedParser<com.proto.dino.FindDinoResponse>(
+                      DEFAULT_INSTANCE);
+              PARSER = parser;
+            }
+          }
+        }
+        return parser;
+    }
+    case GET_MEMOIZED_IS_INITIALIZED: {
+      return (byte) 1;
+    }
+    case SET_MEMOIZED_IS_INITIALIZED: {
+      return null;
+    }
+    }
+    throw new UnsupportedOperationException();
+  }
+
 
   // @@protoc_insertion_point(class_scope:test3.FindDinoResponse)
   private static final com.proto.dino.FindDinoResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.proto.dino.FindDinoResponse();
+    FindDinoResponse defaultInstance = new FindDinoResponse();
+    // New instances are implicitly immutable so no need to make
+    // immutable.
+    DEFAULT_INSTANCE = defaultInstance;
+    com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+      FindDinoResponse.class, defaultInstance);
   }
 
   public static com.proto.dino.FindDinoResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FindDinoResponse>
-      PARSER = new com.google.protobuf.AbstractParser<FindDinoResponse>() {
-    @java.lang.Override
-    public FindDinoResponse parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FindDinoResponse(input, extensionRegistry);
-    }
-  };
+  private static volatile com.google.protobuf.Parser<FindDinoResponse> PARSER;
 
   public static com.google.protobuf.Parser<FindDinoResponse> parser() {
-    return PARSER;
+    return DEFAULT_INSTANCE.getParserForType();
   }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<FindDinoResponse> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.proto.dino.FindDinoResponse getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
-  }
-
 }
 

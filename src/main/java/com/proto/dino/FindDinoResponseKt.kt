@@ -120,10 +120,8 @@ public object FindDinoResponseKt {
     public fun com.google.protobuf.kotlin.DslList<com.proto.dino.Dinosaur, DinosaursProxy>.clear() {
       _builder.clearDinosaurs()
     }
-
   }
 }
-@kotlin.jvm.JvmSynthetic
 public inline fun com.proto.dino.FindDinoResponse.copy(block: com.proto.dino.FindDinoResponseKt.Dsl.() -> kotlin.Unit): com.proto.dino.FindDinoResponse =
   com.proto.dino.FindDinoResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

@@ -5,7 +5,7 @@ package com.proto.dino;
 
 public interface DinosaurOrBuilder extends
     // @@protoc_insertion_point(interface_extends:test3.Dinosaur)
-    com.google.protobuf.MessageOrBuilder {
+    com.google.protobuf.MessageLiteOrBuilder {
 
   /**
    * <pre>
@@ -62,8 +62,8 @@ public interface DinosaurOrBuilder extends
    * </pre>
    *
    * <code>repeated string picture_urls = 2;</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the pictureUrls at the given index.
+   * @param index The index of the element to return.
+   * @return The pictureUrls at the given index.
    */
   com.google.protobuf.ByteString
       getPictureUrlsBytes(int index);

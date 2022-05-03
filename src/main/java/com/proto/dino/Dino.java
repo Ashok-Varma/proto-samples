@@ -9,67 +9,7 @@ public final class Dino {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_test3_Dinosaur_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_test3_Dinosaur_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_test3_FindDinoResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_test3_FindDinoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_test3_FindDinoRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_test3_FindDinoRequest_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\ndino.proto\022\005test3\"M\n\010Dinosaur\022\014\n\004name\030" +
-      "\001 \001(\t\022\024\n\014picture_urls\030\002 \003(\t\022\035\n\006period\030\005 " +
-      "\001(\0162\r.test3.Period\"6\n\020FindDinoResponse\022\"" +
-      "\n\tdinosaurs\030\001 \003(\0132\017.test3.Dinosaur\"\'\n\017Fi" +
-      "ndDinoRequest\022\024\n\014searchString\030\001 \001(\t*4\n\006P" +
-      "eriod\022\016\n\nCRETACEOUS\020\000\022\014\n\010JURASSIC\020\001\022\014\n\010T" +
-      "RIASSIC\020\0022L\n\013DinoService\022=\n\010findDino\022\026.t" +
-      "est3.FindDinoRequest\032\027.test3.FindDinoRes" +
-      "ponse\"\000B\022\n\016com.proto.dinoP\001b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_test3_Dinosaur_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_test3_Dinosaur_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_test3_Dinosaur_descriptor,
-        new java.lang.String[] { "Name", "PictureUrls", "Period", });
-    internal_static_test3_FindDinoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_test3_FindDinoResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_test3_FindDinoResponse_descriptor,
-        new java.lang.String[] { "Dinosaurs", });
-    internal_static_test3_FindDinoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_test3_FindDinoRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_test3_FindDinoRequest_descriptor,
-        new java.lang.String[] { "SearchString", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
