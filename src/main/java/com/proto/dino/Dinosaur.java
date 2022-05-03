@@ -6,48 +6,17 @@ package com.proto.dino;
 /**
  * Protobuf type {@code test3.Dinosaur}
  */
-public final class Dinosaur extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public  final class Dinosaur extends
+    com.google.protobuf.GeneratedMessageLite<
+        Dinosaur, Dinosaur.Builder> implements
     // @@protoc_insertion_point(message_implements:test3.Dinosaur)
     DinosaurOrBuilder {
-private static final long serialVersionUID = 0L;
-  // Use Dinosaur.newBuilder() to construct.
-  private Dinosaur(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-    super(builder);
-  }
   private Dinosaur() {
     name_ = "";
-    pictureUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    period_ = 0;
+    pictureUrls_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
   }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new Dinosaur();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.proto.dino.Dino.internal_static_test3_Dinosaur_descriptor;
-  }
-
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-    return com.proto.dino.Dino.internal_static_test3_Dinosaur_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            com.proto.dino.Dinosaur.class, com.proto.dino.Dinosaur.Builder.class);
-  }
-
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  private java.lang.String name_;
   /**
    * <pre>
    * Common name of this dinosaur, like "Stegosaurus".
@@ -58,16 +27,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
+    return name_;
   }
   /**
    * <pre>
@@ -80,20 +40,50 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.ByteString
       getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+    return com.google.protobuf.ByteString.copyFromUtf8(name_);
+  }
+  /**
+   * <pre>
+   * Common name of this dinosaur, like "Stegosaurus".
+   * </pre>
+   *
+   * <code>string name = 1;</code>
+   * @param value The name to set.
+   */
+  private void setName(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  
+    name_ = value;
+  }
+  /**
+   * <pre>
+   * Common name of this dinosaur, like "Stegosaurus".
+   * </pre>
+   *
+   * <code>string name = 1;</code>
+   */
+  private void clearName() {
+    
+    name_ = getDefaultInstance().getName();
+  }
+  /**
+   * <pre>
+   * Common name of this dinosaur, like "Stegosaurus".
+   * </pre>
+   *
+   * <code>string name = 1;</code>
+   * @param value The bytes for name to set.
+   */
+  private void setNameBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    name_ = value.toStringUtf8();
+    
   }
 
   public static final int PICTURE_URLS_FIELD_NUMBER = 2;
-  private com.google.protobuf.LazyStringList pictureUrls_;
+  private com.google.protobuf.Internal.ProtobufList<java.lang.String> pictureUrls_;
   /**
    * <pre>
    * URLs with images of this dinosaur.
@@ -102,8 +92,8 @@ private static final long serialVersionUID = 0L;
    * <code>repeated string picture_urls = 2;</code>
    * @return A list containing the pictureUrls.
    */
-  public com.google.protobuf.ProtocolStringList
-      getPictureUrlsList() {
+  @java.lang.Override
+  public java.util.List<java.lang.String> getPictureUrlsList() {
     return pictureUrls_;
   }
   /**
@@ -114,6 +104,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated string picture_urls = 2;</code>
    * @return The count of pictureUrls.
    */
+  @java.lang.Override
   public int getPictureUrlsCount() {
     return pictureUrls_.size();
   }
@@ -126,6 +117,7 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the element to return.
    * @return The pictureUrls at the given index.
    */
+  @java.lang.Override
   public java.lang.String getPictureUrls(int index) {
     return pictureUrls_.get(index);
   }
@@ -138,9 +130,85 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the value to return.
    * @return The bytes of the pictureUrls at the given index.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPictureUrlsBytes(int index) {
-    return pictureUrls_.getByteString(index);
+    return com.google.protobuf.ByteString.copyFromUtf8(
+        pictureUrls_.get(index));
+  }
+  private void ensurePictureUrlsIsMutable() {
+    com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+        pictureUrls_;  if (!tmp.isModifiable()) {
+      pictureUrls_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
+  }
+  /**
+   * <pre>
+   * URLs with images of this dinosaur.
+   * </pre>
+   *
+   * <code>repeated string picture_urls = 2;</code>
+   * @param index The index to set the value at.
+   * @param value The pictureUrls to set.
+   */
+  private void setPictureUrls(
+      int index, java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  ensurePictureUrlsIsMutable();
+    pictureUrls_.set(index, value);
+  }
+  /**
+   * <pre>
+   * URLs with images of this dinosaur.
+   * </pre>
+   *
+   * <code>repeated string picture_urls = 2;</code>
+   * @param value The pictureUrls to add.
+   */
+  private void addPictureUrls(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  ensurePictureUrlsIsMutable();
+    pictureUrls_.add(value);
+  }
+  /**
+   * <pre>
+   * URLs with images of this dinosaur.
+   * </pre>
+   *
+   * <code>repeated string picture_urls = 2;</code>
+   * @param values The pictureUrls to add.
+   */
+  private void addAllPictureUrls(
+      java.lang.Iterable<java.lang.String> values) {
+    ensurePictureUrlsIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, pictureUrls_);
+  }
+  /**
+   * <pre>
+   * URLs with images of this dinosaur.
+   * </pre>
+   *
+   * <code>repeated string picture_urls = 2;</code>
+   */
+  private void clearPictureUrls() {
+    pictureUrls_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+  }
+  /**
+   * <pre>
+   * URLs with images of this dinosaur.
+   * </pre>
+   *
+   * <code>repeated string picture_urls = 2;</code>
+   * @param value The bytes of the pictureUrls to add.
+   */
+  private void addPictureUrlsBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    ensurePictureUrlsIsMutable();
+    pictureUrls_.add(value.toStringUtf8());
   }
 
   public static final int PERIOD_FIELD_NUMBER = 5;
@@ -149,226 +217,137 @@ private static final long serialVersionUID = 0L;
    * <code>.test3.Period period = 5;</code>
    * @return The enum numeric value on the wire for period.
    */
-  @java.lang.Override public int getPeriodValue() {
+  @java.lang.Override
+  public int getPeriodValue() {
     return period_;
   }
   /**
    * <code>.test3.Period period = 5;</code>
    * @return The period.
    */
-  @java.lang.Override public com.proto.dino.Period getPeriod() {
-    @SuppressWarnings("deprecation")
-    com.proto.dino.Period result = com.proto.dino.Period.valueOf(period_);
+  @java.lang.Override
+  public com.proto.dino.Period getPeriod() {
+    com.proto.dino.Period result = com.proto.dino.Period.forNumber(period_);
     return result == null ? com.proto.dino.Period.UNRECOGNIZED : result;
+  }
+  /**
+   * <code>.test3.Period period = 5;</code>
+   * @param value The enum numeric value on the wire for period to set.
+   */
+  private void setPeriodValue(int value) {
+      period_ = value;
+  }
+  /**
+   * <code>.test3.Period period = 5;</code>
+   * @param value The period to set.
+   */
+  private void setPeriod(com.proto.dino.Period value) {
+    period_ = value.getNumber();
+    
+  }
+  /**
+   * <code>.test3.Period period = 5;</code>
+   */
+  private void clearPeriod() {
+    
+    period_ = 0;
   }
 
   public static com.proto.dino.Dinosaur parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.Dinosaur parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.Dinosaur parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.dino.Dinosaur parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.Dinosaur parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.Dinosaur parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
+    return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
   public static Builder newBuilder(com.proto.dino.Dinosaur prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
-  @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-    Builder builder = new Builder(parent);
-    return builder;
-  }
   /**
    * Protobuf type {@code test3.Dinosaur}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+      com.google.protobuf.GeneratedMessageLite.Builder<
+        com.proto.dino.Dinosaur, Builder> implements
       // @@protoc_insertion_point(builder_implements:test3.Dinosaur)
       com.proto.dino.DinosaurOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.proto.dino.Dino.internal_static_test3_Dinosaur_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.proto.dino.Dino.internal_static_test3_Dinosaur_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.proto.dino.Dinosaur.class, com.proto.dino.Dinosaur.Builder.class);
-    }
-
     // Construct using com.proto.dino.Dinosaur.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+      super(DEFAULT_INSTANCE);
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
-    }
-    @java.lang.Override
-    public Builder clear() {
-      super.clear();
-      name_ = "";
 
-      pictureUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      period_ = 0;
-
-      return this;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.proto.dino.Dino.internal_static_test3_Dinosaur_descriptor;
-    }
-
-    @java.lang.Override
-    public com.proto.dino.Dinosaur getDefaultInstanceForType() {
-      return com.proto.dino.Dinosaur.getDefaultInstance();
-    }
-
-    @java.lang.Override
-    public com.proto.dino.Dinosaur build() {
-      com.proto.dino.Dinosaur result = buildPartial();
-      if (!result.isInitialized()) {
-        throw newUninitializedMessageException(result);
-      }
-      return result;
-    }
-
-    @java.lang.Override
-    public com.proto.dino.Dinosaur buildPartial() {
-      com.proto.dino.Dinosaur result = new com.proto.dino.Dinosaur(this);
-      int from_bitField0_ = bitField0_;
-      result.name_ = name_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        pictureUrls_ = pictureUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.pictureUrls_ = pictureUrls_;
-      result.period_ = period_;
-      onBuilt();
-      return result;
-    }
-
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
-    private int bitField0_;
-
-    private java.lang.Object name_ = "";
     /**
      * <pre>
      * Common name of this dinosaur, like "Stegosaurus".
@@ -377,17 +356,9 @@ private static final long serialVersionUID = 0L;
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+      return instance.getName();
     }
     /**
      * <pre>
@@ -397,18 +368,10 @@ private static final long serialVersionUID = 0L;
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return instance.getNameBytes();
     }
     /**
      * <pre>
@@ -421,12 +384,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      name_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setName(value);
       return this;
     }
     /**
@@ -438,9 +397,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
-      name_ = getDefaultInstance().getName();
-      onChanged();
+      copyOnWrite();
+      instance.clearName();
       return this;
     }
     /**
@@ -454,23 +412,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      name_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setNameBytes(value);
       return this;
     }
 
-    private com.google.protobuf.LazyStringList pictureUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    private void ensurePictureUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        pictureUrls_ = new com.google.protobuf.LazyStringArrayList(pictureUrls_);
-        bitField0_ |= 0x00000001;
-       }
-    }
     /**
      * <pre>
      * URLs with images of this dinosaur.
@@ -479,9 +425,11 @@ private static final long serialVersionUID = 0L;
      * <code>repeated string picture_urls = 2;</code>
      * @return A list containing the pictureUrls.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Override
+    public java.util.List<java.lang.String>
         getPictureUrlsList() {
-      return pictureUrls_.getUnmodifiableView();
+      return java.util.Collections.unmodifiableList(
+          instance.getPictureUrlsList());
     }
     /**
      * <pre>
@@ -491,8 +439,9 @@ private static final long serialVersionUID = 0L;
      * <code>repeated string picture_urls = 2;</code>
      * @return The count of pictureUrls.
      */
+    @java.lang.Override
     public int getPictureUrlsCount() {
-      return pictureUrls_.size();
+      return instance.getPictureUrlsCount();
     }
     /**
      * <pre>
@@ -503,8 +452,9 @@ private static final long serialVersionUID = 0L;
      * @param index The index of the element to return.
      * @return The pictureUrls at the given index.
      */
+    @java.lang.Override
     public java.lang.String getPictureUrls(int index) {
-      return pictureUrls_.get(index);
+      return instance.getPictureUrls(index);
     }
     /**
      * <pre>
@@ -515,9 +465,10 @@ private static final long serialVersionUID = 0L;
      * @param index The index of the value to return.
      * @return The bytes of the pictureUrls at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPictureUrlsBytes(int index) {
-      return pictureUrls_.getByteString(index);
+      return instance.getPictureUrlsBytes(index);
     }
     /**
      * <pre>
@@ -531,12 +482,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPictureUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePictureUrlsIsMutable();
-      pictureUrls_.set(index, value);
-      onChanged();
+      copyOnWrite();
+      instance.setPictureUrls(index, value);
       return this;
     }
     /**
@@ -550,12 +497,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPictureUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePictureUrlsIsMutable();
-      pictureUrls_.add(value);
-      onChanged();
+      copyOnWrite();
+      instance.addPictureUrls(value);
       return this;
     }
     /**
@@ -569,10 +512,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllPictureUrls(
         java.lang.Iterable<java.lang.String> values) {
-      ensurePictureUrlsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, pictureUrls_);
-      onChanged();
+      copyOnWrite();
+      instance.addAllPictureUrls(values);
       return this;
     }
     /**
@@ -584,9 +525,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPictureUrls() {
-      pictureUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
+      copyOnWrite();
+      instance.clearPictureUrls();
       return this;
     }
     /**
@@ -600,33 +540,27 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPictureUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      ensurePictureUrlsIsMutable();
-      pictureUrls_.add(value);
-      onChanged();
+      copyOnWrite();
+      instance.addPictureUrlsBytes(value);
       return this;
     }
 
-    private int period_ = 0;
     /**
      * <code>.test3.Period period = 5;</code>
      * @return The enum numeric value on the wire for period.
      */
-    @java.lang.Override public int getPeriodValue() {
-      return period_;
+    @java.lang.Override
+    public int getPeriodValue() {
+      return instance.getPeriodValue();
     }
     /**
      * <code>.test3.Period period = 5;</code>
-     * @param value The enum numeric value on the wire for period to set.
+     * @param value The period to set.
      * @return This builder for chaining.
      */
     public Builder setPeriodValue(int value) {
-      
-      period_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setPeriodValue(value);
       return this;
     }
     /**
@@ -635,22 +569,16 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.proto.dino.Period getPeriod() {
-      @SuppressWarnings("deprecation")
-      com.proto.dino.Period result = com.proto.dino.Period.valueOf(period_);
-      return result == null ? com.proto.dino.Period.UNRECOGNIZED : result;
+      return instance.getPeriod();
     }
     /**
      * <code>.test3.Period period = 5;</code>
-     * @param value The period to set.
+     * @param value The enum numeric value on the wire for period to set.
      * @return This builder for chaining.
      */
     public Builder setPeriod(com.proto.dino.Period value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      period_ = value.getNumber();
-      onChanged();
+      copyOnWrite();
+      instance.setPeriod(value);
       return this;
     }
     /**
@@ -658,71 +586,85 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPeriod() {
-      
-      period_ = 0;
-      onChanged();
+      copyOnWrite();
+      instance.clearPeriod();
       return this;
     }
-    @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
-    }
-
-    @java.lang.Override
-    public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.mergeUnknownFields(unknownFields);
-    }
-
 
     // @@protoc_insertion_point(builder_scope:test3.Dinosaur)
   }
+  @java.lang.Override
+  @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+  protected final java.lang.Object dynamicMethod(
+      com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+      java.lang.Object arg0, java.lang.Object arg1) {
+    switch (method) {
+      case NEW_MUTABLE_INSTANCE: {
+        return new com.proto.dino.Dinosaur();
+      }
+      case NEW_BUILDER: {
+        return new Builder();
+      }
+      case BUILD_MESSAGE_INFO: {
+          java.lang.Object[] objects = new java.lang.Object[] {
+            "name_",
+            "pictureUrls_",
+            "period_",
+          };
+          java.lang.String info =
+              "\u0000\u0003\u0000\u0000\u0001\u0005\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
+              "\u0005\f";
+          return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+      }
+      // fall through
+      case GET_DEFAULT_INSTANCE: {
+        return DEFAULT_INSTANCE;
+      }
+      case GET_PARSER: {
+        com.google.protobuf.Parser<com.proto.dino.Dinosaur> parser = PARSER;
+        if (parser == null) {
+          synchronized (com.proto.dino.Dinosaur.class) {
+            parser = PARSER;
+            if (parser == null) {
+              parser =
+                  new DefaultInstanceBasedParser<com.proto.dino.Dinosaur>(
+                      DEFAULT_INSTANCE);
+              PARSER = parser;
+            }
+          }
+        }
+        return parser;
+    }
+    case GET_MEMOIZED_IS_INITIALIZED: {
+      return (byte) 1;
+    }
+    case SET_MEMOIZED_IS_INITIALIZED: {
+      return null;
+    }
+    }
+    throw new UnsupportedOperationException();
+  }
+
 
   // @@protoc_insertion_point(class_scope:test3.Dinosaur)
   private static final com.proto.dino.Dinosaur DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.proto.dino.Dinosaur();
+    Dinosaur defaultInstance = new Dinosaur();
+    // New instances are implicitly immutable so no need to make
+    // immutable.
+    DEFAULT_INSTANCE = defaultInstance;
+    com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+      Dinosaur.class, defaultInstance);
   }
 
   public static com.proto.dino.Dinosaur getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Dinosaur>
-      PARSER = new com.google.protobuf.AbstractParser<Dinosaur>() {
-    @java.lang.Override
-    public Dinosaur parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(
-                builder.buildPartial());
-      }
-      return builder.buildPartial();
-    }
-  };
+  private static volatile com.google.protobuf.Parser<Dinosaur> PARSER;
 
   public static com.google.protobuf.Parser<Dinosaur> parser() {
-    return PARSER;
+    return DEFAULT_INSTANCE.getParserForType();
   }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<Dinosaur> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.proto.dino.Dinosaur getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
-  }
-
 }
 

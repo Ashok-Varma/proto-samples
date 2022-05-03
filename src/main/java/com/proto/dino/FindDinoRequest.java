@@ -6,46 +6,16 @@ package com.proto.dino;
 /**
  * Protobuf type {@code test3.FindDinoRequest}
  */
-public final class FindDinoRequest extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public  final class FindDinoRequest extends
+    com.google.protobuf.GeneratedMessageLite<
+        FindDinoRequest, FindDinoRequest.Builder> implements
     // @@protoc_insertion_point(message_implements:test3.FindDinoRequest)
     FindDinoRequestOrBuilder {
-private static final long serialVersionUID = 0L;
-  // Use FindDinoRequest.newBuilder() to construct.
-  private FindDinoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-    super(builder);
-  }
   private FindDinoRequest() {
     searchString_ = "";
   }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new FindDinoRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.proto.dino.Dino.internal_static_test3_FindDinoRequest_descriptor;
-  }
-
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-    return com.proto.dino.Dino.internal_static_test3_FindDinoRequest_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            com.proto.dino.FindDinoRequest.class, com.proto.dino.FindDinoRequest.Builder.class);
-  }
-
   public static final int SEARCHSTRING_FIELD_NUMBER = 1;
-  private volatile java.lang.Object searchString_;
+  private java.lang.String searchString_;
   /**
    * <pre>
    * Search string
@@ -56,16 +26,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public java.lang.String getSearchString() {
-    java.lang.Object ref = searchString_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      searchString_ = s;
-      return s;
-    }
+    return searchString_;
   }
   /**
    * <pre>
@@ -78,213 +39,143 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.protobuf.ByteString
       getSearchStringBytes() {
-    java.lang.Object ref = searchString_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      searchString_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+    return com.google.protobuf.ByteString.copyFromUtf8(searchString_);
+  }
+  /**
+   * <pre>
+   * Search string
+   * </pre>
+   *
+   * <code>string searchString = 1;</code>
+   * @param value The searchString to set.
+   */
+  private void setSearchString(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  
+    searchString_ = value;
+  }
+  /**
+   * <pre>
+   * Search string
+   * </pre>
+   *
+   * <code>string searchString = 1;</code>
+   */
+  private void clearSearchString() {
+    
+    searchString_ = getDefaultInstance().getSearchString();
+  }
+  /**
+   * <pre>
+   * Search string
+   * </pre>
+   *
+   * <code>string searchString = 1;</code>
+   * @param value The bytes for searchString to set.
+   */
+  private void setSearchStringBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    searchString_ = value.toStringUtf8();
+    
   }
 
   public static com.proto.dino.FindDinoRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, data, extensionRegistry);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.dino.FindDinoRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.FindDinoRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input);
   }
   public static com.proto.dino.FindDinoRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageLite.parseFrom(
+        DEFAULT_INSTANCE, input, extensionRegistry);
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
+    return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
   public static Builder newBuilder(com.proto.dino.FindDinoRequest prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
-  @java.lang.Override
-  public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
-  @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-    Builder builder = new Builder(parent);
-    return builder;
-  }
   /**
    * Protobuf type {@code test3.FindDinoRequest}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+      com.google.protobuf.GeneratedMessageLite.Builder<
+        com.proto.dino.FindDinoRequest, Builder> implements
       // @@protoc_insertion_point(builder_implements:test3.FindDinoRequest)
       com.proto.dino.FindDinoRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.proto.dino.Dino.internal_static_test3_FindDinoRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.proto.dino.Dino.internal_static_test3_FindDinoRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.proto.dino.FindDinoRequest.class, com.proto.dino.FindDinoRequest.Builder.class);
-    }
-
     // Construct using com.proto.dino.FindDinoRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+      super(DEFAULT_INSTANCE);
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
-    }
-    @java.lang.Override
-    public Builder clear() {
-      super.clear();
-      searchString_ = "";
 
-      return this;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.proto.dino.Dino.internal_static_test3_FindDinoRequest_descriptor;
-    }
-
-    @java.lang.Override
-    public com.proto.dino.FindDinoRequest getDefaultInstanceForType() {
-      return com.proto.dino.FindDinoRequest.getDefaultInstance();
-    }
-
-    @java.lang.Override
-    public com.proto.dino.FindDinoRequest build() {
-      com.proto.dino.FindDinoRequest result = buildPartial();
-      if (!result.isInitialized()) {
-        throw newUninitializedMessageException(result);
-      }
-      return result;
-    }
-
-    @java.lang.Override
-    public com.proto.dino.FindDinoRequest buildPartial() {
-      com.proto.dino.FindDinoRequest result = new com.proto.dino.FindDinoRequest(this);
-      result.searchString_ = searchString_;
-      onBuilt();
-      return result;
-    }
-
-    @java.lang.Override
-    public Builder clone() {
-      return super.clone();
-    }
-    @java.lang.Override
-    public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.setField(field, value);
-    }
-    @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
-    }
-    @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
-    }
-    @java.lang.Override
-    public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
-    }
-    @java.lang.Override
-    public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
-      return super.addRepeatedField(field, value);
-    }
-
-    private java.lang.Object searchString_ = "";
     /**
      * <pre>
      * Search string
@@ -293,17 +184,9 @@ private static final long serialVersionUID = 0L;
      * <code>string searchString = 1;</code>
      * @return The searchString.
      */
+    @java.lang.Override
     public java.lang.String getSearchString() {
-      java.lang.Object ref = searchString_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        searchString_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+      return instance.getSearchString();
     }
     /**
      * <pre>
@@ -313,18 +196,10 @@ private static final long serialVersionUID = 0L;
      * <code>string searchString = 1;</code>
      * @return The bytes for searchString.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSearchStringBytes() {
-      java.lang.Object ref = searchString_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        searchString_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return instance.getSearchStringBytes();
     }
     /**
      * <pre>
@@ -337,12 +212,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSearchString(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      searchString_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setSearchString(value);
       return this;
     }
     /**
@@ -354,9 +225,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchString() {
-      
-      searchString_ = getDefaultInstance().getSearchString();
-      onChanged();
+      copyOnWrite();
+      instance.clearSearchString();
       return this;
     }
     /**
@@ -370,75 +240,82 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSearchStringBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      searchString_ = value;
-      onChanged();
+      copyOnWrite();
+      instance.setSearchStringBytes(value);
       return this;
     }
-    @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
-    }
-
-    @java.lang.Override
-    public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.mergeUnknownFields(unknownFields);
-    }
-
 
     // @@protoc_insertion_point(builder_scope:test3.FindDinoRequest)
   }
+  @java.lang.Override
+  @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+  protected final java.lang.Object dynamicMethod(
+      com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+      java.lang.Object arg0, java.lang.Object arg1) {
+    switch (method) {
+      case NEW_MUTABLE_INSTANCE: {
+        return new com.proto.dino.FindDinoRequest();
+      }
+      case NEW_BUILDER: {
+        return new Builder();
+      }
+      case BUILD_MESSAGE_INFO: {
+          java.lang.Object[] objects = new java.lang.Object[] {
+            "searchString_",
+          };
+          java.lang.String info =
+              "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+          return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+      }
+      // fall through
+      case GET_DEFAULT_INSTANCE: {
+        return DEFAULT_INSTANCE;
+      }
+      case GET_PARSER: {
+        com.google.protobuf.Parser<com.proto.dino.FindDinoRequest> parser = PARSER;
+        if (parser == null) {
+          synchronized (com.proto.dino.FindDinoRequest.class) {
+            parser = PARSER;
+            if (parser == null) {
+              parser =
+                  new DefaultInstanceBasedParser<com.proto.dino.FindDinoRequest>(
+                      DEFAULT_INSTANCE);
+              PARSER = parser;
+            }
+          }
+        }
+        return parser;
+    }
+    case GET_MEMOIZED_IS_INITIALIZED: {
+      return (byte) 1;
+    }
+    case SET_MEMOIZED_IS_INITIALIZED: {
+      return null;
+    }
+    }
+    throw new UnsupportedOperationException();
+  }
+
 
   // @@protoc_insertion_point(class_scope:test3.FindDinoRequest)
   private static final com.proto.dino.FindDinoRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.proto.dino.FindDinoRequest();
+    FindDinoRequest defaultInstance = new FindDinoRequest();
+    // New instances are implicitly immutable so no need to make
+    // immutable.
+    DEFAULT_INSTANCE = defaultInstance;
+    com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+      FindDinoRequest.class, defaultInstance);
   }
 
   public static com.proto.dino.FindDinoRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FindDinoRequest>
-      PARSER = new com.google.protobuf.AbstractParser<FindDinoRequest>() {
-    @java.lang.Override
-    public FindDinoRequest parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(
-                builder.buildPartial());
-      }
-      return builder.buildPartial();
-    }
-  };
+  private static volatile com.google.protobuf.Parser<FindDinoRequest> PARSER;
 
   public static com.google.protobuf.Parser<FindDinoRequest> parser() {
-    return PARSER;
+    return DEFAULT_INSTANCE.getParserForType();
   }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<FindDinoRequest> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.proto.dino.FindDinoRequest getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
-  }
-
 }
 

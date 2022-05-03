@@ -5,7 +5,7 @@ package com.proto.dino;
 
 public interface FindDinoRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:test3.FindDinoRequest)
-    com.google.protobuf.MessageOrBuilder {
+    com.google.protobuf.MessageLiteOrBuilder {
 
   /**
    * <pre>
