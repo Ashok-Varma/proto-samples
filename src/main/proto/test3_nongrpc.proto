@@ -196,3 +196,8 @@ message TestService3Request {
   // https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
   repeated google.protobuf.Any details = 42;
 }
+
+service TestService3 {
+  // Unary
+  rpc test(TestService3Request) returns (TestService3Response) {};
+}

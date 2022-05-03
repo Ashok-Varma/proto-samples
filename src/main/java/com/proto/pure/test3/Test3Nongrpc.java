@@ -154,8 +154,10 @@ public final class Test3Nongrpc {
       "d64B\023\n\021_optionalSfixed32B\023\n\021_optionalSfi" +
       "xed64B\017\n\r_optionalBoolB\021\n\017_optionalStrin" +
       "gB\020\n\016_optionalBytesB\t\n\007_corpusJ\004\010\002\020\003J\004\010\017" +
-      "\020\020J\004\010\t\020\014R\003fooR\003barB\030\n\024com.proto.pure.tes" +
-      "t3P\001b\006proto3"
+      "\020\020J\004\010\t\020\014R\003fooR\003bar2Q\n\014TestService3\022A\n\004te" +
+      "st\022\032.test3.TestService3Request\032\033.test3.T" +
+      "estService3Response\"\000B\030\n\024com.proto.pure." +
+      "test3P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
