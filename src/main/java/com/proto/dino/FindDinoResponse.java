@@ -31,58 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private FindDinoResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dinosaurs_ = new java.util.ArrayList<com.proto.dino.Dinosaur>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            dinosaurs_.add(
-                input.readMessage(com.proto.dino.Dinosaur.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        dinosaurs_ = java.util.Collections.unmodifiableList(dinosaurs_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.proto.dino.Dino.internal_static_test3_FindDinoResponse_descriptor;
@@ -154,73 +102,6 @@ private static final long serialVersionUID = 0L;
   public com.proto.dino.DinosaurOrBuilder getDinosaursOrBuilder(
       int index) {
     return dinosaurs_.get(index);
-  }
-
-  private byte memoizedIsInitialized = -1;
-  @java.lang.Override
-  public final boolean isInitialized() {
-    byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
-
-    memoizedIsInitialized = 1;
-    return true;
-  }
-
-  @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
-    for (int i = 0; i < dinosaurs_.size(); i++) {
-      output.writeMessage(1, dinosaurs_.get(i));
-    }
-    unknownFields.writeTo(output);
-  }
-
-  @java.lang.Override
-  public int getSerializedSize() {
-    int size = memoizedSize;
-    if (size != -1) return size;
-
-    size = 0;
-    for (int i = 0; i < dinosaurs_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, dinosaurs_.get(i));
-    }
-    size += unknownFields.getSerializedSize();
-    memoizedSize = size;
-    return size;
-  }
-
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
-    if (obj == this) {
-     return true;
-    }
-    if (!(obj instanceof com.proto.dino.FindDinoResponse)) {
-      return super.equals(obj);
-    }
-    com.proto.dino.FindDinoResponse other = (com.proto.dino.FindDinoResponse) obj;
-
-    if (!getDinosaursList()
-        .equals(other.getDinosaursList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
-  }
-
-  @java.lang.Override
-  public int hashCode() {
-    if (memoizedHashCode != 0) {
-      return memoizedHashCode;
-    }
-    int hash = 41;
-    hash = (19 * hash) + getDescriptor().hashCode();
-    if (getDinosaursCount() > 0) {
-      hash = (37 * hash) + DINOSAURS_FIELD_NUMBER;
-      hash = (53 * hash) + getDinosaursList().hashCode();
-    }
-    hash = (29 * hash) + unknownFields.hashCode();
-    memoizedHashCode = hash;
-    return hash;
   }
 
   public static com.proto.dino.FindDinoResponse parseFrom(
@@ -429,72 +310,6 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
-    }
-    @java.lang.Override
-    public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.proto.dino.FindDinoResponse) {
-        return mergeFrom((com.proto.dino.FindDinoResponse)other);
-      } else {
-        super.mergeFrom(other);
-        return this;
-      }
-    }
-
-    public Builder mergeFrom(com.proto.dino.FindDinoResponse other) {
-      if (other == com.proto.dino.FindDinoResponse.getDefaultInstance()) return this;
-      if (dinosaursBuilder_ == null) {
-        if (!other.dinosaurs_.isEmpty()) {
-          if (dinosaurs_.isEmpty()) {
-            dinosaurs_ = other.dinosaurs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureDinosaursIsMutable();
-            dinosaurs_.addAll(other.dinosaurs_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.dinosaurs_.isEmpty()) {
-          if (dinosaursBuilder_.isEmpty()) {
-            dinosaursBuilder_.dispose();
-            dinosaursBuilder_ = null;
-            dinosaurs_ = other.dinosaurs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            dinosaursBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDinosaursFieldBuilder() : null;
-          } else {
-            dinosaursBuilder_.addAllMessages(other.dinosaurs_);
-          }
-        }
-      }
-      this.mergeUnknownFields(other.unknownFields);
-      onChanged();
-      return this;
-    }
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      return true;
-    }
-
-    @java.lang.Override
-    public Builder mergeFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      com.proto.dino.FindDinoResponse parsedMessage = null;
-      try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.proto.dino.FindDinoResponse) e.getUnfinishedMessage();
-        throw e.unwrapIOException();
-      } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
-      return this;
     }
     private int bitField0_;
 
@@ -842,7 +657,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FindDinoResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(
+                builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

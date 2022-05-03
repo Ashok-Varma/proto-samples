@@ -46,7 +46,7 @@ public final class Dino {
       "eriod\022\016\n\nCRETACEOUS\020\000\022\014\n\010JURASSIC\020\001\022\014\n\010T" +
       "RIASSIC\020\0022L\n\013DinoService\022=\n\010findDino\022\026.t" +
       "est3.FindDinoRequest\032\027.test3.FindDinoRes" +
-      "ponse\"\000B\022\n\016com.proto.dinoP\001b\006proto3"
+      "ponse\"\000B\024\n\016com.proto.dinoH\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
