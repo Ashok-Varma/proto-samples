@@ -62,7 +62,7 @@ public object DinosaurKt {
      * @return A list containing the pictureUrls.
      */
     public val pictureUrls: com.google.protobuf.kotlin.DslList<kotlin.String, PictureUrlsProxy>
-      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getPictureUrlsList()
       )
@@ -163,6 +163,7 @@ public object DinosaurKt {
     }
   }
 }
+@kotlin.jvm.JvmSynthetic
 public inline fun com.proto.dino.Dinosaur.copy(block: com.proto.dino.DinosaurKt.Dsl.() -> kotlin.Unit): com.proto.dino.Dinosaur =
   com.proto.dino.DinosaurKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

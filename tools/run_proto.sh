@@ -13,6 +13,6 @@ protoc-3.20.1-osx-aarch_64/bin/protoc \
 
 protoc-3.20.1-osx-aarch_64/bin/protoc \
 --proto_path="../src/main/proto" \
---java_out=lite:"../src/main/java" \
---kotlin_out=lite:"../src/main/java" \
+--java_out="../src/main/java" \
+--kotlin_out="../src/main/java" \
 ../src/main/proto/dino.proto

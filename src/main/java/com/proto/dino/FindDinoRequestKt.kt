@@ -48,6 +48,7 @@ public object FindDinoRequestKt {
     }
   }
 }
+@kotlin.jvm.JvmSynthetic
 public inline fun com.proto.dino.FindDinoRequest.copy(block: com.proto.dino.FindDinoRequestKt.Dsl.() -> kotlin.Unit): com.proto.dino.FindDinoRequest =
   com.proto.dino.FindDinoRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 
