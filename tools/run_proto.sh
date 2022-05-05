@@ -16,5 +16,5 @@ protoc-3.20.1-osx-aarch_64/bin/protoc \
 --java_out=lite:"../src/main/java" \
 --kotlin_out=lite:"../src/main/java" \
 --plugin=protoc-gen-grpckt="protoc-gen-grpc-kotlin.sh" \
---grpckt_out="../src/main/java" \
+--grpckt_out=lite:"../src/main/java" \
 ../src/main/proto/dino.proto
