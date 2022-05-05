@@ -34,11 +34,10 @@ public final class DinoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "findDino"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.proto.dino.FindDinoRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.proto.dino.FindDinoResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DinoServiceMethodDescriptorSupplier("findDino"))
               .build();
         }
       }
@@ -233,41 +232,6 @@ public final class DinoServiceGrpc {
     }
   }
 
-  private static abstract class DinoServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    DinoServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.proto.dino.Dino.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("DinoService");
-    }
-  }
-
-  private static final class DinoServiceFileDescriptorSupplier
-      extends DinoServiceBaseDescriptorSupplier {
-    DinoServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class DinoServiceMethodDescriptorSupplier
-      extends DinoServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
-
-    DinoServiceMethodDescriptorSupplier(String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -277,7 +241,6 @@ public final class DinoServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DinoServiceFileDescriptorSupplier())
               .addMethod(getFindDinoMethod())
               .build();
         }
