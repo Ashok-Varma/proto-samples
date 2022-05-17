@@ -226,6 +226,12 @@ public class TestService2Request(
   public val nested: NestedMessage? = null,
   map: Map<String, NestedMessage> = emptyMap(),
   map_field: List<MapFieldEntry> = emptyList(),
+  @field:WireField(
+    tag = 42,
+    adapter = "com.proto.test2.TestService2Request${'$'}NestedMessage#ADAPTER",
+    label = WireField.Label.REQUIRED
+  )
+  public val requiredMessageObject: NestedMessage,
   /**
    * Extension source: test2.proto
    */
@@ -316,6 +322,7 @@ public class TestService2Request(
     if (nested != other.nested) return false
     if (map != other.map) return false
     if (map_field != other.map_field) return false
+    if (requiredMessageObject != other.requiredMessageObject) return false
     if (extension_scope != other.extension_scope) return false
     return true
   }
@@ -360,6 +367,7 @@ public class TestService2Request(
       result = result * 37 + (nested?.hashCode() ?: 0)
       result = result * 37 + map.hashCode()
       result = result * 37 + map_field.hashCode()
+      result = result * 37 + requiredMessageObject.hashCode()
       result = result * 37 + (extension_scope?.hashCode() ?: 0)
       super.hashCode = result
     }
@@ -406,6 +414,7 @@ public class TestService2Request(
     if (nested != null) result += """nested=$nested"""
     if (map.isNotEmpty()) result += """map=$map"""
     if (map_field.isNotEmpty()) result += """map_field=$map_field"""
+    result += """requiredMessageObject=$requiredMessageObject"""
     if (extension_scope != null) result += """extension_scope=$extension_scope"""
     return result.joinToString(prefix = "TestService2Request{", separator = ", ", postfix = "}")
   }
@@ -447,6 +456,7 @@ public class TestService2Request(
     nested: NestedMessage? = this.nested,
     map: Map<String, NestedMessage> = this.map,
     map_field: List<MapFieldEntry> = this.map_field,
+    requiredMessageObject: NestedMessage = this.requiredMessageObject,
     extension_scope: Int? = this.extension_scope,
     unknownFields: ByteString = this.unknownFields
   ): TestService2Request = TestService2Request(optionalDouble, requiredDouble, optionalInt32,
@@ -455,8 +465,8 @@ public class TestService2Request(
       optionalFixed32, requiredFixed32, optionalFixed64, requiredFixed64, optionalSfixed32,
       requiredSfixed32, optionalSfixed64, requiredSfixed64, optionalBool, requiredBool,
       optionalString, requiredString, optionalBytes, requiredBytes, optionalWithDefaultInt32,
-      optionalWithDefaultString, corpus, samples, name, nested, map, map_field, extension_scope,
-      unknownFields)
+      optionalWithDefaultString, corpus, samples, name, nested, map, map_field,
+      requiredMessageObject, extension_scope, unknownFields)
 
   public companion object {
     public const val DEFAULT_OPTIONALWITHDEFAULTINT32: Int = 10
@@ -517,6 +527,7 @@ public class TestService2Request(
         size += NestedMessage.ADAPTER.encodedSizeWithTag(39, value.nested)
         size += mapAdapter.encodedSizeWithTag(40, value.map)
         size += MapFieldEntry.ADAPTER.asRepeated().encodedSizeWithTag(41, value.map_field)
+        size += NestedMessage.ADAPTER.encodedSizeWithTag(42, value.requiredMessageObject)
         size += ProtoAdapter.INT32.encodedSizeWithTag(126, value.extension_scope)
         return size
       }
@@ -556,6 +567,7 @@ public class TestService2Request(
         ProtoAdapter.INT32.asPacked().encodeWithTag(writer, 37, value.samples)
         mapAdapter.encodeWithTag(writer, 40, value.map)
         MapFieldEntry.ADAPTER.asRepeated().encodeWithTag(writer, 41, value.map_field)
+        NestedMessage.ADAPTER.encodeWithTag(writer, 42, value.requiredMessageObject)
         ProtoAdapter.INT32.encodeWithTag(writer, 126, value.extension_scope)
         ProtoAdapter.STRING.encodeWithTag(writer, 38, value.name)
         NestedMessage.ADAPTER.encodeWithTag(writer, 39, value.nested)
@@ -567,6 +579,7 @@ public class TestService2Request(
         NestedMessage.ADAPTER.encodeWithTag(writer, 39, value.nested)
         ProtoAdapter.STRING.encodeWithTag(writer, 38, value.name)
         ProtoAdapter.INT32.encodeWithTag(writer, 126, value.extension_scope)
+        NestedMessage.ADAPTER.encodeWithTag(writer, 42, value.requiredMessageObject)
         MapFieldEntry.ADAPTER.asRepeated().encodeWithTag(writer, 41, value.map_field)
         mapAdapter.encodeWithTag(writer, 40, value.map)
         ProtoAdapter.INT32.asPacked().encodeWithTag(writer, 37, value.samples)
@@ -640,6 +653,7 @@ public class TestService2Request(
         var nested: NestedMessage? = null
         val map = mutableMapOf<String, NestedMessage>()
         val map_field = mutableListOf<MapFieldEntry>()
+        var requiredMessageObject: NestedMessage? = null
         var extension_scope: Int? = null
         val unknownFields = reader.forEachTag { tag ->
           when (tag) {
@@ -683,6 +697,7 @@ public class TestService2Request(
             39 -> nested = NestedMessage.ADAPTER.decode(reader)
             40 -> map.putAll(mapAdapter.decode(reader))
             41 -> map_field.add(MapFieldEntry.ADAPTER.decode(reader))
+            42 -> requiredMessageObject = NestedMessage.ADAPTER.decode(reader)
             126 -> extension_scope = ProtoAdapter.INT32.decode(reader)
             else -> reader.readUnknownField(tag)
           }
@@ -737,6 +752,8 @@ public class TestService2Request(
           nested = nested,
           map = map,
           map_field = map_field,
+          requiredMessageObject = requiredMessageObject ?: throw
+              missingRequiredFields(requiredMessageObject, "requiredMessageObject"),
           extension_scope = extension_scope,
           unknownFields = unknownFields
         )
@@ -746,6 +763,7 @@ public class TestService2Request(
         nested = value.nested?.let(NestedMessage.ADAPTER::redact),
         map = value.map.redactElements(NestedMessage.ADAPTER),
         map_field = value.map_field.redactElements(MapFieldEntry.ADAPTER),
+        requiredMessageObject = NestedMessage.ADAPTER.redact(value.requiredMessageObject),
         unknownFields = ByteString.EMPTY
       )
     }

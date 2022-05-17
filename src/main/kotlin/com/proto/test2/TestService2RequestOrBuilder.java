@@ -518,5 +518,20 @@ com.proto.test2.TestService2Request.NestedMessage defaultValue);
   com.proto.test2.TestService2Request.MapFieldEntryOrBuilder getMapFieldOrBuilder(
       int index);
 
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   * @return Whether the requiredMessageObject field is set.
+   */
+  boolean hasRequiredMessageObject();
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   * @return The requiredMessageObject.
+   */
+  com.proto.test2.TestService2Request.NestedMessage getRequiredMessageObject();
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   */
+  com.proto.test2.TestService2Request.NestedMessageOrBuilder getRequiredMessageObjectOrBuilder();
+
   public com.proto.test2.TestService2Request.OneOfFieldCase getOneOfFieldCase();
 }

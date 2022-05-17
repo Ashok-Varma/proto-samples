@@ -1044,6 +1044,30 @@ public object TestService3ResponseKt {
       _builder.clearDetails()
     }
 
+
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public var requiredMessageObject: com.proto.test3.TestService3Response.NestedMessage
+      @JvmName("getRequiredMessageObject")
+      get() = _builder.getRequiredMessageObject()
+      @JvmName("setRequiredMessageObject")
+      set(value) {
+        _builder.setRequiredMessageObject(value)
+      }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public fun clearRequiredMessageObject() {
+      _builder.clearRequiredMessageObject()
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     * @return Whether the requiredMessageObject field is set.
+     */
+    public fun hasRequiredMessageObject(): kotlin.Boolean {
+      return _builder.hasRequiredMessageObject()
+    }
     public val oneOfFieldCase: com.proto.test3.TestService3Response.OneOfFieldCase
       @JvmName("getOneOfFieldCase")
       get() = _builder.getOneOfFieldCase()
@@ -1262,4 +1286,7 @@ val com.proto.test3.TestService3Response.MapFieldEntryOrBuilder.valueOrNull: com
 
 val com.proto.test3.TestService3ResponseOrBuilder.nestedOrNull: com.proto.test3.TestService3Response.NestedMessage?
   get() = if (hasNested()) getNested() else null
+
+val com.proto.test3.TestService3ResponseOrBuilder.requiredMessageObjectOrNull: com.proto.test3.TestService3Response.NestedMessage?
+  get() = if (hasRequiredMessageObject()) getRequiredMessageObject() else null
 

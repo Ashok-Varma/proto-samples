@@ -100,6 +100,8 @@ message TestService3Response {
 
   // https://developers.google.com/protocol-buffers/docs/proto3#any (Support to any)
   repeated google.protobuf.Any details = 42;
+
+  NestedMessage requiredMessageObject = 43;
 }
 
 message TestService3Request {

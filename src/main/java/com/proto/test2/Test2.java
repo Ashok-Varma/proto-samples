@@ -125,7 +125,7 @@ public final class Test2 {
       "\n\005VIDEO\020\006\">\n\021EnumAllowingAlias\022\013\n\007UNKNOW" +
       "N\020\000\022\013\n\007STARTED\020\001\022\013\n\007RUNNING\020\001\032\002\020\001*\005\010d\020\310\001" +
       "*\t\010\350\007\020\200\200\200\200\002B\014\n\noneOfFieldJ\004\010\002\020\003J\004\010\017\020\020J\004\010" +
-      "\t\020\014R\003fooR\003bar\"\337\013\n\023TestService2Request\022\026\n" +
+      "\t\020\014R\003fooR\003bar\"\250\014\n\023TestService2Request\022\026\n" +
       "\016optionalDouble\030\001 \001(\001\022\026\n\016requiredDouble\030" +
       "\003 \002(\001\022\025\n\roptionalInt32\030\004 \001(\005\022\025\n\rrequired" +
       "Int32\030\005 \002(\005\022\025\n\roptionalInt64\030\006 \001(\003\022\025\n\rre" +
@@ -151,24 +151,25 @@ public final class Test2 {
       ".TestService2Request.NestedMessageH\000\0220\n\003" +
       "map\030( \003(\0132#.test2.TestService2Request.Ma" +
       "pEntry\022;\n\tmap_field\030) \003(\0132(.test2.TestSe" +
-      "rvice2Request.MapFieldEntry\032=\n\rNestedMes" +
-      "sage\022\013\n\003url\030\001 \002(\t\022\r\n\005title\030\002 \001(\t\022\020\n\010snip" +
-      "pets\030\003 \003(\t\032T\n\010MapEntry\022\013\n\003key\030\001 \001(\t\0227\n\005v" +
-      "alue\030\002 \001(\0132(.test2.TestService2Request.N" +
-      "estedMessage:\0028\001\032U\n\rMapFieldEntry\022\013\n\003key" +
-      "\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(.test2.TestServic" +
-      "e2Request.NestedMessage\"Z\n\006Corpus\022\r\n\tUNI" +
-      "VERSAL\020\000\022\007\n\003WEB\020\001\022\n\n\006IMAGES\020\002\022\t\n\005LOCAL\020\003" +
-      "\022\010\n\004NEWS\020\004\022\014\n\010PRODUCTS\020\005\022\t\n\005VIDEO\020\006\">\n\021E" +
-      "numAllowingAlias\022\013\n\007UNKNOWN\020\000\022\013\n\007STARTED" +
-      "\020\001\022\013\n\007RUNNING\020\001\032\002\020\001*\005\010d\020\310\001*\t\010\350\007\020\200\200\200\200\002B\014\n" +
-      "\noneOfFieldJ\004\010\002\020\003J\004\010\017\020\020J\004\010\t\020\014R\003fooR\003bar2" +
-      "Q\n\014TestService2\022A\n\004test\022\032.test2.TestServ" +
-      "ice2Request\032\033.test2.TestService2Response" +
-      "\"\000:.\n\textension\022\033.test2.TestService2Resp" +
-      "onse\030~ \001(\005:3\n\017extension_scope\022\032.test2.Te" +
-      "stService2Request\030~ \001(\005B\023\n\017com.proto.tes" +
-      "t2P\001"
+      "rvice2Request.MapFieldEntry\022G\n\025requiredM" +
+      "essageObject\030* \002(\0132(.test2.TestService2R" +
+      "equest.NestedMessage\032=\n\rNestedMessage\022\013\n" +
+      "\003url\030\001 \002(\t\022\r\n\005title\030\002 \001(\t\022\020\n\010snippets\030\003 " +
+      "\003(\t\032T\n\010MapEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 " +
+      "\001(\0132(.test2.TestService2Request.NestedMe" +
+      "ssage:\0028\001\032U\n\rMapFieldEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "7\n\005value\030\002 \001(\0132(.test2.TestService2Reque" +
+      "st.NestedMessage\"Z\n\006Corpus\022\r\n\tUNIVERSAL\020" +
+      "\000\022\007\n\003WEB\020\001\022\n\n\006IMAGES\020\002\022\t\n\005LOCAL\020\003\022\010\n\004NEW" +
+      "S\020\004\022\014\n\010PRODUCTS\020\005\022\t\n\005VIDEO\020\006\">\n\021EnumAllo" +
+      "wingAlias\022\013\n\007UNKNOWN\020\000\022\013\n\007STARTED\020\001\022\013\n\007R" +
+      "UNNING\020\001\032\002\020\001*\005\010d\020\310\001*\t\010\350\007\020\200\200\200\200\002B\014\n\noneOfF" +
+      "ieldJ\004\010\002\020\003J\004\010\017\020\020J\004\010\t\020\014R\003fooR\003bar2Q\n\014Test" +
+      "Service2\022A\n\004test\022\032.test2.TestService2Req" +
+      "uest\032\033.test2.TestService2Response\"\000:.\n\te" +
+      "xtension\022\033.test2.TestService2Response\030~ " +
+      "\001(\005:3\n\017extension_scope\022\032.test2.TestServi" +
+      "ce2Request\030~ \001(\005B\023\n\017com.proto.test2P\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -203,7 +204,7 @@ public final class Test2 {
     internal_static_test2_TestService2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_test2_TestService2Request_descriptor,
-        new java.lang.String[] { "OptionalDouble", "RequiredDouble", "OptionalInt32", "RequiredInt32", "OptionalInt64", "RequiredInt64", "OptionalUint32", "RequiredUint32", "OptionalUint64", "RequiredUint64", "OptionalSint32", "RequiredSint32", "OptionalSint64", "RequiredSint64", "OptionalFixed32", "RequiredFixed32", "OptionalFixed64", "RequiredFixed64", "OptionalSfixed32", "RequiredSfixed32", "OptionalSfixed64", "RequiredSfixed64", "OptionalBool", "RequiredBool", "OptionalString", "RequiredString", "OptionalBytes", "RequiredBytes", "OptionalWithDefaultInt32", "OptionalWithDefaultString", "Corpus", "Samples", "Name", "Nested", "Map", "MapField", "OneOfField", });
+        new java.lang.String[] { "OptionalDouble", "RequiredDouble", "OptionalInt32", "RequiredInt32", "OptionalInt64", "RequiredInt64", "OptionalUint32", "RequiredUint32", "OptionalUint64", "RequiredUint64", "OptionalSint32", "RequiredSint32", "OptionalSint64", "RequiredSint64", "OptionalFixed32", "RequiredFixed32", "OptionalFixed64", "RequiredFixed64", "OptionalSfixed32", "RequiredSfixed32", "OptionalSfixed64", "RequiredSfixed64", "OptionalBool", "RequiredBool", "OptionalString", "RequiredString", "OptionalBytes", "RequiredBytes", "OptionalWithDefaultInt32", "OptionalWithDefaultString", "Corpus", "Samples", "Name", "Nested", "Map", "MapField", "RequiredMessageObject", "OneOfField", });
     internal_static_test2_TestService2Request_NestedMessage_descriptor =
       internal_static_test2_TestService2Request_descriptor.getNestedTypes().get(0);
     internal_static_test2_TestService2Request_NestedMessage_fieldAccessorTable = new

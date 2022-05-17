@@ -2943,6 +2943,52 @@ public  final class TestService2Request extends
     mapField_.remove(index);
   }
 
+  public static final int REQUIREDMESSAGEOBJECT_FIELD_NUMBER = 42;
+  private com.proto.test2.TestService2Request.NestedMessage requiredMessageObject_;
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   */
+  @java.lang.Override
+  public boolean hasRequiredMessageObject() {
+    return ((bitField1_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   */
+  @java.lang.Override
+  public com.proto.test2.TestService2Request.NestedMessage getRequiredMessageObject() {
+    return requiredMessageObject_ == null ? com.proto.test2.TestService2Request.NestedMessage.getDefaultInstance() : requiredMessageObject_;
+  }
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   */
+  private void setRequiredMessageObject(com.proto.test2.TestService2Request.NestedMessage value) {
+    value.getClass();
+  requiredMessageObject_ = value;
+    bitField1_ |= 0x00000002;
+    }
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   */
+  @java.lang.SuppressWarnings({"ReferenceEquality"})
+  private void mergeRequiredMessageObject(com.proto.test2.TestService2Request.NestedMessage value) {
+    value.getClass();
+  if (requiredMessageObject_ != null &&
+        requiredMessageObject_ != com.proto.test2.TestService2Request.NestedMessage.getDefaultInstance()) {
+      requiredMessageObject_ =
+        com.proto.test2.TestService2Request.NestedMessage.newBuilder(requiredMessageObject_).mergeFrom(value).buildPartial();
+    } else {
+      requiredMessageObject_ = value;
+    }
+    bitField1_ |= 0x00000002;
+  }
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   */
+  private void clearRequiredMessageObject() {  requiredMessageObject_ = null;
+    bitField1_ = (bitField1_ & ~0x00000002);
+  }
+
   public static com.proto.test2.TestService2Request parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4679,6 +4725,53 @@ public  final class TestService2Request extends
       return this;
     }
 
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    @java.lang.Override
+    public boolean hasRequiredMessageObject() {
+      return instance.hasRequiredMessageObject();
+    }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    @java.lang.Override
+    public com.proto.test2.TestService2Request.NestedMessage getRequiredMessageObject() {
+      return instance.getRequiredMessageObject();
+    }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    public Builder setRequiredMessageObject(com.proto.test2.TestService2Request.NestedMessage value) {
+      copyOnWrite();
+      instance.setRequiredMessageObject(value);
+      return this;
+      }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    public Builder setRequiredMessageObject(
+        com.proto.test2.TestService2Request.NestedMessage.Builder builderForValue) {
+      copyOnWrite();
+      instance.setRequiredMessageObject(builderForValue.build());
+      return this;
+    }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    public Builder mergeRequiredMessageObject(com.proto.test2.TestService2Request.NestedMessage value) {
+      copyOnWrite();
+      instance.mergeRequiredMessageObject(value);
+      return this;
+    }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    public Builder clearRequiredMessageObject() {  copyOnWrite();
+      instance.clearRequiredMessageObject();
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:test2.TestService2Request)
   }
   private byte memoizedIsInitialized = 2;
@@ -4738,16 +4831,17 @@ public  final class TestService2Request extends
             MapDefaultEntryHolder.defaultEntry,
             "mapField_",
             com.proto.test2.TestService2Request.MapFieldEntry.class,
+            "requiredMessageObject_",
           };
           java.lang.String info =
-              "\u0001$\u0001\u0002\u0001)$\u0001\u0002\u0011\u0001\u1000\u0000\u0003\u1500\u0001" +
+              "\u0001%\u0001\u0002\u0001*%\u0001\u0002\u0012\u0001\u1000\u0000\u0003\u1500\u0001" +
               "\u0004\u1004\u0002\u0005\u1504\u0003\u0006\u1002\u0004\u0007\u1502\u0005\b\u100b" +
               "\u0006\f\u150b\u0007\r\u1003\b\u000e\u1503\t\u0010\u100f\n\u0011\u150f\u000b\u0012" +
               "\u1010\f\u0013\u1510\r\u0014\u1006\u000e\u0015\u1506\u000f\u0016\u1005\u0010\u0017" +
               "\u1505\u0011\u0018\u100d\u0012\u0019\u150d\u0013\u001a\u100e\u0014\u001b\u150e\u0015" +
               "\u001c\u1007\u0016\u001d\u1507\u0017\u001e\u1008\u0018\u001f\u1508\u0019 \u100a\u001a" +
               "!\u150a\u001b\"\u1004\u001c#\u1008\u001d$\u100c\u001e%\'&\u103b\u0000\'\u143c\u0000" +
-              "(\u0432)\u041b";
+              "(\u0432)\u041b*\u1509!";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

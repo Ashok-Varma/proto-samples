@@ -343,6 +343,13 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
   )
   public final List<MapFieldEntry> map_field;
 
+  @WireField(
+      tag = 42,
+      adapter = "com.proto.test2.TestService2Request$NestedMessage#ADAPTER",
+      label = WireField.Label.REQUIRED
+  )
+  public final NestedMessage requiredMessageObject;
+
   /**
    * Extension source: test2.proto
    */
@@ -408,6 +415,7 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
     this.samples = Internal.immutableCopyOf("samples", builder.samples);
     this.map = Internal.immutableCopyOf("map", builder.map);
     this.map_field = Internal.immutableCopyOf("map_field", builder.map_field);
+    this.requiredMessageObject = builder.requiredMessageObject;
     this.extension_scope = builder.extension_scope;
     this.name = builder.name;
     this.nested = builder.nested;
@@ -450,6 +458,7 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
     builder.samples = Internal.copyOf(samples);
     builder.map = Internal.copyOf(map);
     builder.map_field = Internal.copyOf(map_field);
+    builder.requiredMessageObject = requiredMessageObject;
     builder.extension_scope = extension_scope;
     builder.name = name;
     builder.nested = nested;
@@ -497,6 +506,7 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
         && samples.equals(o.samples)
         && map.equals(o.map)
         && map_field.equals(o.map_field)
+        && requiredMessageObject.equals(o.requiredMessageObject)
         && Internal.equals(extension_scope, o.extension_scope)
         && Internal.equals(name, o.name)
         && Internal.equals(nested, o.nested);
@@ -541,6 +551,7 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
       result = result * 37 + samples.hashCode();
       result = result * 37 + map.hashCode();
       result = result * 37 + map_field.hashCode();
+      result = result * 37 + requiredMessageObject.hashCode();
       result = result * 37 + (extension_scope != null ? extension_scope.hashCode() : 0);
       result = result * 37 + (name != null ? name.hashCode() : 0);
       result = result * 37 + (nested != null ? nested.hashCode() : 0);
@@ -617,6 +628,8 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
     public Map<String, NestedMessage> map;
 
     public List<MapFieldEntry> map_field;
+
+    public NestedMessage requiredMessageObject;
 
     public Integer extension_scope;
 
@@ -813,6 +826,11 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
       return this;
     }
 
+    public Builder requiredMessageObject(NestedMessage requiredMessageObject) {
+      this.requiredMessageObject = requiredMessageObject;
+      return this;
+    }
+
     public Builder extension_scope(Integer extension_scope) {
       this.extension_scope = extension_scope;
       return this;
@@ -845,7 +863,8 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
           || requiredSfixed64 == null
           || requiredBool == null
           || requiredString == null
-          || requiredBytes == null) {
+          || requiredBytes == null
+          || requiredMessageObject == null) {
         throw Internal.missingRequiredFields(requiredDouble, "requiredDouble",
             requiredInt32, "requiredInt32",
             requiredInt64, "requiredInt64",
@@ -859,7 +878,8 @@ public final class TestService2Request extends AndroidMessage<TestService2Reques
             requiredSfixed64, "requiredSfixed64",
             requiredBool, "requiredBool",
             requiredString, "requiredString",
-            requiredBytes, "requiredBytes");
+            requiredBytes, "requiredBytes",
+            requiredMessageObject, "requiredMessageObject");
       }
       return new TestService2Request(this, super.buildUnknownFields());
     }

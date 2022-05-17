@@ -480,5 +480,20 @@ com.proto.test3.TestService3Response.NestedMessage defaultValue);
   com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
       int index);
 
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   * @return Whether the requiredMessageObject field is set.
+   */
+  boolean hasRequiredMessageObject();
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   * @return The requiredMessageObject.
+   */
+  com.proto.test3.TestService3Response.NestedMessage getRequiredMessageObject();
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   */
+  com.proto.test3.TestService3Response.NestedMessageOrBuilder getRequiredMessageObjectOrBuilder();
+
   public com.proto.test3.TestService3Response.OneOfFieldCase getOneOfFieldCase();
 }

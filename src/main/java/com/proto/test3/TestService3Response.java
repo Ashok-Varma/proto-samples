@@ -277,6 +277,19 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
             break;
           }
+          case 346: {
+            com.proto.test3.TestService3Response.NestedMessage.Builder subBuilder = null;
+            if (requiredMessageObject_ != null) {
+              subBuilder = requiredMessageObject_.toBuilder();
+            }
+            requiredMessageObject_ = input.readMessage(com.proto.test3.TestService3Response.NestedMessage.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(requiredMessageObject_);
+              requiredMessageObject_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -3254,6 +3267,32 @@ private static final long serialVersionUID = 0L;
     return details_.get(index);
   }
 
+  public static final int REQUIREDMESSAGEOBJECT_FIELD_NUMBER = 43;
+  private com.proto.test3.TestService3Response.NestedMessage requiredMessageObject_;
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   * @return Whether the requiredMessageObject field is set.
+   */
+  @java.lang.Override
+  public boolean hasRequiredMessageObject() {
+    return requiredMessageObject_ != null;
+  }
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   * @return The requiredMessageObject.
+   */
+  @java.lang.Override
+  public com.proto.test3.TestService3Response.NestedMessage getRequiredMessageObject() {
+    return requiredMessageObject_ == null ? com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance() : requiredMessageObject_;
+  }
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   */
+  @java.lang.Override
+  public com.proto.test3.TestService3Response.NestedMessageOrBuilder getRequiredMessageObjectOrBuilder() {
+    return getRequiredMessageObject();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3380,6 +3419,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < details_.size(); i++) {
       output.writeMessage(42, details_.get(i));
+    }
+    if (requiredMessageObject_ != null) {
+      output.writeMessage(43, getRequiredMessageObject());
     }
     unknownFields.writeTo(output);
   }
@@ -3543,6 +3585,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(42, details_.get(i));
     }
+    if (requiredMessageObject_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(43, getRequiredMessageObject());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3670,6 +3716,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMapFieldList())) return false;
     if (!getDetailsList()
         .equals(other.getDetailsList())) return false;
+    if (hasRequiredMessageObject() != other.hasRequiredMessageObject()) return false;
+    if (hasRequiredMessageObject()) {
+      if (!getRequiredMessageObject()
+          .equals(other.getRequiredMessageObject())) return false;
+    }
     if (!getOneOfFieldCase().equals(other.getOneOfFieldCase())) return false;
     switch (oneOfFieldCase_) {
       case 38:
@@ -3811,6 +3862,10 @@ private static final long serialVersionUID = 0L;
     if (getDetailsCount() > 0) {
       hash = (37 * hash) + DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getDetailsList().hashCode();
+    }
+    if (hasRequiredMessageObject()) {
+      hash = (37 * hash) + REQUIREDMESSAGEOBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getRequiredMessageObject().hashCode();
     }
     switch (oneOfFieldCase_) {
       case 38:
@@ -4054,6 +4109,12 @@ private static final long serialVersionUID = 0L;
       } else {
         detailsBuilder_.clear();
       }
+      if (requiredMessageObjectBuilder_ == null) {
+        requiredMessageObject_ = null;
+      } else {
+        requiredMessageObject_ = null;
+        requiredMessageObjectBuilder_ = null;
+      }
       oneOfFieldCase_ = 0;
       oneOfField_ = null;
       return this;
@@ -4192,6 +4253,11 @@ private static final long serialVersionUID = 0L;
         result.details_ = details_;
       } else {
         result.details_ = detailsBuilder_.build();
+      }
+      if (requiredMessageObjectBuilder_ == null) {
+        result.requiredMessageObject_ = requiredMessageObject_;
+      } else {
+        result.requiredMessageObject_ = requiredMessageObjectBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       result.oneOfFieldCase_ = oneOfFieldCase_;
@@ -4396,6 +4462,9 @@ private static final long serialVersionUID = 0L;
             detailsBuilder_.addAllMessages(other.details_);
           }
         }
+      }
+      if (other.hasRequiredMessageObject()) {
+        mergeRequiredMessageObject(other.getRequiredMessageObject());
       }
       switch (other.getOneOfFieldCase()) {
         case NAME: {
@@ -6692,6 +6761,125 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       return detailsBuilder_;
+    }
+
+    private com.proto.test3.TestService3Response.NestedMessage requiredMessageObject_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder> requiredMessageObjectBuilder_;
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     * @return Whether the requiredMessageObject field is set.
+     */
+    public boolean hasRequiredMessageObject() {
+      return requiredMessageObjectBuilder_ != null || requiredMessageObject_ != null;
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     * @return The requiredMessageObject.
+     */
+    public com.proto.test3.TestService3Response.NestedMessage getRequiredMessageObject() {
+      if (requiredMessageObjectBuilder_ == null) {
+        return requiredMessageObject_ == null ? com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance() : requiredMessageObject_;
+      } else {
+        return requiredMessageObjectBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public Builder setRequiredMessageObject(com.proto.test3.TestService3Response.NestedMessage value) {
+      if (requiredMessageObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        requiredMessageObject_ = value;
+        onChanged();
+      } else {
+        requiredMessageObjectBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public Builder setRequiredMessageObject(
+        com.proto.test3.TestService3Response.NestedMessage.Builder builderForValue) {
+      if (requiredMessageObjectBuilder_ == null) {
+        requiredMessageObject_ = builderForValue.build();
+        onChanged();
+      } else {
+        requiredMessageObjectBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public Builder mergeRequiredMessageObject(com.proto.test3.TestService3Response.NestedMessage value) {
+      if (requiredMessageObjectBuilder_ == null) {
+        if (requiredMessageObject_ != null) {
+          requiredMessageObject_ =
+            com.proto.test3.TestService3Response.NestedMessage.newBuilder(requiredMessageObject_).mergeFrom(value).buildPartial();
+        } else {
+          requiredMessageObject_ = value;
+        }
+        onChanged();
+      } else {
+        requiredMessageObjectBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public Builder clearRequiredMessageObject() {
+      if (requiredMessageObjectBuilder_ == null) {
+        requiredMessageObject_ = null;
+        onChanged();
+      } else {
+        requiredMessageObject_ = null;
+        requiredMessageObjectBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public com.proto.test3.TestService3Response.NestedMessage.Builder getRequiredMessageObjectBuilder() {
+      
+      onChanged();
+      return getRequiredMessageObjectFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    public com.proto.test3.TestService3Response.NestedMessageOrBuilder getRequiredMessageObjectOrBuilder() {
+      if (requiredMessageObjectBuilder_ != null) {
+        return requiredMessageObjectBuilder_.getMessageOrBuilder();
+      } else {
+        return requiredMessageObject_ == null ?
+            com.proto.test3.TestService3Response.NestedMessage.getDefaultInstance() : requiredMessageObject_;
+      }
+    }
+    /**
+     * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder> 
+        getRequiredMessageObjectFieldBuilder() {
+      if (requiredMessageObjectBuilder_ == null) {
+        requiredMessageObjectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.proto.test3.TestService3Response.NestedMessage, com.proto.test3.TestService3Response.NestedMessage.Builder, com.proto.test3.TestService3Response.NestedMessageOrBuilder>(
+                getRequiredMessageObject(),
+                getParentForChildren(),
+                isClean());
+        requiredMessageObject_ = null;
+      }
+      return requiredMessageObjectBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

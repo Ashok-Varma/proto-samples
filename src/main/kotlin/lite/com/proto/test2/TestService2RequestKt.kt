@@ -1077,6 +1077,30 @@ public object TestService2RequestKt {
     public fun com.google.protobuf.kotlin.DslList<com.proto.test2.TestService2Request.MapFieldEntry, MapFieldProxy>.clear() {
       _builder.clearMapField()
     }
+
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    public var requiredMessageObject: com.proto.test2.TestService2Request.NestedMessage
+      @JvmName("getRequiredMessageObject")
+      get() = _builder.getRequiredMessageObject()
+      @JvmName("setRequiredMessageObject")
+      set(value) {
+        _builder.setRequiredMessageObject(value)
+      }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     */
+    public fun clearRequiredMessageObject() {
+      _builder.clearRequiredMessageObject()
+    }
+    /**
+     * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+     * @return Whether the requiredMessageObject field is set.
+     */
+    public fun hasRequiredMessageObject(): kotlin.Boolean {
+      return _builder.hasRequiredMessageObject()
+    }
     public val oneOfFieldCase: com.proto.test2.TestService2Request.OneOfFieldCase
       @JvmName("getOneOfFieldCase")
       get() = _builder.getOneOfFieldCase()
@@ -1405,4 +1429,7 @@ val com.proto.test2.TestService2Request.MapFieldEntryOrBuilder.valueOrNull: com.
 
 val com.proto.test2.TestService2RequestOrBuilder.nestedOrNull: com.proto.test2.TestService2Request.NestedMessage?
   get() = if (hasNested()) getNested() else null
+
+val com.proto.test2.TestService2RequestOrBuilder.requiredMessageObjectOrNull: com.proto.test2.TestService2Request.NestedMessage?
+  get() = if (hasRequiredMessageObject()) getRequiredMessageObject() else null
 

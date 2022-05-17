@@ -505,5 +505,16 @@ com.proto.test2.TestService2Request.NestedMessage defaultValue);
    */
   int getMapFieldCount();
 
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   * @return Whether the requiredMessageObject field is set.
+   */
+  boolean hasRequiredMessageObject();
+  /**
+   * <code>required .test2.TestService2Request.NestedMessage requiredMessageObject = 42;</code>
+   * @return The requiredMessageObject.
+   */
+  com.proto.test2.TestService2Request.NestedMessage getRequiredMessageObject();
+
   public com.proto.test2.TestService2Request.OneOfFieldCase getOneOfFieldCase();
 }

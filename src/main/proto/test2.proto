@@ -185,6 +185,8 @@ message TestService2Request {
     optional NestedMessage value = 2;
   }
   repeated MapFieldEntry map_field = 41;
+
+  required NestedMessage requiredMessageObject = 42;
 }
 
 extend TestService2Request {

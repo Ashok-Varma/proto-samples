@@ -448,5 +448,16 @@ com.proto.test3.TestService3Response.NestedMessage defaultValue);
    */
   int getDetailsCount();
 
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   * @return Whether the requiredMessageObject field is set.
+   */
+  boolean hasRequiredMessageObject();
+  /**
+   * <code>.test3.TestService3Response.NestedMessage requiredMessageObject = 43;</code>
+   * @return The requiredMessageObject.
+   */
+  com.proto.test3.TestService3Response.NestedMessage getRequiredMessageObject();
+
   public com.proto.test3.TestService3Response.OneOfFieldCase getOneOfFieldCase();
 }

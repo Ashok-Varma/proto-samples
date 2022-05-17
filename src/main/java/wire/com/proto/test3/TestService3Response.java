@@ -312,6 +312,13 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
   public final List<AnyMessage> details;
 
   @WireField(
+      tag = 43,
+      adapter = "com.proto.test3.TestService3Response$NestedMessage#ADAPTER",
+      label = WireField.Label.OMIT_IDENTITY
+  )
+  public final NestedMessage requiredMessageObject;
+
+  @WireField(
       tag = 38,
       adapter = "com.squareup.wire.ProtoAdapter#STRING",
       oneofName = "oneOfField"
@@ -371,6 +378,7 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
     this.map = Internal.immutableCopyOf("map", builder.map);
     this.map_field = Internal.immutableCopyOf("map_field", builder.map_field);
     this.details = Internal.immutableCopyOf("details", builder.details);
+    this.requiredMessageObject = builder.requiredMessageObject;
     this.name = builder.name;
     this.nested = builder.nested;
   }
@@ -411,6 +419,7 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
     builder.map = Internal.copyOf(map);
     builder.map_field = Internal.copyOf(map_field);
     builder.details = Internal.copyOf(details);
+    builder.requiredMessageObject = requiredMessageObject;
     builder.name = name;
     builder.nested = nested;
     builder.addUnknownFields(unknownFields());
@@ -456,6 +465,7 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
         && map.equals(o.map)
         && map_field.equals(o.map_field)
         && details.equals(o.details)
+        && Internal.equals(requiredMessageObject, o.requiredMessageObject)
         && Internal.equals(name, o.name)
         && Internal.equals(nested, o.nested);
   }
@@ -498,6 +508,7 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
       result = result * 37 + map.hashCode();
       result = result * 37 + map_field.hashCode();
       result = result * 37 + details.hashCode();
+      result = result * 37 + (requiredMessageObject != null ? requiredMessageObject.hashCode() : 0);
       result = result * 37 + (name != null ? name.hashCode() : 0);
       result = result * 37 + (nested != null ? nested.hashCode() : 0);
       super.hashCode = result;
@@ -571,6 +582,8 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
     public List<MapFieldEntry> map_field;
 
     public List<AnyMessage> details;
+
+    public NestedMessage requiredMessageObject;
 
     public String name;
 
@@ -780,6 +793,11 @@ public final class TestService3Response extends AndroidMessage<TestService3Respo
     public Builder details(List<AnyMessage> details) {
       Internal.checkElementsNotNull(details);
       this.details = details;
+      return this;
+    }
+
+    public Builder requiredMessageObject(NestedMessage requiredMessageObject) {
+      this.requiredMessageObject = requiredMessageObject;
       return this;
     }
 

@@ -221,6 +221,12 @@ public class TestService3Response(
   map: Map<String, NestedMessage> = emptyMap(),
   map_field: List<MapFieldEntry> = emptyList(),
   details: List<AnyMessage> = emptyList(),
+  @field:WireField(
+    tag = 43,
+    adapter = "com.proto.test3.TestService3Response${'$'}NestedMessage#ADAPTER",
+    label = WireField.Label.OMIT_IDENTITY
+  )
+  public val requiredMessageObject: NestedMessage? = null,
   unknownFields: ByteString = ByteString.EMPTY
 ) : AndroidMessage<TestService3Response, Nothing>(ADAPTER, unknownFields) {
   /**
@@ -313,6 +319,7 @@ public class TestService3Response(
     if (map != other.map) return false
     if (map_field != other.map_field) return false
     if (details != other.details) return false
+    if (requiredMessageObject != other.requiredMessageObject) return false
     return true
   }
 
@@ -355,6 +362,7 @@ public class TestService3Response(
       result = result * 37 + map.hashCode()
       result = result * 37 + map_field.hashCode()
       result = result * 37 + details.hashCode()
+      result = result * 37 + (requiredMessageObject?.hashCode() ?: 0)
       super.hashCode = result
     }
     return result
@@ -397,6 +405,7 @@ public class TestService3Response(
     if (map.isNotEmpty()) result += """map=$map"""
     if (map_field.isNotEmpty()) result += """map_field=$map_field"""
     if (details.isNotEmpty()) result += """details=$details"""
+    if (requiredMessageObject != null) result += """requiredMessageObject=$requiredMessageObject"""
     return result.joinToString(prefix = "TestService3Response{", separator = ", ", postfix = "}")
   }
 
@@ -436,6 +445,7 @@ public class TestService3Response(
     map: Map<String, NestedMessage> = this.map,
     map_field: List<MapFieldEntry> = this.map_field,
     details: List<AnyMessage> = this.details,
+    requiredMessageObject: NestedMessage? = this.requiredMessageObject,
     unknownFields: ByteString = this.unknownFields
   ): TestService3Response = TestService3Response(optionalDouble, requiredDouble, optionalInt32,
       requiredInt32, optionalInt64, requiredInt64, optionalUint32, requiredUint32, optionalUint64,
@@ -443,7 +453,7 @@ public class TestService3Response(
       optionalFixed32, requiredFixed32, optionalFixed64, requiredFixed64, optionalSfixed32,
       requiredSfixed32, optionalSfixed64, requiredSfixed64, optionalBool, requiredBool,
       optionalString, requiredString, optionalBytes, requiredBytes, corpus, samples, name, nested,
-      map, map_field, details, unknownFields)
+      map, map_field, details, requiredMessageObject, unknownFields)
 
   public companion object {
     @JvmField
@@ -510,6 +520,8 @@ public class TestService3Response(
         size += mapAdapter.encodedSizeWithTag(40, value.map)
         size += MapFieldEntry.ADAPTER.asRepeated().encodedSizeWithTag(41, value.map_field)
         size += AnyMessage.ADAPTER.asRepeated().encodedSizeWithTag(42, value.details)
+        if (value.requiredMessageObject != null) size +=
+            NestedMessage.ADAPTER.encodedSizeWithTag(43, value.requiredMessageObject)
         return size
       }
 
@@ -561,6 +573,8 @@ public class TestService3Response(
         mapAdapter.encodeWithTag(writer, 40, value.map)
         MapFieldEntry.ADAPTER.asRepeated().encodeWithTag(writer, 41, value.map_field)
         AnyMessage.ADAPTER.asRepeated().encodeWithTag(writer, 42, value.details)
+        if (value.requiredMessageObject != null) NestedMessage.ADAPTER.encodeWithTag(writer, 43,
+            value.requiredMessageObject)
         ProtoAdapter.STRING.encodeWithTag(writer, 38, value.name)
         NestedMessage.ADAPTER.encodeWithTag(writer, 39, value.nested)
         writer.writeBytes(value.unknownFields)
@@ -570,6 +584,8 @@ public class TestService3Response(
         writer.writeBytes(value.unknownFields)
         NestedMessage.ADAPTER.encodeWithTag(writer, 39, value.nested)
         ProtoAdapter.STRING.encodeWithTag(writer, 38, value.name)
+        if (value.requiredMessageObject != null) NestedMessage.ADAPTER.encodeWithTag(writer, 43,
+            value.requiredMessageObject)
         AnyMessage.ADAPTER.asRepeated().encodeWithTag(writer, 42, value.details)
         MapFieldEntry.ADAPTER.asRepeated().encodeWithTag(writer, 41, value.map_field)
         mapAdapter.encodeWithTag(writer, 40, value.map)
@@ -655,6 +671,7 @@ public class TestService3Response(
         val map = mutableMapOf<String, NestedMessage>()
         val map_field = mutableListOf<MapFieldEntry>()
         val details = mutableListOf<AnyMessage>()
+        var requiredMessageObject: NestedMessage? = null
         val unknownFields = reader.forEachTag { tag ->
           when (tag) {
             1 -> optionalDouble = ProtoAdapter.DOUBLE.decode(reader)
@@ -696,6 +713,7 @@ public class TestService3Response(
             40 -> map.putAll(mapAdapter.decode(reader))
             41 -> map_field.add(MapFieldEntry.ADAPTER.decode(reader))
             42 -> details.add(AnyMessage.ADAPTER.decode(reader))
+            43 -> requiredMessageObject = NestedMessage.ADAPTER.decode(reader)
             else -> reader.readUnknownField(tag)
           }
         }
@@ -735,6 +753,7 @@ public class TestService3Response(
           map = map,
           map_field = map_field,
           details = details,
+          requiredMessageObject = requiredMessageObject,
           unknownFields = unknownFields
         )
       }
@@ -744,6 +763,7 @@ public class TestService3Response(
         map = value.map.redactElements(NestedMessage.ADAPTER),
         map_field = value.map_field.redactElements(MapFieldEntry.ADAPTER),
         details = value.details.redactElements(AnyMessage.ADAPTER),
+        requiredMessageObject = value.requiredMessageObject?.let(NestedMessage.ADAPTER::redact),
         unknownFields = ByteString.EMPTY
       )
     }
