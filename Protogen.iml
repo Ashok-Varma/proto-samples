@@ -11,5 +11,7 @@
     <orderEntry type="library" name="javax.annotation.api" level="project" />
     <orderEntry type="library" name="io.grpc.stub" level="project" />
     <orderEntry type="library" name="jetbrains.kotlin.stdlib" level="project" />
+    <orderEntry type="library" name="squareup.wire.runtime" level="project" />
+    <orderEntry type="library" name="squareup.wire.grpc.client" level="project" />
   </component>
 </module>
